@@ -1,0 +1,142 @@
+body {
+	background-color: #222222;
+	display:flex;
+	font-size: 2.6em;
+	text-size-adjust: none;
+	overflow: hidden;
+	margin: 10px;
+}
+
+
+
+
+#main {
+	max-width: 1020px;
+	min-width: 720px;
+	margin: auto;
+	height: 100%;
+}
+
+.header {
+	height: 3em;
+	background-color: #252525;
+}
+
+.mainicon {
+	position: absolute;
+	height: 33%;
+}
+
+.message {
+	background-color: #252525; 
+	font-family: 'Scada', sans-serif;
+	text-align: left; 
+	padding-left: 30px;
+	padding-right: 30px; 
+	border-bottom: 4px solid #1F2123;
+	border-top: 2px solid #4b4c54;
+	height: 290px;
+	display: flex;
+    align-items: center;     /*Центрирование по вертикали */
+}
+.mc {
+	color: #cfcfcf;
+}
+
+.sys { color: #529245;
+}
+
+.sc1 {
+	color: #cdbb6a;
+}
+
+.sc2 {
+    color: #ba3740;
+    font-weight: 1000;
+}
+
+.btn {
+	display: inline-block;
+	background: rgb(168,215,245);
+	background: linear-gradient(0deg, rgba(168,215,245,1) 0%, rgba(227,232,235,1) 100%);
+
+	border-bottom: 10px solid #3D7EAA;
+  	border-radius: 20px;
+  	padding: 20px;
+
+  	margin: auto;
+
+  	color: #050C16;
+  	font-family: 'Scada', sans-serif;
+	text-align: center;
+	width: 44%;
+	float: left;
+	height: 170px;
+	display: flex;
+	justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+}
+
+.active {
+	background: rgb(8,89,155);
+	background: linear-gradient(0deg, rgba(8,89,155,1) 0%, rgba(49,134,197,1) 100%);
+	border-bottom: 7px solid #3B77C0;
+	color: #c0e4fc;
+
+}
+
+.passive {
+	background: rgb(53,57,60);
+	background: linear-gradient(0deg, rgba(53,57,60,1) 0%, rgba(27,35,38,1) 100%);
+	border-bottom: 7px solid #282C31;
+	color: #55585e;
+}
+
+.btnhl {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	height: 220px;
+	background: rgb(42,42,42);
+	background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(28,29,31,1) 100%);
+	border-bottom: 4px solid #1F2123;
+	border-top: 2px solid #4b4c54;
+}
+
+
+.r {
+	float: right;
+}
+
+@media (min-width: 854px) {
+	#main {
+		width: 100%;
+	}
+}
+
+.poop {
+	
+}
+
+
+#achievement_notification {
+	font-family: 'Scada', sans-serif;
+	color: #b9bcbf;
+    padding: 30px;
+    font-size: 0.9em;
+
+}
+
+#achievement_name {
+	font-family: 'Scada', sans-serif;
+	color: #dde0e2;
+    padding: 50px 0 40px 0;
+    font-size: 1.4em;
+}
+#achievement_desc {
+	font-family: 'Scada', sans-serif;
+	color: #dde0e2;
+    padding: 50px 0;
+    font-size: 0.8em;
+}

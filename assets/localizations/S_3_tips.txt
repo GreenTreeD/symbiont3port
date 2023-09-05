@@ -1,0 +1,176 @@
+<!------------------------------------------------ TIPS ------------------------------------------------------------->
+<item key="tip.1" value="Если у Вас возникнут сложности, Вы всегда можете воспользоваться меню «Подсказка». Для этого просто коснитесь пальцем индикатора подсказок, когда он загорится."/>
+<item key="tip.2" value="В процессе прохождения Вы активируете контрольные главы. Коснитесь иконки «Закладка», и сможете вернуться к любой доступной главе, чтобы изменить решение или, в случае гибели своего протеже, переиграть."/>
+<item key="tip.3" value="Теперь Вы можете не только провести своего протеже по лаборатории разными путями, но и выбрать, кому помогать и чью историю узнать первой. Каждый путь по-своему уникален. Более того, некоторые Ваши решения меняют игровой процесс и могут как открыть ранее недоступные локации, так и спасти жизнь (или наоборот) некоторым персонажам."/>
+<item key="tip.4" value="В «Симбионт 3» мы расширили вариативность прохождения игры: добавили скрытые локации, ключевые действия и улучшили систему реагирования окружающей среды на Ваши действия, а потому решено было ввести систему Достижений. Специальные значки не только послужат Вам наградой за внимательность, но и облегчат ориентирование в лаборатории."/>
+<item key="tip.5" value="Действие книги-игры приближено к концепции реального времени. Иногда главному герою потребуется время, чтобы решить задачу, справиться с неприятностями или даже поспать. Ожидания, как и в реальности, разные: от минуты до 6-8 часов. Будьте терпеливы, и Вы узнаете все тайны Симбионта."/>
+<item key="tip.6" value="Вы открыли один из четырех возможных финалов книги-игры. Чтобы узнать, как еще могла бы завершиться эта история, воспользуйтесь закладками контрольных глав. Подсказка: история Соболева могла завершиться двумя возможными способами, ключевой выбор был сделан, когда Вы решали, как именно стоит себя вести с шантажистами из корпорации."/>
+<item key="tip.7" value="Вы открыли один из четырех возможных финалов книги-игры. Чтобы узнать, как еще могла бы завершиться эта история, воспользуйтесь закладками контрольных глав. Подсказка: история Беркута могла завершиться двумя возможными способами, ключевой выбор был сделан, когда Вы решали, стоит ли слушать Музу, а потом искать тайный склад."/>
+<item key="tip.8" value="Вы разблокировали скрытый финал. Теперь Вы один из посвященных! Отныне и навсегда Ваша жизнь изменилась, ведь Вы знаете, что человечество — не единственная разумная форма жизни на Земле. Это знание опасно, держите его при себе, ибо любое неосторожно сказанное слово, и... Они всегда следят за нами!"/>
+<item key="tip.9" value="Чтобы выжить в столкновении с «обезьяной» в Отделе зоологов нужно отбежать, затаиться, отвлечь ее броском батарейки; проползти к «двери»; атаковать и прорываться."/>
+<item key="tip.10" value="Чтобы открыть аварийный клапан, нужно слушать щелчки. Они раздаются: (1 засов) на втором вопросе, (2 засов) на третьем вопросе, и (3 засов) — на первом вопросе Соболева."/>
+<item key="tip.11" value="Ключом к разгадке является классическое сочетание цветов радуги. Вспоминаем поговорку: каждый охотник желает знать, где сидит фазан. Т.е. порядковые номера цветов: красный (1), оранжевый (2), желтый (3), зеленый (4), голубой (5), синий (6), фиолетовый (7). Соотносим с цветными полосами на двери, и получаем правильную комбинацию: 1, 3, 5, 7."/>
+<item key="tip.12" value="Спасаемся от «Паука» в Отделе зоологов (используем батарейки): катим батарейку вправо, сами идем влево, потом еще раз катим вправо, сами идем влево, наконец, швыряем батарейку вперед и сами идем вперед. Можно и наоборот, тогда: катим влево, идем вправо, катим влево, идем вправо, кидаем вперед и сами идем вперед."/>
+<item key="tip.13" value="Замок от хранилища Стражей-пауков открывается так: выставляем пропущенное четное число: 4; подсоединяем внизу синий провод (цвет четных чисел)."/>
+<item key="tip.14" value="В тюрьме раскачиваемся на веревке, затем расшатываем крюк, а потом резко прыгаем."/>
+<item key="tip.15" value="Убегаем от волны зомби из офисов: вначале крадемся, затем бежим, опять бежим, потом подзуживаем Соболева: добрые или злые слова (лучше чередовать)."/>
+<item key="tip.16" value="Шифр слесаря: СПЙ ГББ РЁЛЬ ПГЙМ. Ключом является стихотворение-намек: «Алфавит, как болото, только нет бегемота. Буквы лягушками скачут: прыг-скок! Каждая гласная скачет вперед, а не-согласная наоборот». То есть мы видим, что каждая гласная буква алфавита передвигается вперед, занимая место следующей, а согласная — наоборот, на одну отодвигается назад (криптография в один шаг). А вот мягкий знак не является ни гласной, ни согласной — это диакритический знак. Он остается на своем месте. Получается комбинация цифр: ТРИ, ДВА, СЕМЬ, ОДИН."/>
+<item key="tip.17" value="Обыскиваем помещение, еще тщательнее обыскиваем, лезем в мусорное ведро и находим записку шутника. Код: первая пара чисел — количество официальных студийных альбомов группы «Биттлз» (13); вторая пара — ответ на главный вопрос жизни, вселенной и всего такого по версии суперкомпьютера Deep Thought (42). Итого, правильная комбинация: 1342."/>
+<item key="tip.18" value="Находим рюкзак, осматриваем и запоминаем подсказки. Томик Шекспира с «нет повести печальнее» («Ромео и Джульетта»), DVD с фильмом Кубрика («Заводной апельсин), брелок с собачьей лапой и антиутопия Оруэлла («1984»). На вопрос про ворона любой ответ является верным."/>
+<item key="tip.19" value="Вначале отступаем, защищаемся, кружим, опять отступаем, затем внезапно нападаем, угрожаем."/>
+<item key="tip.20" value="Ключом является хронологическая последовательность событий из «Алисы в Стране чудес»: девочка+заяц+часы+дыра+черва."/>
+<item key="tip.21" value="Пытаемся его свалить, затем атакуем, атакуем с расстояния, давим стулом, заливаем кислотой, бежим."/>
+<item key="tip.22" value="Стоим и не шевелимся, ждем, пока не приблизится инфицированный, затем хватаем его, валим плашмя, чтобы он прикрыл Беркута от взрыва и... БА-БАХ!!!"/>
+<item key="tip.23" value="Идем только вперед, затем не даем зомби отгрызть себе руку, отвлекая его, осматриваемся, затем еще раз отвлекаем зомби, режем ладонь, отходим, отходим, — и прыгаем на лестничную площадку."/>
+<item key="tip.24" value="Правильный маршрут: направо, налево, налево, направо, направо, прямо, направо, направо, не подходим к Беркуту, направо, направо."/>
+<item key="tip.25" value="Правильные пиктограммы выбираются методом логического исключения: ребенок (единственное юное существо в числе взрослых особей); 34 (3+4 в сумме дают 7, в то время как прочие числа в сумме равны 12); красный круг — вторая фигура (единственная фигура без рамки)."/>
+<item key="tip.26" value="Нужен второй уступ, первый, затем прыгаем, и еще раз."/>
+<item key="tip.27" value="Загоняем штурмовиков в ловушку: подзываем солдат, еще ближе, говорим, что ран нет, бежим, бежим ко второй решетке, ключ не ломаем."/>
+<item key="tip.28" value="Код для разминирования заряда у шлюза: первая часть кода (34-43-35-29-22-22-29-23-74-47-23-...): 17; вторая часть кода (десятое простое число): 29; третья часть кода (83-38-51-92-29-35-11...): 11. Располагаем их в порядке возрастания, получаем пароль: 11-17-29."/>
+<!------------------------------------------------ TIPS ------------------------------------------------------------->
+
+<!------------------------------------------------ ACHIEVEMENTS ------------------------------------------------------------->
+<item key="achievementSimple.name.1" value="СТАРЫЙ ДРУГ"/>
+<item key="achievementSimple.description.1" value="Начните сюжетную кампанию Соболева."/>
+<item key="achievementSimple.notification.1" value="Он вернулся!"/>
+
+<item key="achievementSimple.name.3" value="ОДИН В ТЕМНОТЕ"/>
+<item key="achievementSimple.description.3" value="Войдите в Отдел зоологов без света."/>
+<item key="achievementSimple.notification.3" value="Они где-то рядом..."/>
+
+<item key="achievementSimple.name.4" value="НЕСУЩИЙ СВЕТ"/>
+<item key="achievementSimple.description.4" value="Войдите в Отдел зоологов с фонарем."/>
+<item key="achievementSimple.notification.4" value="Луч света — луч надежды?"/>
+
+<item key="achievementSimple.name.5" value="МАРОДЕР"/>
+<item key="achievementSimple.description.5" value="Заберите из схрона рычаг и карту тоннелей."/>
+<item key="achievementSimple.notification.5" value="И это тоже пригодится!"/>
+
+<item key="achievementSimple.name.6" value="КОРМИЛЕЦ"/>
+<item key="achievementSimple.description.6" value="Отыщите кусок филе и покормите... зомби!"/>
+<item key="achievementSimple.notification.6" value="Ням-ням!"/>
+
+<item key="achievementSimple.name.7" value="Н — ЗНАЧИТ НЕЙРОБИОЛОГ!"/>
+<item key="achievementSimple.description.7" value="Стравите Стражей-пауков."/>
+<item key="achievementSimple.notification.7" value="Пусть победит сильнейший!"/>
+
+<item key="achievementSimple.name.9" value="ЛЖЕЦ, ЛЖЕЦ"/>
+<item key="achievementSimple.description.9" value="Не доверяйте никому, тем более аг..."/>
+<item key="achievementSimple.notification.9" value="Т-с-с!"/>
+
+<item key="achievementSimple.name.10" value="ПРОПАГАНДИСТ"/>
+<item key="achievementSimple.description.10" value="Завербуйте агента корпорации."/>
+<item key="achievementSimple.notification.10" value="Правда — это оружие."/>
+
+<item key="achievementSimple.name.14" value="ЗНАТОК ТОННЕЛЕЙ"/>
+<item key="achievementSimple.description.14" value="Пройдите лабиринт с картой."/>
+<item key="achievementSimple.notification.14" value="И никаких больше развилок!"/>
+
+<item key="achievementSimple.name.15" value="ВНЕЗАПНЫЙ СОЮЗНИК"/>
+<item key="achievementSimple.description.15" value="Мутант на страже добра?!"/>
+<item key="achievementSimple.notification.15" value="Эт-то б-было... неожиданно!"/>
+
+<item key="achievementSimple.name.17" value="ДОБРОЕ СЕРДЦЕ"/>
+<item key="achievementSimple.description.17" value="Оборвите мучения Одинокого стрелка."/>
+<item key="achievementSimple.notification.17" value="Было тяжело, но вы справились..."/>
+
+<item key="achievementSimple.name.18" value="ЗАГНАННЫЙ ЗВЕРЬ"/>
+<item key="achievementSimple.description.18" value=""/>
+<item key="achievementSimple.notification.18" value="Разблокирован финал Террора!"/>
+
+<item key="achievementSimple.name.19" value="МЕТАМОРФ"/>
+<item key="achievementSimple.description.19" value=""/>
+<item key="achievementSimple.notification.19" value="Разблокирован финал Откровения!"/>
+
+<item key="achievementSimple.name.2" value="РЕШИТЕЛЬНЫЙ"/>
+<item key="achievementSimple.description.2" value="Начните сюжетную кампанию Беркута."/>
+<item key="achievementSimple.notification.2" value="К бою готов!"/>
+
+<item key="achievementSimple.name.25" value="ТИК-ТАК!"/>
+<item key="achievementSimple.description.25" value="Помогите Беркуту отыскать будильник."/>
+<item key="achievementSimple.notification.25" value="Бинго!"/>
+
+<item key="achievementSimple.name.27" value="САБОТАЖНИК!"/>
+<item key="achievementSimple.description.27" value="Солдаты в клетке? Им там самое место!"/>
+<item key="achievementSimple.notification.27" value="Ловушка захлопнулась!"/>
+
+<item key="achievementSimple.name.28" value="РИСК — УДЕЛ СМЕЛЫХ!"/>
+<item key="achievementSimple.description.28" value="Помогите Беркуту разминировать шлюз."/>
+<item key="achievementSimple.notification.28" value="Хорошо, что не черный провод..."/>
+
+<item key="achievementSimple.name.29" value="ТОЧКИ РАССТАВЛЯЮТ ПУЛЯМИ..."/>
+<item key="achievementSimple.description.29" value=""/>
+<item key="achievementSimple.notification.29" value="Разблокирован Кровавый финал!"/>
+
+<item key="achievementSimple.name.30" value="КРЕДО НАЁМНИКА"/>
+<item key="achievementSimple.description.30" value=""/>
+<item key="achievementSimple.notification.30" value="Разблокирован финал Наёмника!"/>
+
+<item key="achievementSimple.name.31" value="ПОСЛАНЕЦ ЗЛА"/>
+<item key="achievementSimple.description.31" value="Выйдите на контакт с Легионером."/>
+<item key="achievementSimple.notification.31" value="Объект готов!"/>
+
+<item key="achievementSimple.name.32" value="КРОВОЖАДНЫЙ"/>
+<item key="achievementSimple.description.32" value="Натравите Легионера на солдат."/>
+<item key="achievementSimple.notification.32" value="Свидетели долго не живут."/>
+
+<item key="achievementSimple.name.33" value="ВОЛК В ОВЕЧЬЕЙ ШКУРЕ"/>
+<item key="achievementSimple.description.33" value="Пусть Легионер атакует зомби."/>
+<item key="achievementSimple.notification.33" value="Убить всех!"/>
+
+<item key="achievementSimple.name.34" value="КОНТАКТЫ ПЕРВОЙ СТЕПЕНИ"/>
+<item key="achievementSimple.description.34" value=""/>
+<item key="achievementSimple.notification.34" value="Единицам выпала честь вести переговоры с новой формой разума, и Вы в их числе. Поздравляем!"/>
+
+<item key="achievementSimple.name.8" value="ВЕРНЫЙ ДРУГ"/>
+<item key="achievementSimple.description.8" value=""/>
+<item key="achievementSimple.notification.8" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.11" value="ТИРАН!"/>
+<item key="achievementSimple.description.11" value=""/>
+<item key="achievementSimple.notification.11" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.12" value="ПСИХОЛОГ-НЕДОУЧКА"/>
+<item key="achievementSimple.description.12" value=""/>
+<item key="achievementSimple.notification.12" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.13" value="ВНИМАТЕЛЬНЫЙ"/>
+<item key="achievementSimple.description.13" value=""/>
+<item key="achievementSimple.notification.13" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.16" value="ДЕТЕКТИВ"/>
+<item key="achievementSimple.description.16" value=""/>
+<item key="achievementSimple.notification.16" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.20" value="СЕРИЙНЫЙ УБИЙЦА"/>
+<item key="achievementSimple.description.20" value=""/>
+<item key="achievementSimple.notification.20" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.21" value="МАНЬЯК"/>
+<item key="achievementSimple.description.21" value=""/>
+<item key="achievementSimple.notification.21" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.22" value="КОЛЛЕКЦИОНЕР СМЕРТЕЙ"/>
+<item key="achievementSimple.description.22" value=""/>
+<item key="achievementSimple.notification.22" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.23" value="СКАУТ"/>
+<item key="achievementSimple.description.23" value=""/>
+<item key="achievementSimple.notification.23" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.24" value="МАСТЕР ЗАГАДОК"/>
+<item key="achievementSimple.description.24" value=""/>
+<item key="achievementSimple.notification.24" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.26" value="НАХОДКА ДЛЯ ШПИОНА"/>
+<item key="achievementSimple.description.26" value=""/>
+<item key="achievementSimple.notification.26" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.35" value="ДЕКОДЕР"/>
+<item key="achievementSimple.description.35" value=""/>
+<item key="achievementSimple.notification.35" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.36" value="ОПЛОТ"/>
+<item key="achievementSimple.description.36" value=""/>
+<item key="achievementSimple.notification.36" value="Вы активировали скрытое достижение!"/>
+<!------------------------------------------------ ACHIEVEMENTS ------------------------------------------------------------->
