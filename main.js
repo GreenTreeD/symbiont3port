@@ -317,7 +317,7 @@ function set_Proggres(Pizdec) {
         //console.log(item.id, child.id);
         istems.push(item.id);
         }
-        History[child.id]=istems;
+        History[(child.id-1)]=istems;
       }
       console.log(History);
     //Надо сделать ачивки
