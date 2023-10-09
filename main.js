@@ -256,14 +256,18 @@ function showhint(id) {
 }
 
 function save_Proggres(){
-
-  var data = Object.entries(History).map(([k,v])=>`${k}: ${v}`).join(', ')
+  const toXml = (data) => {
+    return data.reduce((result, el) => {
+     return result + `<trkpt lat="${el.lat}" lon="${el.lon}"><ele>${el.ele}</ele></trkpt>\n`
+    }, '')
+  };
+  var data = toXml(History);
   var file = new Blob([data],{ 
     type: 'plain/text'
   });
   var url = URL.createObjectURL(file);
   var a = document.createElement('a');
-  a.download = 'file.txt';
+  a.download = 'save.xml';
   a.href = url;
   a.click();
 
