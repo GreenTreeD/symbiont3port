@@ -314,14 +314,14 @@ function set_Proggres(Pizdec) {
       let istems =  new Array();
       for (item of child.children) {
         //console.log(item.id, child.id);
-        istems.push(item.id);
+        istems.push(parseInt(item.id, 10));
         }
         History[(child.id-1)]=istems;
       }
     
     for(const child of xmlDoc.getElementsByTagName("Achivement"))
     for(item of child.children){
-      Achivement.push(item.id);
+      Achivement.push(parseInt(item.id, 10));
     }
   };
 
