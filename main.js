@@ -285,5 +285,29 @@ function save_Proggres(){
   setTimeout(function() {
     URL.revokeObjectURL(url);
   }, 2000);
-   
+}
+
+function set_Proggres(Pizdec) {
+  History = [
+    [],
+    [],
+    []
+  ];
+
+  Achivement = [];
+  let file = document.getElementById("file-to-load").files[0];
+  let reader = new FileReader();
+  let parser = new DOMParser();
+
+  let xmltext = reader.readAsText(file);
+  xml = parser.parseFromString(xmltext, "text/html");
+  
+  for (const child of xml.children) {
+    console.log(child);
+  }
+  
+
+
+
+
 }
