@@ -254,3 +254,21 @@ function play(branch) {
 function showhint(id) {
 
 }
+
+function save_Proggres(){
+
+  var data = Object.entries(History).map(([k,v])=>`${k}: ${v}`).join(', ')
+  var file = new Blob([data],{ 
+    type: 'plain/text'
+  });
+  var url = URL.createObjectURL(file);
+  var a = document.createElement('a');
+  a.download = 'file.txt';
+  a.href = url;
+  a.click();
+
+  setTimeout(function() {
+    URL.revokeObjectURL(url);
+  }, 2000);
+   
+}
