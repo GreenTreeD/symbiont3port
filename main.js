@@ -311,7 +311,6 @@ function set_Proggres(Pizdec) {
     let xmlDoc = parser.parseFromString(reader.result, "text/xml");
     
     for (const child of xmlDoc.getElementsByTagName("root")){
-      console.log(History);
       let istems =  new Array();
       for (item of child.children) {
         //console.log(item.id, child.id);
@@ -319,8 +318,11 @@ function set_Proggres(Pizdec) {
         }
         History[(child.id-1)]=istems;
       }
-      console.log(History);
-    //Надо сделать ачивки
+    
+    for(const child of xmlDoc.getElementsByTagName("Achivement"))
+    for(item of child.children){
+      Achivement.push(item.id);
+    }
   };
 
   reader.onerror = function() {
