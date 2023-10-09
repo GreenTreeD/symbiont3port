@@ -8,6 +8,7 @@ History = [
   []
 ];
 
+Achivement = [];
 
 var xmlDoc = '';
 var tipsDoc = '';
@@ -257,11 +258,21 @@ function showhint(id) {
 
 function save_Proggres(){
   const toXml = (data) => {
+    var i = 0;
     return data.reduce((result, el) => {
-     return result + `<trkpt lat="${el.lat}" lon="${el.lon}"><ele>${el.ele}</ele></trkpt>\n`
-    }, '')
+      i++;
+     return result + `<root id="${i}">\n`+
+     el.reduce((result, item)=> 
+     {return result + `<item id="${item}" />\n`},'')+ 
+     `</root>\n`}, '')
   };
-  var data = toXml(History);
+
+
+  var data = '<save>\n<history>'+
+  toXml(History)+
+  '</history>\n<Achivment>'+
+  Achivement.reduce((result, el) => {return result+`<item id="${item}" />\n`},'') +
+  '</Achivment>\n</save>';
   var file = new Blob([data],{ 
     type: 'plain/text'
   });
