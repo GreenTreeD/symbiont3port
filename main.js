@@ -287,6 +287,10 @@ function save_Proggres(){
   }, 2000);
 }
 
+
+
+
+
 function set_Proggres(Pizdec) {
   History = [
     [],
@@ -298,16 +302,28 @@ function set_Proggres(Pizdec) {
   let file = document.getElementById("file-to-load").files[0];
   let reader = new FileReader();
   let parser = new DOMParser();
+  let xmltext;
 
-  let xmltext = reader.readAsText(file);
-  xml = parser.parseFromString(xmltext, "text/html");
-  
-  for (const child of xml.children) {
-    console.log(child);
-  }
-  
+  reader.readAsText(file);
 
+  reader.onload = function() {
 
+    let xmlDoc = parser.parseFromString(reader.result, "text/xml");
+    
+    for (const child of xmlDoc.getElementsByTagName("root")){
+      console.log(History);
+      let istems =  new Array();
+      for (item of child.children) {
+        //console.log(item.id, child.id);
+        istems.push(item.id);
+        }
+        History[child.id]=istems;
+      }
+      console.log(History);
+    //Надо сделать ачивки
+  };
 
-
+  reader.onerror = function() {
+    return;
+  };
 }
