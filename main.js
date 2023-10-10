@@ -267,16 +267,16 @@ function showhint(id) {
 
 }
 
+
 function save_Proggres(){
-}
   const toXml = (data) => {
     let i = 0;
     return data.reduce((result, el) => {
       i++;
      return result + `<root id="${i}">\n`+
      el.reduce((result, item)=> 
-     `</root>\n`}, '')
      {return result + `<item id="${item}" />\n`},'')+ 
+     `</root>\n`}, '')
   };
 
 
@@ -284,8 +284,8 @@ function save_Proggres(){
   toXml(History)+
   '</history>\n<Achivment>'+
   Achivement.reduce((result, el) => {return result+`<item id="${item}" />\n`},'') +
-  let file = new Blob([data],{ 
   '</Achivment>\n</save>';
+  let file = new Blob([data],{ 
     type: 'plain/text'
   });
   let url = URL.createObjectURL(file);
@@ -298,8 +298,8 @@ function save_Proggres(){
     URL.revokeObjectURL(url);
   }, 2000);
 }
-function set_Proggres(Pizdec) {
 
+function set_Proggres(Pizdec) {
   History = [
     [],
     [],
@@ -308,16 +308,16 @@ function set_Proggres(Pizdec) {
 
   Achivement = [];
   let file = document.getElementById("file-to-load").files[0];
-  let parser = new DOMParser();
   let reader = new FileReader();
+  let parser = new DOMParser();
   let xmltext;
-  reader.readAsText(file);
 
+  reader.readAsText(file);
 
   reader.onload = function() {
 
-    
     let xmlDoc = parser.parseFromString(reader.result, "text/xml");
+    
     for (const child of xmlDoc.getElementsByTagName("root")){
       let istems =  new Array();
       for (item of child.children) {
@@ -330,9 +330,10 @@ function set_Proggres(Pizdec) {
     for(const child of xmlDoc.getElementsByTagName("Achivement"))
     for(item of child.children){
       Achivement.push(parseInt(item.id, 10));
-  };
     }
+  };
 
   reader.onerror = function() {
     return;
   };
+}
