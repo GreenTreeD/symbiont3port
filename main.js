@@ -10,14 +10,14 @@ History = [
 
 Achivement = [];
 
-var xmlDoc = '';
+var xmlMainText = '';
 var tipsDoc = '';
 
 
 function start() {
-  var xhr1 = new XMLHttpRequest();
-  var xhr2 = new XMLHttpRequest();  
-  var parser = new DOMParser();
+  let xhr1 = new XMLHttpRequest();
+  let xhr2 = new XMLHttpRequest();  
+  let parser = new DOMParser();
 
 
   xhr1.open("GET",'text.xml');
@@ -27,8 +27,8 @@ function start() {
   xhr1.onload = function() {
     console.log("start");
     if (xhr1.response != 200) {
-      xmlDoc = parser.parseFromString(xhr1.response,"text/xml");
-      //console.log(xmlDoc);
+      xmlMainText = parser.parseFromString(xhr1.response,"text/xml");
+      //console.log(xmlMainText);
     }
   };
 
@@ -51,8 +51,8 @@ start();
 
 function rendermessage(elem) {
   
-  var b = Number(elem.getAttribute('roleId'));
-  var role;
+  let b = Number(elem.getAttribute('roleId'));
+  let role;
   switch (b) {
       case 1: {
         role = 'mc';
@@ -71,11 +71,11 @@ function rendermessage(elem) {
         break;
       }
     }
-  for (var i = 0; i < elem.attributes.length; i++) {
+  for (let i = 0; i < elem.attributes.length; i++) {
     
     switch (elem.attributes[i].name) {
       case 'ifVisited': {
-        var num = Number(elem.getAttribute("ifVisited"))-1;
+        let num = Number(elem.getAttribute("ifVisited"))-1;
 
         if (History[CurrentBranch].includes(num) == false) {
           //console.log(History[CurrentBranch].includes(num));
@@ -84,7 +84,7 @@ function rendermessage(elem) {
         break;
       }
       case 'ifNotVisited': {
-        var num = Number(elem.getAttribute("ifVisited"))-1;
+        let num = Number(elem.getAttribute("ifVisited"))-1;
         if (History[CurrentBranch].includes(num) == true) {
           //console.log(History[CurrentBranch].includes(num));
           return 0;
@@ -93,20 +93,20 @@ function rendermessage(elem) {
       }
     }
   }
-  var a = `<div class="message `+ role +`">`+elem.innerHTML+`</div>`;
+  let a = `<div class="message `+ role +`">`+elem.innerHTML+`</div>`;
   document.getElementById('container').innerHTML+= a;
   return elem.innerHTML.length;
 
 }
 
 function renderchoice(elem, a) {
-  var nextchpt = elem.childNodes[1].innerHTML;
-  var innertext = elem.childNodes[0].data;
-  for (var i = 0; i < elem.attributes.length; i++) {
+  let nextchpt = elem.childNodes[1].innerHTML;
+  let innertext = elem.childNodes[0].data;
+  for (let i = 0; i < elem.attributes.length; i++) {
     
     switch (elem.attributes[i].name) {
       case 'ifVisited': {
-        var num = Number(elem.getAttribute("ifVisited"))-1;
+        let num = Number(elem.getAttribute("ifVisited"))-1;
 
         if (History[CurrentBranch].includes(num) == false) {
           //console.log(History[CurrentBranch].includes(num));
@@ -115,7 +115,7 @@ function renderchoice(elem, a) {
         break;
       }
       case 'ifNotVisited': {
-        var num = Number(elem.getAttribute("ifVisited"))-1;
+        let num = Number(elem.getAttribute("ifVisited"))-1;
         if (History[CurrentBranch].includes(num) == true) {
           //console.log(History[CurrentBranch].includes(num));
           return '';
@@ -124,35 +124,35 @@ function renderchoice(elem, a) {
       }
     }
   }
-  var txt = `<div class="btn`+(a == 1 ? ' r' : '')+`" onclick="renderfrominput(`+(nextchpt-1)+', '+(a == 1 ? `'r'` : `'l'`)+`)" id='btn`+(a == 1 ? 'r' : 'l')+`'>`+ innertext +`</div>`;
+  let txt = `<div class="btn`+(a == 1 ? ' r' : '')+`" onclick="renderfrominput(`+(nextchpt-1)+', '+(a == 1 ? `'r'` : `'l'`)+`)" id='btn`+(a == 1 ? 'r' : 'l')+`'>`+ innertext +`</div>`;
   return txt;
 
 }
 
 function renderinactivechoice(buttonside, mode) {
 
-  var txt = `<div class="btn`+ (buttonside == 'r' ? ' r ' : ' ') + mode +`" >`+document.getElementById('btn'+buttonside).innerHTML+`</div>`;
+  let txt = `<div class="btn`+ (buttonside == 'r' ? ' r ' : ' ') + mode +`" >`+document.getElementById('btn'+buttonside).innerHTML+`</div>`;
   return txt;
 
 }
 
 function chapterrender(id) {
   History[CurrentBranch].push(Number(id));
-  var chapter = xmlDoc.getElementsByTagName("chapter")[id];
+  let chapter = xmlMainText.getElementsByTagName("chapter")[id];
   //console.log(chapter);
-  var choicerendered = 0;
+  let choicerendered = 0;
 
-  var i = 0;
-  var win = document.getElementById("container");
+  let i = 0;
+  let win = document.getElementById("container");
 
-  var timeset = 500;
+  let timeset = 500;
 
   document.getElementById('btnholder').innerHTML = `<div style="height:245px; display: flex; justify-content: center;align-items: center;"><img src="assets/gui/typingAnimation/animation.gif"></div>`;
   
   if (chapter.getAttribute('achievementSimple') != undefined) {
           document.getElementById('achievement').style.display = 'block';
-          var achid = chapter.getAttribute('achievementSimple');
-          var listl = tipsDoc.children[0].children[1];
+          let achid = chapter.getAttribute('achievementSimple');
+          let listl = tipsDoc.children[0].children[1];
           achid = listl.querySelector("[id='"+achid+"']");
 
           document.getElementById('achievement_notification').innerHTML = achid.getAttribute("notification");
@@ -166,7 +166,7 @@ function chapterrender(id) {
   function myLoop () {
 
     setTimeout(function () {
-      var tmp = Speed[0]*rendermessage(chapter.children[i]);
+      let tmp = Speed[0]*rendermessage(chapter.children[i]);
 
       timeset = (tmp > Speed[1]) ? tmp : Speed[1];
       //console.log(timeset);
@@ -183,7 +183,7 @@ function chapterrender(id) {
         else {
           document.getElementById('hint').style.display = 'none';
         }
-        var txt;
+        let txt;
         document.getElementById("btnholder").innerHTML = '';
         for (i; i < chapter.children.length; i++)
           {
@@ -198,7 +198,7 @@ function chapterrender(id) {
             if (txt != '') {
               //console.log(txt);
               if (txt.indexOf("Автопереход") != -1) {
-                var nn = txt.slice(txt.indexOf('onclick="renderfrominput(')+25,txt.indexOf(',', txt.indexOf('onclick="renderfrominput(')+25));
+                let nn = txt.slice(txt.indexOf('onclick="renderfrominput(')+25,txt.indexOf(',', txt.indexOf('onclick="renderfrominput(')+25));
                 chapterrender(nn);
                 return ;
                 //console.log("meow");
@@ -221,7 +221,7 @@ function chapterrender(id) {
 }
 
 function renderfrominput(nextchpt,buttonside) {
-  var txt = `<div style="text-align: center;" class="btnhl">`;
+  let txt = `<div style="text-align: center;" class="btnhl">`;
   txt+=renderinactivechoice(buttonside, 'active');
   txt+=renderinactivechoice((buttonside == 'r' ? 'l' : 'r'), 'passive');
   txt+=`</div>`;
@@ -229,10 +229,21 @@ function renderfrominput(nextchpt,buttonside) {
   chapterrender(nextchpt);
 }
 
+function instantrender(routeid) {
+  for (let i = 0; i < History[routeid].length; i++) {
+    let chapter = xmlMainText.getElementsByTagName("chapter")[id];
+    for (let j = 0; j < chapter.getElementsByTagName('message').length; j++) {
+
+    }
+
+    
+  }
+}
+
 function f(argument) {
-      var a = window.innerHeight;
-      var b = a - document.getElementById("header").offsetHeight - 40;
-      var style = document.head.lastElementChild;
+      let a = window.innerHeight;
+      let b = a - document.getElementById("header").offsetHeight - 40;
+      let style = document.head.lastElementChild;
       style.innerHTML = `#outtercountainer { height: `+ b + `px;}`
 
     }
@@ -257,27 +268,28 @@ function showhint(id) {
 }
 
 function save_Proggres(){
+}
   const toXml = (data) => {
-    var i = 0;
+    let i = 0;
     return data.reduce((result, el) => {
       i++;
      return result + `<root id="${i}">\n`+
      el.reduce((result, item)=> 
-     {return result + `<item id="${item}" />\n`},'')+ 
      `</root>\n`}, '')
+     {return result + `<item id="${item}" />\n`},'')+ 
   };
 
 
-  var data = '<save>\n<history>'+
+  let data = '<save>\n<history>'+
   toXml(History)+
   '</history>\n<Achivment>'+
   Achivement.reduce((result, el) => {return result+`<item id="${item}" />\n`},'') +
+  let file = new Blob([data],{ 
   '</Achivment>\n</save>';
-  var file = new Blob([data],{ 
     type: 'plain/text'
   });
-  var url = URL.createObjectURL(file);
-  var a = document.createElement('a');
+  let url = URL.createObjectURL(file);
+  let a = document.createElement('a');
   a.download = 'save.xml';
   a.href = url;
   a.click();
@@ -286,12 +298,8 @@ function save_Proggres(){
     URL.revokeObjectURL(url);
   }, 2000);
 }
-
-
-
-
-
 function set_Proggres(Pizdec) {
+
   History = [
     [],
     [],
@@ -300,16 +308,16 @@ function set_Proggres(Pizdec) {
 
   Achivement = [];
   let file = document.getElementById("file-to-load").files[0];
-  let reader = new FileReader();
   let parser = new DOMParser();
+  let reader = new FileReader();
   let xmltext;
-
   reader.readAsText(file);
+
 
   reader.onload = function() {
 
-    let xmlDoc = parser.parseFromString(reader.result, "text/xml");
     
+    let xmlDoc = parser.parseFromString(reader.result, "text/xml");
     for (const child of xmlDoc.getElementsByTagName("root")){
       let istems =  new Array();
       for (item of child.children) {
@@ -322,10 +330,9 @@ function set_Proggres(Pizdec) {
     for(const child of xmlDoc.getElementsByTagName("Achivement"))
     for(item of child.children){
       Achivement.push(parseInt(item.id, 10));
-    }
   };
+    }
 
   reader.onerror = function() {
     return;
   };
-}
