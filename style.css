@@ -113,6 +113,20 @@ body {
 	float: right;
 }
 
+.contentscell {
+	background-color: #252525;
+    font-family: 'Scada', sans-serif;
+    text-align: left;
+    padding: 49px;
+    padding-left: 81px;
+    padding-right: 30px;
+    border-bottom: 4px solid #1F2123;
+    border-top: 2px solid #4b4c54;
+    /* height: 100px; */
+    display: flex;
+    color: white;
+}
+
 @media (min-width: 854px) {
 	#main {
 		width: 100%;

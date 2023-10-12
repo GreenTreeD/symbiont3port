@@ -230,9 +230,13 @@ function renderfrominput(nextchpt,buttonside) {
 }
 
 function instantrender(routeid) {
-  let choicerendered = 0;
+
   CurrentBranch = routeid;
   document.getElementById("container").innerHTML = '';
+  document.getElementById('menu').style.display = 'none';
+  document.getElementById('game').style.display = 'block';
+  f();
+
   for (let i = 0; i < History[routeid].length-1; i++) {
     let chapter = xmlMainText.getElementsByTagName("chapter")[History[routeid][i]];
     for (let j = 0; j < chapter.getElementsByTagName('message').length; j++) {
@@ -255,6 +259,10 @@ function instantrender(routeid) {
     
   }
 
+  let lastchpt = History[routeid].pop();
+
+  document.getElementById('outtercountainer').scrollTop = document.getElementById('outtercountainer').scrollHeight;
+  chapterrender(lastchpt);
 
   function choice(elem, a, CHOSEN) {
     let nextchpt = elem.childNodes[1].innerHTML;
@@ -305,8 +313,22 @@ function play(branch) {
   CurrentBranch = branch;
   document.getElementById('container').innerHTML = '';
   switch(branch) {
-    case 0: {chapterrender(0); break;}
-    case 1: {chapterrender(2262); break;}
+    case 0: {
+      if (History[CurrentBranch].length == 0){
+        chapterrender(0);
+      }
+        else {
+          instantrender(CurrentBranch);
+        }
+      break;}
+    case 1: {
+      if (History[CurrentBranch].length == 0){
+        chapterrender(2262);
+      }
+        else {
+          instantrender(CurrentBranch);
+        }
+      break;}
   }
   document.getElementById('menu').style.display = 'none';
   document.getElementById('game').style.display = 'block';
@@ -349,7 +371,7 @@ function save_Proggres(){
   }, 2000);
 }
 
-function set_Proggres(Pizdec) {
+function set_Proggres() {
   History = [
     [],
     [],
