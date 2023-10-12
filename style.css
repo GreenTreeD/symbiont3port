@@ -1,3 +1,8 @@
+button, input, html {
+	font-size: 1em;
+}
+
+
 body {
 	background-color: #222222;
 	display:flex;

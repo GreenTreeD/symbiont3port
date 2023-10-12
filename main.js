@@ -230,15 +230,65 @@ function renderfrominput(nextchpt,buttonside) {
 }
 
 function instantrender(routeid) {
-  for (let i = 0; i < History[routeid].length; i++) {
-    let chapter = xmlMainText.getElementsByTagName("chapter")[id];
+  let choicerendered = 0;
+  CurrentBranch = routeid;
+  document.getElementById("container").innerHTML = '';
+  for (let i = 0; i < History[routeid].length-1; i++) {
+    let chapter = xmlMainText.getElementsByTagName("chapter")[History[routeid][i]];
     for (let j = 0; j < chapter.getElementsByTagName('message').length; j++) {
-
+      rendermessage(chapter.children[j]);
     }
-
+    let vis = 0;
+    let nextchpt = History[routeid][i+1];
+    let choices = chapter.getElementsByTagName('choice');
+    let txt = '';
+    for (let j = 0; j < choices.length; j++) {
+      txt+=choice(choices[j], vis, nextchpt);
+      if(txt != '') {
+        vis = 1;
+      }
+      
+    }
+    if (txt != '') {
+      document.getElementById("container").innerHTML+= '<div style="text-align: center;" class="btnhl">'+txt+'</div>';
+    }
     
   }
-}
+
+
+  function choice(elem, a, CHOSEN) {
+    let nextchpt = elem.childNodes[1].innerHTML;
+    let innertext = elem.childNodes[0].data;
+    
+    if (innertext == "Автопереход.") {
+      return '';
+    }
+    for (let i = 0; i < elem.attributes.length; i++) {
+      
+      switch (elem.attributes[i].name) {
+        case 'ifVisited': {
+          let num = Number(elem.getAttribute("ifVisited"))-1;
+
+          if (History[routeid].includes(num) == false) {
+            //console.log(History[CurrentBranch].includes(num));
+            return '';
+          }
+          break;
+        }
+        case 'ifNotVisited': {
+          let num = Number(elem.getAttribute("ifVisited"))-1;
+          if (History[routeid].includes(num) == true) {
+            //console.log(History[CurrentBranch].includes(num));
+            return '';
+          }
+          break;
+        }
+      }
+    }
+    let txt = `<div class="btn`+(a == 1 ? ' r ' : ' ')+(Number(CHOSEN) == Number(nextchpt)-1 ? ' active' : ' passive')+`" '>`+ innertext +`</div>`;
+    return txt;
+    }
+  }
 
 function f(argument) {
       let a = window.innerHeight;
