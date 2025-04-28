@@ -1,0 +1,23 @@
+<div class="content-block game-menu">
+    <a href="{{url_for('game.gameachivements', gamename=gamename)}}">&nbsp;</a>
+    <a href="{{url_for('game.gameachivements', gamename=gamename)}}">&nbsp;</a>
+    <a href="{{url_for('gamesettings')}}">&nbsp;</a>
+    <a href="{{url_for('main_menu')}}">&nbsp;</a>
+</div>
+<div class="text_container" id="outer_text_container">
+    <div id="text_container">
+    </div>
+</div>
+
+<script type="text/javascript">
+
+
+    fetchData('S3/localizations/text.xml')
+    .then(data => {
+        xmlMainText = data;  // Должен быть объект XML
+        chapterrender(1);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+</script>

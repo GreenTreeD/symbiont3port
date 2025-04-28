@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<items>
+    <achievement id="1" value="СТАРЫЙ ДРУГ" description="Начните сюжетную кампанию Соболева." notification="Он вернулся!" />
+    <achievement id="2" value="РЕШИТЕЛЬНЫЙ" description="Начните сюжетную кампанию Беркута." notification="К бою готов!" />
+    <achievement id="3" value="ОДИН В ТЕМНОТЕ" description="Войдите в Отдел зоологов без света." notification="Они где-то рядом..." />
+    <achievement id="4" value="НЕСУЩИЙ СВЕТ" description="Войдите в Отдел зоологов с фонарем." notification="Луч света — луч надежды?" />
+    <achievement id="5" value="МАРОДЕР" description="Заберите из схрона рычаг и карту тоннелей." notification="И это тоже пригодится!" />
+    <achievement id="6" value="КОРМИЛЕЦ" description="Отыщите кусок филе и покормите... зомби!" notification="Ням-ням!" />
+    <achievement id="7" value="Н — ЗНАЧИТ НЕЙРОБИОЛОГ!" description="Стравите Стражей-пауков." notification="Пусть победит сильнейший!" />
+        <achievement id="8" value="ВЕРНЫЙ ДРУГ" description="" notification="Вы активировали скрытое достижение!" />
+    <achievement id="9" value="ЛЖЕЦ, ЛЖЕЦ" description="Не доверяйте никому, тем более аг..." notification="Т-с-с!" />
+    <achievement id="10" value="ПРОПАГАНДИСТ" description="Завербуйте агента корпорации." notification="Правда — это оружие." />
+        <achievement id="11" value="ТИРАН!" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="12" value="ПСИХОЛОГ-НЕДОУЧКА" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="13" value="ВНИМАТЕЛЬНЫЙ" description="" notification="Вы активировали скрытое достижение!" />
+    <achievement id="14" value="ЗНАТОК ТОННЕЛЕЙ" description="Пройдите лабиринт с картой." notification="И никаких больше развилок!" />
+    <achievement id="15" value="ВНЕЗАПНЫЙ СОЮЗНИК" description="Мутант на страже добра?!" notification="Эт-то б-было... неожиданно!" />
+        <achievement id="16" value="ДЕТЕКТИВ" description="" notification="Вы активировали скрытое достижение!" />
+    <achievement id="17" value="ДОБРОЕ СЕРДЦЕ" description="Оборвите мучения Одинокого стрелка." notification="Было тяжело, но вы справились..." />
+    <achievement id="18" value="ЗАГНАННЫЙ ЗВЕРЬ" description="" notification="Разблокирован финал Террора!" />
+    <achievement id="19" value="МЕТАМОРФ" description="" notification="Разблокирован финал Откровения!" />
+        <achievement id="20" value="СЕРИЙНЫЙ УБИЙЦА" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="21" value="МАНЬЯК" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="22" value="КОЛЛЕКЦИОНЕР СМЕРТЕЙ" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="23" value="СКАУТ" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="24" value="МАСТЕР ЗАГАДОК" description="" notification="Вы активировали скрытое достижение!" />
+    <achievement id="25" value="ТИК-ТАК!" description="Помогите Беркуту отыскать будильник." notification="Бинго!" />
+        <achievement id="26" value="НАХОДКА ДЛЯ ШПИОНА" description="" notification="Вы активировали скрытое достижение!" />
+    <achievement id="27" value="САБОТАЖНИК!" description="Солдаты в клетке? Им там самое место!" notification="Ловушка захлопнулась!" />
+    <achievement id="28" value="РИСК — УДЕЛ СМЕЛЫХ!" description="Помогите Беркуту разминировать шлюз." notification="Хорошо, что не черный провод..." />
+    <achievement id="29" value="ТОЧКИ РАССТАВЛЯЮТ ПУЛЯМИ..." description="" notification="Разблокирован Кровавый финал!" />
+    <achievement id="30" value="КРЕДО НАЁМНИКА" description="" notification="Разблокирован финал Наёмника!" />
+    <achievement id="31" value="ПОСЛАНЕЦ ЗЛА" description="Выйдите на контакт с Легионером." notification="Объект готов!" />
+    <achievement id="32" value="КРОВОЖАДНЫЙ" description="Натравите Легионера на солдат." notification="Свидетели долго не живут." />
+    <achievement id="33" value="ВОЛК В ОВЕЧЬЕЙ ШКУРЕ" description="Пусть Легионер атакует зомби." notification="Убить всех!" />
+    <achievement id="34" value="КОНТАКТЫ ПЕРВОЙ СТЕПЕНИ" description="" notification="Единицам выпала честь вести переговоры с новой формой разума, и Вы в их числе. Поздравляем!" />
+        <achievement id="35" value="ДЕКОДЕР" description="" notification="Вы активировали скрытое достижение!" />
+        <achievement id="36" value="ОПЛОТ" description="" notification="Вы активировали скрытое достижение!" />
+</items>

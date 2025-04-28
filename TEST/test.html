@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная страница</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> 
+        /* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+body, html {
+    background-color: #222222;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Контейнер */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+    height: 80%;
+    max-width: 800px;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+
+/* На мобильных устройствах контейнер занимает весь экран */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+/* На ПК контейнер имеет ширину до 800px и занимает всю высоту экрана */
+@media (min-width: 769px) {
+    .container {
+        width: 100%;
+        max-width: 500px;
+        height: 100vh;
+        margin: 0 auto;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <!-- Здесь будет отображаться текст -->
+        </div>
+        <button id="scrollDownBtn">Вниз</button>
+    </div>
+</body>
+<script type="text/javascript">
+// Получаем элементы
+const content = document.getElementById('content');
+const scrollDownBtn = document.getElementById('scrollDownBtn');
+
+// Флаг для отслеживания, находимся ли мы внизу
+let isAtBottom = true;
+
+// Функция для добавления текста
+function addText() {
+    const newText = document.createElement('p');
+    newText.textContent = `Новый текст в ${new Date().toLocaleTimeString()}`;
+    content.appendChild(newText);
+
+    // Если мы внизу, прокручиваем вниз
+    if (isAtBottom) {
+        content.scrollTop = content.scrollHeight;
+    }
+}
+
+// Функция для проверки, находимся ли мы внизу
+function checkIfAtBottom() {
+    const scrollPosition = content.scrollTop;
+    const scrollHeight = content.scrollHeight;
+    const clientHeight = content.clientHeight;
+    isAtBottom = clientHeight  >= scrollHeight - Math.ceil(scrollPosition);
+    console.log(Math.ceil(scrollPosition), scrollHeight, clientHeight);
+}
+
+// Обработчик события прокрутки
+content.addEventListener('scroll', () => {
+    checkIfAtBottom();
+});
+
+// Кнопка для принудительной прокрутки вниз
+scrollDownBtn.addEventListener('click', () => {
+    content.scrollTop = content.scrollHeight;
+    isAtBottom = true; // После прокрутки вниз возобновляем автопрокрутку
+});
+
+// Пример добавления текста каждые 2 секунды
+setInterval(addText, 300);
+    
+</script>
+</html>
