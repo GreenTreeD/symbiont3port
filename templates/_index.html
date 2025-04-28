@@ -1,0 +1,93 @@
+<!DOCTYPE html >
+<html manifest="a.cache">
+<head>
+	<meta charset="utf-8">
+
+	<title>Симбионт 3</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Scada&display=swap" rel="stylesheet">
+	<style> </style>
+</head>
+<body>
+	<div id='main'>
+		<div id='menu' style="display: block;">
+			<div onclick="play(0)"><img src="assets/gui/branch/sobolev-active.png" style="width: 100%"></div>
+			
+			<div onclick="play(1)"><img src="assets/gui/branch/bercut-active.png" style="width: 100%"></div>
+
+			<div><button onclick='save_Proggres()'>Save</button></div>
+
+			<div><input type="file" id="file-to-load"/><button onclick='set_Proggres()'>Load Save</button></div>
+
+		</div>
+		<div id='game' style="display: none;">
+			<div class="header" id="header">
+				<!--<img src="assets/gui/buttonMarker.png" style="height:110%" onclick="document.getElementById('oglav').style.display = 'block';document.getElementById('game').style.display = 'none';" />-->
+			</div>
+			<div style="height:20px"></div>
+			<div id='outtercountainer' style="overflow-y: scroll; overflow-x: hidden;">
+				<div id="container">
+				</div>
+			<div id="btnholder" style="text-align: center;" class="btnhl">
+				<div style="height:245px; display: flex; justify-content: center;align-items: center;"><img src="assets/gui/typingAnimation/animation.gif"></div>
+			</div>
+
+			
+			<div id='hint' style="position: absolute;display: none;bottom: -7px;left: calc(50% - 65px);transform: scale(1.4);"><img src="assets/gui/hint-1.png" ></div>
+			
+			</div>
+			
+		</div>
+
+
+		<div id='contents' style="display: none;">
+			<div class="header">
+				<span style="font-family: 'Scada', sans-serif; font-size: 2em; color: #cfcfcf; padding-left: 1em">Главы</span>
+			</div>
+			<div style="height:20px"></div>
+			<div id="contentscontainer">
+				<div class="contentscell">Глава 1</div>
+				<div class="contentscell">Глава 2</div>
+				<div class="contentscell">Глава 3</div>
+				<div class="contentscell">Глава 4</div>
+			</div>
+			
+		</div>
+
+		<div style="display: none; ">
+			<div style="padding: 10px;">
+				<div class="header">
+					<div style="font-family: 'Scada', sans-serif; font-size: 1.4em; color: #cfcfcf; padding: 0.5em">Скрытый канал</div>
+				</div>
+				<div style="height:20px"></div>
+				<div id='hinttext'>
+
+				</div>
+			</div>
+
+		</div>
+			
+	</div>
+
+		
+
+		<div id="achievement" style="position: absolute; background-color: ; top: calc(50% - 570px); left: calc(50% - 250px); width: 500px; display: none;" onclick="document.getElementById('achievement').style.display = 'none';">
+			<div style="height: 265px;background-color:"><img src="assets/gui/achievements/1.png" id='achievement_pic'></div>
+			<div style="height: 700px;background-color:#131313;">
+				<div style="padding-top: 313px; text-align: center;">
+					<div id="achievement_notification">Он вернулся!</div>
+					<div id="achievement_name">СТАРЫЙ ДРУГ</div>
+					<div id="achievement_desc">Достижение открыто</div>
+				</div>
+				<img src="assets/gui/achievements/down.png" style="position: absolute; bottom: -175px">
+
+			</div>
+		</div>
+
+
+	<script src="main.js"></script>
+</body>
+</html>

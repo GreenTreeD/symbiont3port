@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "sound": "on",
+    "music": "on",
+    "speed": "75",
+    "hints": "on"
+  },
+  "symbiont0": {
+    "history": [],
+    "historyVisible": [],
+    "words": [],
+    "achievements": []
+  },
+  "symbiont1": {
+    "history": [],
+    "historyVisible": [],
+    "words": [],
+    "achievements": []
+  },
+  "symbiont2": {
+    "history": [],
+    "historyVisible": [],
+    "words": [],
+    "achievements": []
+  },
+  "symbiont3_1": {
+    "history": [],
+    "historyVisible": [],
+    "words": [],
+    "achievements": []
+  },
+  "symbiont3_2": {
+    "history": [],
+    "historyVisible": [],
+    "words": [],
+    "achievements": []
+  },
+  "symbiont3_3": {
+    "history": [],
+    "historyVisible": [],
+    "words": [],
+    "achievements": []
+  }
+}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{gamename}}{% endblock %}
+
+{% block content %}
+<div id="gameMain">
+    {% include "game_main.html" %}
+</div>
+<div id="achievements" style="display:none;">
+    {% include "achievements.html" %}
+</div>
+<div id="chapters" style="display:none;">
+    {% include "chapters.html" %}
+</div>
+<div id="settingsGame" style="display:none;">
+    {% include "settings.html" %}
+</div>
+
+<script>
+
+</script>
+{% endblock %}

@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'Scada';
+    src: url('Scada-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+	background-color: #222222;
+	font-size: 20px;
+	text-size-adjust: none;
+	overflow: hidden;
+	margin: 0px;
+	font-family: 'Scada', sans-serif;
+	box-sizing: border-box;
+}
+
+
+#main {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+#gamegif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gamegif > img {
+    transform: scale(0.4);
+}
+
+.move::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    z-index: 10;
+    height: 61px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background: linear-gradient(180deg, #ffffff00 0%, #36568e4a 100%);
+}
+
+
+.content-block {
+    position: relative;
+    background-color: #323232; /* Цвет фона div */
+    padding: 30px;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.content-block::before,
+.content-block::after,
+.btnhl::before,
+.btnhl::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px; /* Высота полос */
+}
+
+.content-block::before, .btnhl::before {
+    height: 2px;
+    bottom: 1px; /* Первая полоса */
+    background-color: #3f3f3f; /* Цвет первой полосы */
+}
+
+.content-block::after, .btnhl::after {
+    bottom: 0; /* Вторая полоса */
+    background-color: #282828; /* Цвет второй полосы */
+}
+
+.game-menu {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.game-menu .btn_a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px 70px;
+}
+
+.game-menu::before {
+    display: block;
+    content: " ";
+    position: absolute;
+    z-index: 10;
+    height: 60px;
+    bottom: -60px;
+    left: 0px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(243, 208, 186, 0.0069906624759278335) 0%, rgb(29 29 29 / 60%) 100%);
+}
+
+.marker { background-image: url("assets/gui/marker.svg"); }
+.ach { background-image: url('assets/gui/ach.svg'); }
+.settings { background-image: url('assets/gui/settings.svg'); }
+.menuInGame { background-image: url('assets/gui/menuInGame.svg'); }
+.closeBlock { background-image: url('assets/gui/close.svg'); }
+
+.text_container {
+    width: 100%;
+    height: calc(100vh - 100px - 20px);
+    max-width: 800px;
+    overflow-y: auto;
+    flex-grow: 1;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.text_container::-webkit-scrollbar {
+  display: none;
+}
+
+
+#scrollDownBtn {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    background-image: url("assets/gui/down.svg");
+    height: 100px;
+    width: 100px;
+    z-index: 11;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: none;
+    transition: display 0.4s;
+}
+
+@media only screen and (max-width: 995px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 460px) {
+  #main {
+    width: calc(100% - 20px);
+    height: calc(100vh - 20px);
+    margin: 10px;
+  }
+  .game-menu {
+        padding: 15px 25px;
+  }
+  .text_container {
+      height: calc(100vh - 70px - 20px);
+  }
+}
+
+@media (min-width: 460px) {
+  #main {
+    width: 100%;
+    max-width: 600px;          /* Максимальная ширина 800px */
+    height: calc(100vh - 20px);             /* Полная высота экрана */
+    margin: 10px auto;            /* Центрируем по горизонтали */
+  }
+}
+
+
+.header {
+	height: 3em;
+	background-color: #252525;
+}
+
+.mainicon {
+	position: absolute;
+	height: 33%;
+}
+
+.message {
+	background-color: #252525; 
+	font-family: 'Scada', sans-serif;
+	text-align: left; 
+	padding-left: 30px;
+	padding-right: 30px; 
+	border-bottom: 4px solid #1F2123;
+	border-top: 2px solid #4b4c54;
+	height: 290px;
+	display: flex;
+    align-items: center;     /*Центрирование по вертикали */
+}
+.mc {
+	color: #cfcfcf;
+}
+
+.sys { color: #529245;
+}
+
+.sc1 {
+	color: #cdbb6a;
+}
+
+.sc2 {
+    color: #c25159;
+}
+
+.btn {
+    box-sizing: border-box;
+    display: flex;
+    background: rgb(168,215,245);
+    background: linear-gradient(0deg, rgba(168,215,245,1) 0%, rgba(227,232,235,1) 100%);
+    border-bottom: 7px solid #3D7EAA;
+    border-radius: 10px;
+    padding: 20px;
+    color: #050C16;
+    font-family: 'Scada', sans-serif;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+}
+
+.active {
+	background: rgb(8,89,155);
+	background: linear-gradient(0deg, rgba(8,89,155,1) 0%, rgba(49,134,197,1) 100%);
+	border-bottom: 7px solid #3B77C0;
+	color: #c0e4fc;
+
+}
+
+.passive {
+	background: rgb(53,57,60);
+	background: linear-gradient(0deg, rgba(53,57,60,1) 0%, rgba(27,35,38,1) 100%);
+	border-bottom: 7px solid #282C31;
+	color: #55585e;
+}
+
+.btnhl {
+    padding: 20px;
+    height: 120px;
+    background: rgb(42,42,42);
+    background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(28,29,31,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+}
+
+
+.contentscell {
+	background-color: #252525;
+    font-family: 'Scada', sans-serif;
+    text-align: left;
+    padding: 49px;
+    padding-left: 81px;
+    padding-right: 30px;
+    border-bottom: 4px solid #1F2123;
+    border-top: 2px solid #4b4c54;
+    /* height: 100px; */
+    display: flex;
+    color: white;
+}
+
+
+
+#achievement_notification {
+	font-family: 'Scada', sans-serif;
+	color: #b9bcbf;
+    padding: 30px;
+    font-size: 0.9em;
+
+}
+
+#achievement_name {
+	font-family: 'Scada', sans-serif;
+	color: #dde0e2;
+    padding: 50px 0 40px 0;
+    font-size: 1.4em;
+}
+#achievement_desc {
+	font-family: 'Scada', sans-serif;
+	color: #dde0e2;
+    padding: 50px 0;
+    font-size: 0.8em;
+}

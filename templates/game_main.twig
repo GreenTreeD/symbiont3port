@@ -1,0 +1,28 @@
+<div class="content-block game-menu">
+    <a class="btn_a marker" onclick="displayBlock('chapters')">&nbsp;</a>
+    <a class="btn_a ach" href="{{url_for('game.gameachivements', gamename=gamename)}}">&nbsp;</a>
+    <a class="btn_a settings" href="{{url_for('gamesettings')}}">&nbsp;</a>
+    <a class="btn_a menuInGame" href="{{url_for('main_menu')}}">&nbsp;</a>
+</div>
+<div class="text_container" id="outer_text_container">
+    <div class="" id="text_container">
+    </div>
+    <div class="btnhl" id="btnholder">
+        <div id="gamegif"><img src="../static/assets/gui/gui/animation.gif"></div>
+    </div>
+</div>
+
+<div id="scrollDownBtn"></div>
+
+<script src="../static/assets/js/game.js"></script>
+<script type="text/javascript">
+    speed = 20;
+    fetchData('S3/localizations/text.xml')
+    .then(data => {
+        xmlMainText = data;  // Должен быть объект XML
+        chapterrender(1);
+    })
+    .catch(error => {
+        console.log(error);
+    });
+</script>
