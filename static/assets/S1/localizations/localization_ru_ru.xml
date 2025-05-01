@@ -1,0 +1,367 @@
+﻿<!------------------------------------------------ MENU ------------------------------------------------------------->
+<item key="menu.play" value="Начать игру"/>
+<item key="menu.continue" value="Продолжить игру"/>
+<item key="menu.restart" value="Начать игру заново"/>
+<item key="menu.otherGames" value="Другие книги-игры"/>
+<item key="menu.rate" value="Мы пишем продолжение игры, оцените наш труд"/>
+<item key="menu.authors" value="Авторы"/>
+<item key="menu.vk" value="Прохождение, секреты,&#x0A;новости в группе VK"/>
+
+<item key="menu.otherGames.installed" value="Оценить"/>
+<item key="menu.otherGames.not_installed" value="Установить"/>
+
+<item key="menu.otherGames.series.symbiont" value="Цикл «Симбионт»"/>
+<item key="menu.otherGames.series.others" value="Другие игры"/>
+
+<item key="menu.otherGames.symbiont0.label" value="Симбионт 0"/>
+<item key="menu.otherGames.symbiont0.desc" value="Предыстория"/>
+<item key="menu.otherGames.symbiont0.price" value="Рейтинг: 4.9"/>
+
+<item key="menu.otherGames.symbiont1.label" value="Симбионт 1"/>
+<item key="menu.otherGames.symbiont1.desc" value="Наедине с кошмаром"/>
+<item key="menu.otherGames.symbiont1.price" value="Рейтинг: 4.8"/>
+
+<item key="menu.otherGames.symbiont2.label" value="Симбионт 2"/>
+<item key="menu.otherGames.symbiont2.desc" value="Миссия бесчеловечна"/>
+<item key="menu.otherGames.symbiont2.price" value="Рейтинг 4.8"/>
+
+<item key="menu.otherGames.symbiont3.label" value="Симбионт 3"/>
+<item key="menu.otherGames.symbiont3.desc" value="Проект Метаморф"/>
+<item key="menu.otherGames.symbiont3.price" value="Рейтинг 4.9"/>
+
+<item key="menu.otherGames.dungeons.label" value="Подземелья"/>
+<item key="menu.otherGames.dungeons.desc" value="Легендарная книга-игра"/>
+<item key="menu.otherGames.dungeons.price" value="Рейтинг 4.6"/>
+
+<item key="menu.otherGames.tardion.label" value="Тардион"/>
+<item key="menu.otherGames.tardion.desc" value="Межгалактический сигнал"/>
+<item key="menu.otherGames.tardion.price" value="Рейтинг 4.8"/>
+
+<item key="menu.otherGames.in_progress" value="Сейчас мы работаем над этой игрой! О выходе игры мы сообщим facebook.com/symbiontgames &#x0A; &#x0A;Спасибо за интерес!"/>
+
+<item key="menu.authors.1" value="Symbiont Games"/>
+<item key="menu.authors.2" value="Сюжет"/>
+<item key="menu.authors.3" value="Николай Трой"/>
+<item key="menu.authors.4" value="Разработка"/>
+<item key="menu.authors.5" value="Антон Бажанов"/>
+<item key="menu.authors.6" value="Виталий Островский"/>
+<item key="menu.authors.7" value="Дизайн"/>
+<item key="menu.authors.8" value="Владимир Яфет"/>
+<item key="menu.authors.others_thanks" value="Студия благодарит героев,&#x0A;которые поддерживали проект не только словом, но и делом:"/>
+<item key="menu.authors.others" value="Композиция «Massive Attack» принадлежит композитору Владимиру Шайкину. Лицензия: Music Broadcast One Million.&#x0A; &#x0A;Icon: Streamline — Webalys, Material Core — Google.&#x0A; &#x0A;Спасибо, что Вы с нами!&#x0A; &#x0A;Команда «SYMBIONT GAMES»&#x0A; &#x0A;Мы делаем игры — &#x0A; критерий цивилизованности."/>
+
+<item key="menu.authors.donate" value="Хотите имя в Титрах игры и Ранний доступ? Поддержите выпуск новых игр через пожертвования на symbiontgames.ru"/>
+
+<item key="menu.restart.text" value="Начать игру заново? &#x0A; Прогресс игры будет утерян."/>
+<item key="menu.restart.confirm" value="Начать заново"/>
+<item key="menu.restart.cancel" value="Я погорячился"/>
+
+<item key="menu.lang.header" value="Изменить язык?"/>
+<item key="menu.lang.en" value="English"/>
+<item key="menu.lang.ru" value="Русский"/>
+
+<item key="menu.tips.header" value="Скрытый канал"/>
+<item key="menu.tips.desc.off" value="Ваше устройство обнаружило зашифрованное послание"/>
+<item key="menu.tips.desc.on" value="Послание #/* успешно декодировано!"/>
+<item key="menu.tips.available" value="Доступно: "/>
+<item key="menu.tips.open" value="Декодировать"/>
+<item key="menu.tips.purchase.desc" value="У вас закончились декодеры, необходимо их обновить:"/>
+<item key="tips.one" value="декодер"/>
+<item key="tips.three" value="декодера"/>
+<item key="tips.ten" value="декодеров"/>
+<item key="tips.waiting" value="Транзакция выполняется..."/>
+
+<item key="menu.settings.header" value="Настройки"/>
+<item key="menu.settings.sound" value="Звуки"/>
+<item key="menu.settings.music" value="Музыка"/>
+<item key="menu.settings.speed" value="Скорость игры"/>
+<item key="menu.settings.tips" value="Подсказки"/>
+<item key="menu.settings.restart" value="Начать игру заново"/>
+<item key="menu.settings.language" value="English, please"/>
+<item key="menu.settings.restore" value="Восстановить покупки"/>
+<item key="menu.settings.version.main" value="v. "/>
+<item key="menu.settings.version.free" value="Бесплатная версия"/>
+<item key="menu.settings.version.premium" value="Премиум версия"/>
+
+<item key="game.subscribe" value="Подпишитесь и узнавайте о НОВЫХ ИГРАХ первыми!"/>
+<item key="game.go.symbiont0.appstore" value="Предыстория Симбионта уже в Appstore!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont0.googleplay" value="Предыстория Симбионта уже в Google Play!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont1.appstore" value="Продолжение Симбионта уже в Appstore!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont1.googleplay" value="Продолжение Симбионта уже в Google Play!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont2.appstore" value="Симбионт-2 уже в Appstore!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont2.googleplay" value="Симбионт-2 уже в Google Play!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont3.appstore" value="Симбионт-3 уже в Appstore!&#x0A;Играть бесплатно"/>
+<item key="game.go.symbiont3.googleplay" value="Симбионт-3 уже в Google Play!&#x0A;Играть бесплатно"/>
+
+<item key="checkpoint.restart.text" value="[ Начать игру заново ]"/>
+
+<item key="menu.thanks.main" value="Спасибо,"/>
+<item key="menu.thanks.list" value="Абакумова Алена,Абрамов Данил,Актубин Леонид,Александрова Анастасия,Альшаев Дмитрий,Андреев Василий,Андреев Павел,Астафьев Артем,Ахметбекова Томирис,Ахметшин Александр,Багров Илья,Бедов Алексей,Белькевич Александр,Бирюков Игорь,Боледзюк Екатерина,Бородин Александр,Быковский Александр,Бычков Игорь,Ваганова Адриана,Вейзе Валерия,Винни Денбро,Гаяздинова Наиля,Гильц Александр,Голованов Евгений,Гребенюк Елена,Гусев Максим,Данилов Александр,Дашков Артём,Дерябина Дарья,Доломан Никита,Доплер Тимофей,Егоркина Ирина,Елисеев Сергей,Зайцев Владислав,Захаров Роман,Исанина Елена,Истошин Дмитрий,Калюжная Ольга,Киндин Антон,Колесников Владимир,Колесников Иван,Коньков Григорий,Корнеев Иван,Королева Ксения,Кряков Сергей,Куликова Екатерина,Купцов Сергей,Лавочников Илья,Лёвшин Александр,Лихачев Константин,Лопатин Сергей,Лучная Наталья,Медведев Михаил,Минишев Марат,Михайлов Юрий,Недорезов Савелий,Никифоров Михаил,Никольская Мария,Никольский Владимир,Новикова Анастасия,Носков Станислав,Пименова Алёна,Поджио Виктория,Рамадов Влад,Рыжова Вероника,Рябуха Александр,Сауся Алексей,Сафонов Алексей,Семенова Кристина,Сивцева Алина,Симакина Вера,Ситкова Анастасия,Скарюкин Олег,Смородов Роман,Соловьёв Владимир,Степанов Макс,Строгонов Илья,Сыркин Евгений,Тарасова Юлия,Ткачук Никита,Токарев Виталий,Фёдорова Екатерина,Фоменко Вероника,Холодкова Маргарита,Черенков Сергей,Черняк Софья,Чистякова Наташа,Чубаров Глеб,Чудинова Алина,Шашин Иван,Штоль Александра,Ражева Татьяна"/>
+
+<item key="game.restart.confirm" value="Начать заново"/>
+<item key="game.restart.menu" value="В меню"/>
+<item key="game.restart.header" value="Начать заново"/>
+<item key="game.restart.checkpoints" value="Контрольные главы"/>
+
+<item key="game.waiting.sobolev" value="Соболев занят"/>
+<item key="game.waiting.berkut" value="Беркут занят"/>
+<item key="game.waiting.semenov" value="Семёнов занят"/>
+
+<item key="menu.checkpoints.header" value="Главы"/>
+<item key="menu.checkpoints.confirm.header" value="Выбрать главу"/>
+<item key="menu.checkpoints.to.chapter" value="К главе"/>
+<item key="menu.checkpoints.confirm.text" value="Вы действительно хотите перейти в эту главу? Текущий прогресс будет потерян."/>
+<item key="menu.checkpoints.confirm.yes" value="Перейти"/>
+<item key="menu.checkpoints.confirm.no" value="Отмена"/>
+
+<item key="local.notification.alarm" value="&#9200;"/>
+<item key="local.notification.hour.3" value="Эй, приём! Соболев на связи!"/>
+<item key="local.notification.hour.8" value="Мне нужна помощь! Отзовитесь!"/>
+<item key="local.notification.hour.24" value="Помогите, прошу вас!"/>
+<item key="local.notification.day.7" value="Это снова я... живой... пока еще..."/>
+
+<item key="menu.coffee.header" value="Кофе автору"/>
+<item key="menu.coffee.message" value="Лучший способ сказать «спасибо» создателю вселенной Симбионта — угостить автора чашечкой любимого эспрессо.&#x0A; &#x0A;Ваша благодарность непременно повлияет на выход новых игр. Ну, правда, какое творчество без кофе?"/>
+<item key="menu.coffee.1" value="Чашечка кофе"/>
+<item key="menu.coffee.2" value="Кофе с пирожком"/>
+<item key="menu.coffee.3" value="Пицца Маргарита"/>
+<item key="menu.coffee.got.header" value="Спасибо!"/>
+<item key="menu.coffee.got.message" value="Ваш вклад приближает выход новых книг-игр."/>
+<item key="menu.coffee.got.button" value="Пожалуйста"/>
+
+<item key="godmode.header" value="Уфф..."/>
+<item key="godmode.message" value="Мы обнаружили, что по нашей вине Вы потратили лишние подсказки. Приносим свои извинения и возвращаем Вам все 16 подсказок. Спасибо, что Вы по-прежнему с нами!"/>
+<item key="godmode.ok" value="Отлично!"/>
+
+<item key="menu.phantoms.header" value="Ошибка криптокодов!"/>
+<item key="menu.phantoms.message" value="Оператор, необходима перезагрузка устройства. Извините за неполадки."/>
+<item key="menu.phantoms.ok" value="Хорошо!"/>
+<item key="menu.phantoms.bonus.header" value="Неисправность устранена"/>
+<item key="menu.phantoms.bonus.message" value="Благодарим за содействие. Вам доступен +1 декодер."/>
+
+<item key="ads.not.available.header" value="Упс"/>
+<item key="ads.not.available.message" value="К сожалению, в данный момент видеореклама не доступна. Повторите попытку через несколько минут."/>
+<item key="ads.thanks.header" value="Спасибо за просмотр!"/>
+<item key="ads.thanks.message" value="Приятной игры!"/>
+
+<item key="menu.message.header" value="Премиум-версия"/>
+<item key="menu.message.message" value="[ ПРЕМИУМ-АККАУНТ ]&#x0A; &#x0A;— игра без рекламы;&#x0A;— игра без подключения к Интернету;&#x0A;— неисчерпаемые декодеры-подсказки;&#x0A;— пропуск любых ожиданий и таймеров;&#x0A;— мгновенная перемотка истории в случае ЧП;&#x0A; &#x0A;И все это за символическую плату! Покупая «Симбионт», Вы помогаете выпускать новые книги-игры.&#x0A; &#x0A;В любом случае мы желаем Вам приятной игры!"/>
+<item key="menu.message.button" value="Купить"/>
+
+<item key="menu.achievements.header" value="Достижения"/>
+<item key="menu.achievement.about.newunlocked" value="Новое достижение!"/>
+<item key="menu.achievement.about.unlocked" value="Достижение открыто"/>
+<item key="menu.achievement.about.locked" value="Достижение закрыто"/>
+<item key="menu.achievement.about.newunlocked.final" value="Новый финал!"/>
+<item key="menu.achievement.about.unlocked.final" value="Финал открыт"/>
+<item key="menu.achievement.about.locked.final" value="Финал закрыт"/>
+<item key="menu.achievement.sobolev" value="Метаморф"/>
+<item key="menu.achievement.berkut" value="Кредо наёмника"/>
+<item key="menu.achievement.legioner" value="Легионер"/>
+<item key="menu.achievement.hidden" value="Значки рейтинга"/>
+
+<item key="signal.loading" value="Получение сигнала, ожидайте..."/>
+
+<item key="manu.branch.sobolev.header" value="Метаморф"/>
+<item key="manu.branch.sobolev.id" value="ID: Иван Соболев"/>
+<item key="manu.branch.berkut.header" value="Кредо наемника"/>
+<item key="manu.branch.berkut.id" value="ID: Сергей Беркут"/>
+<item key="manu.branch.legioner.header" value="Легионер"/>
+<item key="manu.branch.legioner.id" value="ID: неустановлен"/>
+<item key="manu.branch.legioner.message.header" value="Миссия заблокирована!"/>
+<item key="manu.branch.legioner.message.message" value="Для доступа требуется завершить операцию «Наёмник»"/>
+<item key="menu.branch.legioner.opened.header" value="Поздравляем!"/>
+<item key="menu.branch.legioner.opened.message" value="Миссия «Легионер» разблокирована"/>
+<item key="menu.branch.berkut.hidden.header" value="Файл заблокирован!"/>
+<item key="menu.branch.berkut.hidden.message" value="Требуется уровень допуска «Наёмник»."/>
+<item key="menu.branch.legioner.hidden.header" value="Файл заблокирован!"/>
+<item key="menu.branch.legioner.hidden.message" value="Требуется уровень допуска «Легионер»."/>
+
+<item key="menu.rater.header.common" value="Понравилась игра?"/>
+<item key="menu.rater.text.common" value="Поддержите проект хорошей оценкой и отзывом!"/>
+<item key="menu.rater.ok.common" value="Да!"/>
+
+<item key="banner.price" value="ВСЕГО ЗА"/>
+
+<item key="inapps.failure.to.initiate.header" value="Внимание"/>
+<item key="inapps.failure.to.initiate.message" value="Что-то пошло не так во время покупки. Пожалуйста, убедитесь, что подключен интернет и Вы залогинены валидным аккаунтом в магазин."/>
+<!------------------------------------------------ MENU ------------------------------------------------------------->
+
+<!------------------------------------------------ TIPS ------------------------------------------------------------->
+<item key="tip.1" value="Если у Вас или доктора Соболева возникнут сложности, Вы всегда можете воспользоваться меню «Подсказка». Для этого просто коснитесь пальцем индикатора подсказок, когда он загорится."/>
+<item key="tip.2" value="Вы открыли один из трех возможных финалов книги-игры. Чтобы узнать, как еще могла бы завершиться эта история, воспользуйтесь закладками контрольных глав. Подсказка: первый финал открывается, когда доктор Соболев отправляется к генераторам; два других, — если рискнуть, и отправить его на поиск данных."/>
+<item key="tip.3" value="В процессе прохождения Вы активируете контрольные главы. Коснитесь иконки «Закладка», и сможете вернуться к доступной главе, чтобы изменить решение или переиграть в случае гибели доктора Соболева."/>
+<item key="tip.4" value="Действие книги-игры приближено к концепции реального времени. Иногда главному герою потребуется время, чтобы решить задачу, справиться с неприятностями или даже поспать. Ожидания, как в реальности, разные: от минуты до 6-8 часов. Будьте терпеливы, и Вы узнаете все тайны Симбионта."/>
+<item key="tip.5" value="Попытайтесь отыскать аптечку или затащить Игоря в медблок; затем выломайте дверь, не останавливаясь и не отвлекаясь на зомби. После чего затащите ученого в медблок и заблокируйте дверь."/>
+<item key="tip.6" value="Провести доктора Соболева через лабораторию можно разными путями. Каждый путь по-своему уникален."/>
+<item key="tip.7" value="Чтобы попасть на крышу лифта нужно осмотреться, найти нож, снять плафон, закрыть двери лифта и продолжать работу, после чего сразу лезьте на крышу."/>
+<item key="tip.8" value="Берем кусок мяса, прокладываем путь к лифтам или в коридор. Призываем зомби и медленно отступаем. Затем прячемся и ждем, но недолго. Совет: не дразните зомби ногами и не лежите в укрытии слишком долго."/>
+<item key="tip.9" value="Увидев монстра, прикажите доктору Соболеву уходить, а, когда чудовище проснется, пусть замрет и ослепит монстра фонарем. После чего нужно бежать без остановок до самой вентиляции."/>
+<item key="tip.10" value="Фарватер: налево, прямо, налево, прямо, направо, направо, налево, направо, налево."/>
+<item key="tip.11" value="В Инфекционной нужно вести себя предельно тихо. Когда же дело дойдет до беседы с охранником, либо пусть Соболев говорит жестко, упирая на то, что он из группы зачистки, либо молчит, как рыба."/>
+<item key="tip.12" value="Фарватер: налево, налево, прямо, налево, направо, налево, направо."/>
+<item key="tip.13" value="Соболеву придется действовать решительно: захватить сумку со взрывчаткой, угрожать пистолетом, но, когда у солдат кончится терпение, на самые верхние уровни не лезть."/>
+<item key="tip.14" value="Правильная скорость — 5 километров в час."/>
+<item key="tip.15" value="Правильный код: 9785."/>
+<item key="tip.16" value="Для создания сыворотки нужны следующие элементы: масса, ингибиторы, образец 23, вода, фиксатор G."/>
+<!------------------------------------------------ TIPS ------------------------------------------------------------->
+
+<!------------------------------------------------ HINTS ------------------------------------------------------------->
+<item key="waiting.first.header" value="ОЖИДАНИЕ"/>
+<item key="waiting.first.message" value="Действие игры приближено к реальному времени. Ожидания могут быть от 5 минут до 12 часов. Будтье терпеливы, и вы раскроете все тайны Симбионта."/>
+
+<item key="waiting.second.header" value="ПРОПУСК"/>
+<item key="waiting.second.message" value="Некоторые ожидания можно пропустить. Нажмите эту кнопку."/>
+
+<item key="ads.thanks.header" value="СПАСИБО"/>
+<item key="ads.thanks.message" value="Спасибо за просмотр! Приятной игры!"/>
+
+<item key="resurrection.header" value="ВОЗРОЖДЕНИЕ"/>
+<item key="resurrection.message" value="Это еще не конец! Чтобы вернуться к последнему выбору - нажмите эту кнопку."/>
+<!------------------------------------------------ HINTS ------------------------------------------------------------->
+
+<!------------------------------------------------ ACHIEVEMENTS ------------------------------------------------------------->
+<item key="achievementSimple.name.1" value="СТАРЫЙ ДРУГ"/>
+<item key="achievementSimple.description.1" value="Начните сюжетную кампанию Соболева."/>
+<item key="achievementSimple.notification.1" value="Он вернулся!"/>
+
+<item key="achievementSimple.name.3" value="ОДИН В ТЕМНОТЕ"/>
+<item key="achievementSimple.description.3" value="Войдите в Отдел зоологов без света."/>
+<item key="achievementSimple.notification.3" value="Они где-то рядом..."/>
+
+<item key="achievementSimple.name.4" value="НЕСУЩИЙ СВЕТ"/>
+<item key="achievementSimple.description.4" value="Войдите в Отдел зоологов с фонарем."/>
+<item key="achievementSimple.notification.4" value="Луч света — луч надежды?"/>
+
+<item key="achievementSimple.name.5" value="МАРОДЕР"/>
+<item key="achievementSimple.description.5" value="Заберите из схрона рычаг и карту тоннелей."/>
+<item key="achievementSimple.notification.5" value="И это тоже пригодится!"/>
+
+<item key="achievementSimple.name.6" value="КОРМИЛЕЦ"/>
+<item key="achievementSimple.description.6" value="Отыщите кусок филе и покормите... зомби!"/>
+<item key="achievementSimple.notification.6" value="Ням-ням!"/>
+
+<item key="achievementSimple.name.7" value="Н — ЗНАЧИТ НЕЙРОБИОЛОГ!"/>
+<item key="achievementSimple.description.7" value="Стравите Стражей-пауков."/>
+<item key="achievementSimple.notification.7" value="Пусть победит сильнейший!"/>
+
+<item key="achievementSimple.name.9" value="ЛЖЕЦ, ЛЖЕЦ"/>
+<item key="achievementSimple.description.9" value="Не доверяйте никому, тем более аг..."/>
+<item key="achievementSimple.notification.9" value="Т-с-с!"/>
+
+<item key="achievementSimple.name.10" value="ПРОПАГАНДИСТ"/>
+<item key="achievementSimple.description.10" value="Завербуйте агента корпорации."/>
+<item key="achievementSimple.notification.10" value="Правда — это оружие."/>
+
+<item key="achievementSimple.name.14" value="ЗНАТОК ТОННЕЛЕЙ"/>
+<item key="achievementSimple.description.14" value="Пройдите лабиринт с картой."/>
+<item key="achievementSimple.notification.14" value="И никаких больше развилок!"/>
+
+<item key="achievementSimple.name.15" value="ВНЕЗАПНЫЙ СОЮЗНИК"/>
+<item key="achievementSimple.description.15" value="Мутант на страже добра?!"/>
+<item key="achievementSimple.notification.15" value="Эт-то б-было... неожиданно!"/>
+
+<item key="achievementSimple.name.17" value="ДОБРОЕ СЕРДЦЕ"/>
+<item key="achievementSimple.description.17" value="Оборвите мучения Одинокого стрелка."/>
+<item key="achievementSimple.notification.17" value="Было тяжело, но вы справились..."/>
+
+<item key="achievementSimple.name.18" value="ЗАГНАННЫЙ ЗВЕРЬ"/>
+<item key="achievementSimple.description.18" value=""/>
+<item key="achievementSimple.notification.18" value="Разблокирован финал Террора!"/>
+
+<item key="achievementSimple.name.19" value="МЕТАМОРФ"/>
+<item key="achievementSimple.description.19" value=""/>
+<item key="achievementSimple.notification.19" value="Разблокирован финал Откровения!"/>
+
+<item key="achievementSimple.name.2" value="РЕШИТЕЛЬНЫЙ"/>
+<item key="achievementSimple.description.2" value="Начните сюжетную кампанию Беркута."/>
+<item key="achievementSimple.notification.2" value="К бою готов!"/>
+
+<item key="achievementSimple.name.25" value="ТИК-ТАК!"/>
+<item key="achievementSimple.description.25" value="Помогите Беркуту отыскать будильник."/>
+<item key="achievementSimple.notification.25" value="Бинго!"/>
+
+<item key="achievementSimple.name.27" value="САБОТАЖНИК!"/>
+<item key="achievementSimple.description.27" value="Солдаты в клетке? Им там самое место!"/>
+<item key="achievementSimple.notification.27" value="Ловушка захлопнулась!"/>
+
+<item key="achievementSimple.name.28" value="РИСК — УДЕЛ СМЕЛЫХ!"/>
+<item key="achievementSimple.description.28" value="Помогите Беркуту разминировать шлюз."/>
+<item key="achievementSimple.notification.28" value="Хорошо, что не черный провод..."/>
+
+<item key="achievementSimple.name.29" value="ТОЧКИ РАССТАВЛЯЮТ ПУЛЯМИ..."/>
+<item key="achievementSimple.description.29" value=""/>
+<item key="achievementSimple.notification.29" value="Разблокирован Кровавый финал!"/>
+
+<item key="achievementSimple.name.30" value="КРЕДО НАЁМНИКА"/>
+<item key="achievementSimple.description.30" value=""/>
+<item key="achievementSimple.notification.30" value="Разблокирован финал Наёмника!"/>
+
+<item key="achievementSimple.name.31" value="ПОСЛАНЕЦ ЗЛА"/>
+<item key="achievementSimple.description.31" value="Выйдите на контакт с Легионером."/>
+<item key="achievementSimple.notification.31" value="Объект готов!"/>
+
+<item key="achievementSimple.name.32" value="КРОВОЖАДНЫЙ"/>
+<item key="achievementSimple.description.32" value="Натравите Легионера на солдат."/>
+<item key="achievementSimple.notification.32" value="Свидетели долго не живут."/>
+
+<item key="achievementSimple.name.33" value="ВОЛК В ОВЕЧЬЕЙ ШКУРЕ"/>
+<item key="achievementSimple.description.33" value="Пусть Легионер атакует зомби."/>
+<item key="achievementSimple.notification.33" value="Убить всех!"/>
+
+<item key="achievementSimple.name.34" value="КОНТАКТЫ ПЕРВОЙ СТЕПЕНИ"/>
+<item key="achievementSimple.description.34" value=""/>
+<item key="achievementSimple.notification.34" value="Единицам выпала честь вести переговоры с новой формой разума, и Вы в их числе. Поздравляем!"/>
+
+<item key="achievementSimple.name.8" value="ВЕРНЫЙ ДРУГ"/>
+<item key="achievementSimple.description.8" value=""/>
+<item key="achievementSimple.notification.8" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.11" value="ТИРАН!"/>
+<item key="achievementSimple.description.11" value=""/>
+<item key="achievementSimple.notification.11" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.12" value="ПСИХОЛОГ-НЕДОУЧКА"/>
+<item key="achievementSimple.description.12" value=""/>
+<item key="achievementSimple.notification.12" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.13" value="ВНИМАТЕЛЬНЫЙ"/>
+<item key="achievementSimple.description.13" value=""/>
+<item key="achievementSimple.notification.13" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.16" value="ДЕТЕКТИВ"/>
+<item key="achievementSimple.description.16" value=""/>
+<item key="achievementSimple.notification.16" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.20" value="СЕРИЙНЫЙ УБИЙЦА"/>
+<item key="achievementSimple.description.20" value=""/>
+<item key="achievementSimple.notification.20" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.21" value="МАНЬЯК"/>
+<item key="achievementSimple.description.21" value=""/>
+<item key="achievementSimple.notification.21" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.22" value="КОЛЛЕКЦИОНЕР СМЕРТЕЙ"/>
+<item key="achievementSimple.description.22" value=""/>
+<item key="achievementSimple.notification.22" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.23" value="СКАУТ"/>
+<item key="achievementSimple.description.23" value=""/>
+<item key="achievementSimple.notification.23" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.24" value="МАСТЕР ЗАГАДОК"/>
+<item key="achievementSimple.description.24" value=""/>
+<item key="achievementSimple.notification.24" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.26" value="НАХОДКА ДЛЯ ШПИОНА"/>
+<item key="achievementSimple.description.26" value=""/>
+<item key="achievementSimple.notification.26" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.35" value="ДЕКОДЕР"/>
+<item key="achievementSimple.description.35" value=""/>
+<item key="achievementSimple.notification.35" value="Вы активировали скрытое достижение!"/>
+
+<item key="achievementSimple.name.36" value="ОПЛОТ"/>
+<item key="achievementSimple.description.36" value=""/>
+<item key="achievementSimple.notification.36" value="Вы активировали скрытое достижение!"/>
+<!------------------------------------------------ ACHIEVEMENTS ------------------------------------------------------------->

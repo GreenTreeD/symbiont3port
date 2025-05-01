@@ -7806,7 +7806,7 @@
     <choice id="1">Автопереход.<targetChapter>698</targetChapter>
     </choice>
   </chapter>
-  <chapter description="«Агент корпорации»" id="721" isKeyChapter="true" priceTier="1.99">
+  <chapter description="«Агент корпорации»" id="721" isKeyChapter="true">
     <message id="1" roleId="2">«Не дергайся!»</message>
     <message id="2" roleId="1">«Чего вы хотите?! Я же уже назвал свое имя и...»</message>
     <message id="3" roleId="2">«Не зли меня! Ты не можешь быть Соболевым!»</message>
@@ -8463,7 +8463,7 @@
     <choice id="1">Автопереход.<targetChapter>775</targetChapter>
     </choice>
   </chapter>
-  <chapter adsSpontaneousEnable="true" description="«Атака Симбионта»" helpId="15" id="775" isKeyChapter="true">
+  <chapter description="«Атака Симбионта»" helpId="15" id="775" isKeyChapter="true">
     <message id="1" roleId="1">Настоящий вал из тел! Лавина мертвецов!</message>
     <message id="2" roleId="1">Многие уже настолько близки к окончательной смерти, что едва плетутся по коридору.</message>
     <message id="3" roleId="1">Другие живее, но даже такие выглядят удручающе. Почерневшая кожа, заострившиеся черты лиц, впалые глаза...</message>
@@ -9018,7 +9018,7 @@
     <choice id="1">Автопереход.<targetChapter>815</targetChapter>
     </choice>
   </chapter>
-  <chapter description="«К Стокам»" id="815" isKeyChapter="true" priceTier="0.99">
+  <chapter description="«К Стокам»" id="815" isKeyChapter="true">
     <message id="1" roleId="1">Отдохнули и хватит, верно?</message>
     <message id="2" roleId="1">Так, приближаюсь к двери. Уже вполне традиционно прислушиваюсь.</message>
     <message id="3" roleId="1">... ... ...</message>
