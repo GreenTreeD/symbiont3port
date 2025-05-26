@@ -1,0 +1,15 @@
+{
+    "symb0": {
+        "startChapter": 1,
+        "assetPath": "..\\static\\assets\\S1"
+    },
+    "symb3_1": {
+        "startChapter": 1,
+        "assetPath": "..\\static\\assets\\S3"
+    },
+    "symb3_2": {
+        "startChapter": 2263,
+        "assetPath": "..\\static\\assets\\S3"
+
+    }
+}

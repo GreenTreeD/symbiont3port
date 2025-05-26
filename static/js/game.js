@@ -5,9 +5,9 @@ const btnHolder = document.getElementById('btnholder');
 let isAtBottom = true;
 let xmlMainText;
 
-History = [];
-HistoryVisible = [];
-let speed;
+let History = [];
+let HistoryKey = [];
+let speed = 75;
 
 
 function displayBlock(targetId) {
@@ -55,10 +55,24 @@ scrollDownBtn.addEventListener('click', () => {
     isAtBottom = true;
 });
 
+function displayReturn(lastKeyChapter) {
 
+}
+
+function returnToChapter(lastKeyChapter) {
+
+}
+
+function shakeDamnIcon() {
+    let button = document.querySelector('.btn_a.marker');
+    button.classList.add("icon_anim");
+    setTimeout(() => {
+        button.classList.remove("icon_anim");
+    }, 600);
+}
 
 function fetchData(paramValue) {
-    const url = `/api/get-xml?name=${paramValue}`;
+    const url = `${paramValue}`;
     return fetch(url)
         .then(response => response.text())
         .then(xmlText => {
@@ -142,22 +156,37 @@ function displayChoices(choices) {
 }
 
 async function chapterrender(id) {
-    History.push(Number(id));
-    const chapter = xmlMainText.getElementsByTagName("chapter")[id-1];
-    let i = 0;
+    
+    const chapter = xmlMainText.querySelector(`chapter[id="${id}"]`);
     let timeset = 500;
 
     Array.from(chapter.attributes).forEach(attr => {
         switch (attr.name) {
-            case "id": {break;}
+            case "id": {
+                History.push(Number(id));
+                break;}
             case "achievementSimple": { break;}
-            case "isKeyChapter": {break;}
-            case "isEnded": {break;}
+            case "isKeyChapter": {
+                let node = document.createElement("div");
+                node.className = 'content-block';
+                node.innerText = chapter.getAttribute("description");
+                document.getElementById("chapterlist").appendChild(node);
+                shakeDamnIcon();
+                HistoryKey.push(
+                    {
+                        "id": Number(chapter.getAttribute("id")),
+                        "name": chapter.getAttribute("description")
+                    }
+                );
+                break;}
+            case "isEnded": {
+                displayReturn(HistoryKey[HistoryKey.length - 1]);
+                break;}
             case "helpId": {break;}
-            case "description": {break;}
         }
     });
-    if (chapter.getAttribute('achievementSimple') != undefined) {
+
+    /*if (chapter.getAttribute('achievementSimple') != undefined) {
           document.getElementById('achievement').style.display = 'block';
           let achid = chapter.getAttribute('achievementSimple');
           let listl = tipsDoc.children[0].children[1];
@@ -166,7 +195,7 @@ async function chapterrender(id) {
           document.getElementById('achievement_notification').innerHTML = achid.getAttribute("notification");
           document.getElementById('achievement_name').innerHTML = achid.getAttribute("value");
           document.getElementById('achievement_pic').src = "assets/gui/achievements/"+achid.getAttribute("id")+".png";
-    }
+    }*/
 
     await displayMessages(chapter.getElementsByTagName('message'));
     if (chapter.getAttribute('isEnded') != undefined) {

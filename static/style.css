@@ -17,6 +17,11 @@ body {
 	box-sizing: border-box;
 }
 
+h1 {
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
 
 #main {
   width: 100%;
@@ -54,7 +59,7 @@ body {
     position: relative;
     background-color: #323232; /* Цвет фона div */
     padding: 30px;
-    color: white;
+    color: #def1ff;
     height: 100px;
     display: flex;
     align-items: center;
@@ -84,6 +89,10 @@ body {
     background-color: #282828; /* Цвет второй полосы */
 }
 
+.chapterlist > .content-block {
+    height: unset;
+}
+
 .game-menu {
     display: flex;
     justify-content: space-between;
@@ -92,8 +101,8 @@ body {
 
 .game-menu .btn_a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70px 70px;
@@ -116,6 +125,28 @@ body {
 .settings { background-image: url('assets/gui/settings.svg'); }
 .menuInGame { background-image: url('assets/gui/menuInGame.svg'); }
 .closeBlock { background-image: url('assets/gui/close.svg'); }
+
+
+/* Анимация при появлении новой ключевой главы */
+.icon_anim {
+    display: inline-block;
+    animation: shake-rotate 0.6s;
+    transform-origin: center center;
+}
+
+@keyframes shake-rotate {
+    0%   { transform: rotate(0deg); }
+    10%  { transform: rotate(-10deg); }
+    20%  { transform: rotate(10deg); }
+    30%  { transform: rotate(-10deg); }
+    40%  { transform: rotate(10deg); }
+    50%  { transform: rotate(-10deg); }
+    60%  { transform: rotate(10deg); }
+    70%  { transform: rotate(-10deg); }
+    80%  { transform: rotate(10deg); }
+    90%  { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
 
 .text_container {
     width: 100%;
@@ -201,7 +232,7 @@ body {
     align-items: center;     /*Центрирование по вертикали */
 }
 .mc {
-	color: #cfcfcf;
+	color: #def1ff;
 }
 
 .sys { color: #529245;
@@ -248,7 +279,7 @@ body {
 
 .btnhl {
     padding: 20px;
-    height: 120px;
+    height: 110px;
     background: rgb(42,42,42);
     background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(28,29,31,1) 100%);
     display: flex;

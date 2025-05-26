@@ -1,5 +1,6 @@
 <?php 
 require_once 'vendor/autoload.php';
+require_once 'functions.php';
 
 $game_array = [
     "0" => "symb0",
@@ -25,7 +26,8 @@ switch ($segments[0]) {
         break;
     case 'game':
         if (isset($segments[1])) {
-            echo $segments[1];
+            echo $twig->render('game.twig',
+        ['gamename' => $segments[1]]);
             break;
 
         }
