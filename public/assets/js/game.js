@@ -6,7 +6,7 @@ let isAtBottom = true;
 let xmlMainText;
 
 History = [];
-HistoryVisible = [];
+HistoryVisible = new Map();
 let speed;
 
 
@@ -58,7 +58,7 @@ scrollDownBtn.addEventListener('click', () => {
 
 
 function fetchData(paramValue) {
-    const url = `/api/get-xml?name=${paramValue}`;
+    const url = `${paramValue}`;
     return fetch(url)
         .then(response => response.text())
         .then(xmlText => {
@@ -111,52 +111,53 @@ async function displayMessages(messages) {
     }
 }
 
+function canRender(choiceEl) {
+    const ifVisited = choiceEl.getAttribute("ifVisited");
+    const ifNotVisited = choiceEl.getAttribute("ifNotVisited");
+  
+    if (ifVisited !== null) return History.includes(Number(ifVisited));
+    if (ifNotVisited !== null) return !History.includes(Number(ifNotVisited));
+    return true;
+}
+
 function displayChoices(choices) {
+    choices = Array.from(choices).filter(canRender);
     btnHolder.innerHTML = ``;
-    const parser = new DOMParser();
-    for (let item of choices) {
-        if (item.childNodes[0].textContent == "Автопереход.") {
-            if (
-                ((item.getAttribute("ifVisited") != undefined) && History.includes(Number(item.getAttribute("ifVisited"))) == true) ||
-                ((item.getAttribute("ifNotVisited") != undefined) && History.includes(Number(item.getAttribute("ifVisited"))) == false) ||
-                ((item.getAttribute("ifNotVisited") == undefined) && (item.getAttribute("ifVisited") == undefined))
-             ) {
-                chapterrender(item.childNodes[1].textContent);
-            }
-        }
-        else  {
-            if (
-                ((item.getAttribute("ifVisited") != undefined) && History.includes(Number(item.getAttribute("ifVisited"))) == true) ||
-                ((item.getAttribute("ifNotVisited") != undefined) && History.includes(Number(item.getAttribute("ifVisited"))) == false) ||
-                ((item.getAttribute("ifNotVisited") == undefined) && (item.getAttribute("ifVisited") == undefined))
-            ) {
-                let button = document.createElement('div');
-                button.setAttribute('class','btn');
-                button.setAttribute('onclick',`chapterrenderButton(${Number(item.childNodes[1].textContent)})`);
-                button.innerHTML = item.childNodes[0].textContent;
-                btnHolder.appendChild(button);
-            }
+
+    if (choices.length === 1) {
+        chapterrender(choices[0].childNodes[1].textContent);
+    } else {
+        for (let item of choices) {
+            const button = document.createElement('div');
+            button.className = 'btn';
+            button.setAttribute(
+                "onclick",
+                `chapterrenderButton(${Number(item.childNodes[1].textContent)})`
+              );
+            button.textContent = item.childNodes[0].textContent;
+            btnHolder.appendChild(button);
         }
     }
-
 }
+
 
 async function chapterrender(id) {
     History.push(Number(id));
     const chapter = xmlMainText.getElementsByTagName("chapter")[id-1];
-    let i = 0;
-    let timeset = 500;
+    document.getElementById('progressAnim').style.display = 'block';
 
     Array.from(chapter.attributes).forEach(attr => {
         switch (attr.name) {
             case "id": {break;}
             case "achievementSimple": { break;}
-            case "isKeyChapter": {break;}
+            case "isKeyChapter": {
+                HistoryVisible.set(Number(id), chapter.getAttribute('achievementSimple'));
+                break;}
             case "isEnded": {break;}
             case "helpId": {break;}
-            case "description": {break;}
         }
     });
+
     if (chapter.getAttribute('achievementSimple') != undefined) {
           document.getElementById('achievement').style.display = 'block';
           let achid = chapter.getAttribute('achievementSimple');
@@ -173,6 +174,7 @@ async function chapterrender(id) {
     }
     else {
         displayChoices(chapter.getElementsByTagName('choice'));
+        document.getElementById('progressAnim').style.display = 'none';
     }
 
 }
@@ -204,7 +206,7 @@ function chapterrenderButton(id) {
     }
 
     text_container.appendChild(holder);
-    btnHolder.innerHTML = `<div id="gamegif"><img src="/static/assets/gui/gui/animation.gif"></div>`;
+    btnHolder.innerHTML = `<div><img src="/assets/game_assets/gui/gui/animation.gif"></div>`;
     outer_container.scrollTop = outer_container.scrollHeight;
     chapterrender(id);
 }

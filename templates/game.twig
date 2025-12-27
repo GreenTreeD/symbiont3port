@@ -1,22 +1,33 @@
-{% extends 'layout.html' %}
+{% extends 'layout.twig' %}
 
 {% block title %}{{gamename}}{% endblock %}
 
 {% block content %}
+
 <div id="gameMain">
-    {% include "game_main.html" %}
+    {% include "game_main.twig" %}
 </div>
 <div id="achievements" style="display:none;">
-    {% include "achievements.html" %}
+    {% include "achievements.twig" %}
 </div>
 <div id="chapters" style="display:none;">
-    {% include "chapters.html" %}
+    {% include "chapters.twig" %}
 </div>
 <div id="settingsGame" style="display:none;">
-    {% include "settings.html" %}
+    {% include "settings.twig" %}
 </div>
 
-<script>
 
+<script type="text/javascript">
+    speed = 20;
+    fetchData('{{ maintext }}')
+    .then(data => {
+        xmlMainText = data;  // Должен быть объект XML
+        chapterrender(1);
+    })
+    .catch(error => {
+        console.log(error);
+    });
 </script>
+
 {% endblock %}

@@ -7,7 +7,7 @@
     <message id="10" roleId="4">[ВХОДЯЩИЙ ВЫЗОВ]</message>
     <message id="11" roleId="4">[... ... ...]</message>
     <message id="12" roleId="4">[КОНТАКТ УСТАНОВЛЕН]</message>
-    <choice id="1">Выслушать.<targetChapter>2</targetChapter>
+    <choice id="1">Автопереход.<targetChapter>2</targetChapter>
     </choice>
   </chapter>
   <chapter id="2">
