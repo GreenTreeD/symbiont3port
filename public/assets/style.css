@@ -99,6 +99,11 @@ body {
     background-position: center;
     background-size: 70px 70px;
 }
+.marker { background-image: url("game_assets/gui/marker.svg"); }
+.ach { background-image: url('game_assets/gui/ach.svg'); }
+.settings { background-image: url('game_assets/gui/settings.svg'); }
+.menuInGame { background-image: url('game_assets/gui/menuInGame.svg'); }
+.closeBlock { background-image: url('game_assets/gui/close.svg'); }
 
 .game-menu::before {
     display: block;
@@ -112,11 +117,7 @@ body {
     background: linear-gradient(0deg, rgba(243, 208, 186, 0.0069906624759278335) 0%, rgb(29 29 29 / 60%) 100%);
 }
 
-.marker { background-image: url("game_assets/gui/marker.svg"); }
-.ach { background-image: url('game_assets/gui/ach.svg'); }
-.settings { background-image: url('game_assets/gui/settings.svg'); }
-.menuInGame { background-image: url('game_assets/gui/menuInGame.svg'); }
-.closeBlock { background-image: url('game_assets/gui/close.svg'); }
+
 
 .text_container {
     width: 100%;

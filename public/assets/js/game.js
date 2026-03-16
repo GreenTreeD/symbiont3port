@@ -2,6 +2,7 @@ const outer_container = document.getElementById('outer_text_container');
 const text_container = document.getElementById('text_container');
 const scrollDownBtn = document.getElementById('scrollDownBtn');
 const btnHolder = document.getElementById('btnholder');
+const animHolder = document.getElementById('progressAnim');
 let isAtBottom = true;
 let xmlMainText;
 
@@ -9,27 +10,6 @@ History = [];
 HistoryVisible = new Map();
 let speed;
 
-
-function displayBlock(targetId) {
-  const parentDiv = document.getElementById('main');
-
-  if (parentDiv) {
-    const childDivs = parentDiv.children;
-
-    for (let child of childDivs) {
-        if (child.tagName == "DIV") {
-            if (child.id !== targetId) {
-                child.style.display = 'none';
-
-              } else {
-                child.style.display = 'block';
-              }
-        }
-    }
-  } else {
-    console.error('Родительский элемент не найден');
-  }
-}
 
 function checkIfAtBottom() {
     const scrollPosition = outer_container.scrollTop;
@@ -84,6 +64,17 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function swapBtnAnim() {
+    if (btnHolder.style.display == 'none') {
+        btnHolder.style.display = 'flex';
+        animHolder.style.display = 'none';
+    }
+    else {
+        btnHolder.style.display = 'none';
+        animHolder.style.display = 'flex';
+    }
+}
+
 async function displayMessages(messages) {
     for (let item of messages) {
         let message = document.createElement('div');
@@ -98,7 +89,6 @@ async function displayMessages(messages) {
         }
 
         message.setAttribute('class',`content-block ${role}`);
-
         message.innerHTML = item.textContent;
 
         delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
@@ -125,7 +115,7 @@ function displayChoices(choices) {
     btnHolder.innerHTML = ``;
 
     if (choices.length === 1) {
-        chapterrender(choices[0].childNodes[1].textContent);
+        return choices[0].childNodes[1].textContent;
     } else {
         for (let item of choices) {
             const button = document.createElement('div');
@@ -137,6 +127,7 @@ function displayChoices(choices) {
             button.textContent = item.childNodes[0].textContent;
             btnHolder.appendChild(button);
         }
+        return undefined;
     }
 }
 
@@ -144,7 +135,6 @@ function displayChoices(choices) {
 async function chapterrender(id) {
     History.push(Number(id));
     const chapter = xmlMainText.getElementsByTagName("chapter")[id-1];
-    document.getElementById('progressAnim').style.display = 'block';
 
     Array.from(chapter.attributes).forEach(attr => {
         switch (attr.name) {
@@ -173,13 +163,19 @@ async function chapterrender(id) {
     if (chapter.getAttribute('isEnded') != undefined) {
     }
     else {
-        displayChoices(chapter.getElementsByTagName('choice'));
-        document.getElementById('progressAnim').style.display = 'none';
+        let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
+        if (ifBtn == undefined) {
+            swapBtnAnim();
+        }
+        else {
+            chapterrender(ifBtn);
+        }
     }
 
 }
 
 function chapterrenderButton(id) {
+    swapBtnAnim();
     let btnlft = btnHolder.children[0];
     let btnrght = btnHolder.children[1];
     let holder = document.createElement('div');
@@ -206,7 +202,7 @@ function chapterrenderButton(id) {
     }
 
     text_container.appendChild(holder);
-    btnHolder.innerHTML = `<div><img src="/assets/game_assets/gui/gui/animation.gif"></div>`;
+    btnHolder.innerHTML = ``;
     outer_container.scrollTop = outer_container.scrollHeight;
     chapterrender(id);
 }
@@ -214,3 +210,54 @@ function chapterrenderButton(id) {
 function startgame() {
 }
 
+function showAchievements() {
+    function formAchievemntBlock(elem) {
+        const newDiv = document.createElement("div");
+        const newContent = document.createTextNode(elem.getAttribute("value"));
+        newDiv.appendChild(newContent);
+        return newDiv;
+
+    }
+    function formAchievemntModal(elem) {
+
+    }
+
+    let xmlData;
+    
+    fetchData('/assets/game_assets/'+gamefolder+ '/localizations/achievements.xml')
+    .then(data => {
+        
+        xmlData = data.getElementsByTagName("achievement");  // Должен быть объект XML
+        const achievementBlock = document.getElementById("achievement_container");
+        if (gamefolder == "S3") {
+            const lst = ["Метаморф","Кредо наёмника","Легионер"];
+            for (let i=1; i < 4; i++) {
+                const block = document.createElement("div");
+                block.id = "company"+i;
+                const header = document.createElement("h3");
+                header.textContent = lst[i-1];
+                block.appendChild(header);
+                achievementBlock.appendChild(block);
+            }
+
+        }
+        for (let item of xmlData) {
+            if (item.getAttribute("show") != undefined) {
+                continue;
+            }
+            const block = formAchievemntBlock(item);
+            if (gamefolder == "S3") {
+                const company = document.getElementById("company"+item.getAttribute('company'));
+                company.appendChild(block);
+
+            }
+            else {
+                achievementBlock.appendChild(block);
+            }
+        }
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+}
