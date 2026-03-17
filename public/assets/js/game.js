@@ -3,12 +3,16 @@ const text_container = document.getElementById('text_container');
 const scrollDownBtn = document.getElementById('scrollDownBtn');
 const btnHolder = document.getElementById('btnholder');
 const animHolder = document.getElementById('progressAnim');
+let chapterlist;
 let isAtBottom = true;
 let xmlMainText;
+let Chapters;
 
 History = [];
 HistoryVisible = new Map();
 let speed;
+
+
 
 
 function checkIfAtBottom() {
@@ -57,7 +61,6 @@ async function initData() {
     return fetch(url)
         .then(response => response.json())
         .then(jsonData => {
-            console.log(jsonData);
             localStorage.setItem("info",JSON.stringify(jsonData));
             return true;
         })
@@ -65,7 +68,6 @@ async function initData() {
             console.error('Error:', error);
             return false;
         });
-    
 }
 
 async function setHistory() {
@@ -79,17 +81,17 @@ async function setHistory() {
     localStorage.setItem("info",JSON.stringify(data));
 }
 
-async function readHistory(params) {
-    let data = localStorage.getItem("info");
-    if (data == null) {
+async function readHistory() {
+    if (localStorage.getItem("info") == null) {
         await initData();
+        return;
     }
+    let data = JSON.parse(localStorage.getItem("info"));
     History = data["symbiont"+gamedata]['history'];
     const historyVisNums = data["symbiont"+gamedata]['historyVisible'];
     for (const item in historyVisNums) {
 
     }
-    
 }
 
 
@@ -104,6 +106,9 @@ function setWord(word) {
 }
 
 function delay(ms) {
+    if (ms == 0) {
+        return;
+    }
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -118,11 +123,10 @@ function swapBtnAnim() {
     }
 }
 
-async function displayMessages(messages) {
+async function displayMessages(messages, delay_ms) {
     for (let item of messages) {
         let message = document.createElement('div');
         let role;
-        let delay_ms = 200;
 
         switch (Number(item.getAttribute('roleId'))) {
           case 1: { role = 'mc'; break; }
@@ -134,8 +138,8 @@ async function displayMessages(messages) {
         message.setAttribute('class',`content-block ${role}`);
         message.innerHTML = item.textContent;
 
-        delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
-        await delay(delay_ms);
+        //delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
+        if (delay_ms != 0) await delay(delay_ms);
         text_container.appendChild(message);
         if (isAtBottom) {
             outer_container.scrollTop = outer_container.scrollHeight;
@@ -174,11 +178,13 @@ function displayChoices(choices) {
     }
 }
 
+function resetToChapter(chapterid){
 
+}
 async function chapterrender(id) {
     History.push(Number(id));
     setHistory();
-    const chapter = xmlMainText.getElementsByTagName("chapter")[id-1];
+    const chapter = Chapters[id-1];
     let isEnded = null;
 
     Array.from(chapter.attributes).forEach(attr => {
@@ -188,7 +194,12 @@ async function chapterrender(id) {
                 setAchievement(attr.value);
                 break;}
             case "isKeyChapter": {
-                HistoryVisible.set(Number(id), chapter.getAttribute('achievementSimple'));
+                const tmp = document.createElement("div");
+                tmp.setAttribute('class','content-block chapter');
+                const desc = chapter.getAttribute("description")
+                tmp.textContent = desc;
+                chapterlist.appendChild(tmp);
+                HistoryVisible.set(Number(id), desc);
                 break;}
             case "isEnded": {break;}
             case "helpId": {break;}
@@ -206,7 +217,7 @@ async function chapterrender(id) {
           document.getElementById('achievement_pic').src = "assets/gui/achievements/"+achid.getAttribute("id")+".png";
     }
 
-    await displayMessages(chapter.getElementsByTagName('message'));
+    await displayMessages(chapter.getElementsByTagName('message'), 0);
     if (chapter.getAttribute('isEnded') != undefined) {
     }
     else {
@@ -254,13 +265,9 @@ function chapterrenderButton(id) {
     chapterrender(id);
 }
 
-async function startgame() {
-    await readHistory();
-    
-    
-}
 
-function showAchievements() {
+
+async function showAchievements() {
     function formAchievemntBlock(elem) {
         const newDiv = document.createElement("div");
         const newContent = document.createTextNode(elem.getAttribute("value"));
@@ -274,9 +281,8 @@ function showAchievements() {
 
     let xmlData;
     
-    fetchData('/assets/game_assets/'+gamefolder+ '/localizations/achievements.xml')
+    fetchData('/assets/game_assets/' + gamefolder + '/localizations/achievements.xml')
     .then(data => {
-        
         xmlData = data.getElementsByTagName("achievement");  // Должен быть объект XML
         const achievementBlock = document.getElementById("achievement_container");
         if (gamefolder == "S3") {
@@ -289,7 +295,6 @@ function showAchievements() {
                 block.appendChild(header);
                 achievementBlock.appendChild(block);
             }
-
         }
         for (let item of xmlData) {
             if (item.getAttribute("show") != undefined) {
@@ -299,7 +304,6 @@ function showAchievements() {
             if (gamefolder == "S3") {
                 const company = document.getElementById("company"+item.getAttribute('company'));
                 company.appendChild(block);
-
             }
             else {
                 achievementBlock.appendChild(block);
@@ -309,5 +313,82 @@ function showAchievements() {
     .catch(error => {
         console.log(error);
     });
+}
 
+// основная функция запускающая игру
+async function startgame() {
+    async function renderAll() {
+        async function displayFast(messages) {
+            for (let item of messages) {
+                let message = document.createElement('div');
+                let role;
+
+                switch (Number(item.getAttribute('roleId'))) {
+                case 1: { role = 'mc'; break; }
+                case 2: { role = 'sc1'; break; }
+                case 3: { role = 'sc2';  break; }
+                case 4: { role = 'sys';  break; }
+                }
+
+                message.setAttribute('class',`content-block ${role}`);
+                message.innerHTML = item.textContent;
+                fragment.appendChild(message);
+            } 
+        }
+        if (History.length == 0) {
+            const startChapter = {"0":1, "1":1,"2":1, "3_1":1, "3_2":2263, "3_3": 2263};
+            chapterrender(startChapter[String(gamedata)]);
+            return;
+        }
+        const fragment = document.createDocumentFragment();
+        for (let i = 0; i < History.length - 1; i++) {
+            const chapter = Chapters[History[i]-1];
+            const messages = chapter.getElementsByTagName('message');
+            await displayFast(messages);
+        
+            const nextchapter = History[i+1];
+            const choices = Array.from(chapter.getElementsByTagName('choice')).filter(canRender);
+
+            let holder = document.createElement('div');
+            holder.setAttribute('class','btnhl');
+            if (choices.length != 1) {
+                for (const item of choices) {
+                    let button = document.createElement('div');
+                    if (Number(item.childNodes[1].textContent) == nextchapter) {
+                        button.setAttribute('class','btn active');
+                    }
+                    else {
+                        button.setAttribute('class','btn passive');
+                    }
+                    button.textContent = item.childNodes[0].textContent;
+                    holder.appendChild(button);
+                }
+                fragment.appendChild(holder);
+            }
+        }
+        if (History.length < 2) return;
+        const chapter = Chapters[History[History.length-1]-1];
+        const messages = chapter.getElementsByTagName('message');
+        await displayFast(messages);
+        text_container.appendChild(fragment);
+        let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
+
+        if (ifBtn == undefined) {
+            swapBtnAnim();
+        }
+        else {
+            chapterrender(ifBtn);
+        }
+    }
+
+    chapterlist = document.getElementById('chapterlist');
+    await readHistory();    
+    await renderAll();
+    if (gamedata == "S2" || gamedata == "S3") {
+        await showAchievements();
+    }
+    document.getElementById("waiting").style.display = 'none';
+    document.getElementById("outer_text_container").style.display = 'block';
+    outer_container.scrollTop = outer_container.scrollHeight;
+    checkIfAtBottom();
 }

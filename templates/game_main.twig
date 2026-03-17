@@ -1,11 +1,13 @@
 <div class="content-block game-menu">
     <a class="btn_a marker" onclick="displayBlock('chapters')"></a>
-    <a class="btn_a ach" onclick="displayBlock('achievements')"></a>
+    {% if gamefolder not in ["S0", "S1"] %}
+        <a class="btn_a ach" onclick="displayBlock('achievements')"></a>
+    {% endif %}
     <a class="btn_a settings" onclick="displayBlock('settingsGame')"></a>
     <a href="/" class="btn_a menuInGame"></a>
 </div>
 
-<div class="text_container" id="outer_text_container">
+<div class="text_container" id="outer_text_container" style="display:none;">
     <div class="" id="text_container">
     </div>
     <div id="progressAnim" class="content-block">
@@ -14,7 +16,10 @@
     <div class="btnhl" id="btnholder" style="display:none;">
     </div>
 </div>
-
 <div id="scrollDownBtn"></div>
+
+<div id="waiting">
+<h2>Подключение к защищённому каналу...</h2>
+</div>
 
 <script src="/assets/js/game.js"></script>

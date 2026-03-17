@@ -25,6 +25,7 @@ body {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+  background: #323232;
 }
 
 .gamegif {
@@ -84,7 +85,10 @@ body {
     bottom: 0; /* Вторая полоса */
     background-color: #282828; /* Цвет второй полосы */
 }
-
+.chapter {
+    height: 50px;
+    color: #dcecfb;
+}
 .game-menu {
     display: flex;
     justify-content: space-between;
@@ -147,6 +151,20 @@ body {
     background-position: bottom right;
     display: none;
     transition: display 0.4s;
+}
+
+#waiting {
+    height: calc(100vh - 100px - 20px);
+    background-color: black;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#NOTwaiting {
+    height: calc(100vh - 100px - 20px);
 }
 
 @media only screen and (max-width: 995px) {

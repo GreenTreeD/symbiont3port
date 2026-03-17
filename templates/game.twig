@@ -7,9 +7,11 @@
 <div id="gameMain">
     {% include "game_main.twig" %}
 </div>
-<div id="achievements" style="display:none;">
-    {% include "achievements.twig" %}
-</div>
+{% if gamefolder not in ["S0", "S1"] %}
+    <div id="achievements" style="display:none;">
+        {% include "achievements.twig" %}
+    </div>
+{% endif %}
 <div id="chapters" style="display:none;">
     {% include "chapters.twig" %}
 </div>
@@ -18,18 +20,21 @@
 </div>
 
 
+
 <script type="text/javascript">
     speed = 20;
+    const gamefolder = '{{ gamefolder }}';
+    const gamedata = '{{ gamedata }}';
     fetchData('{{ maintext }}')
     .then(data => {
-        xmlMainText = data;  // Должен быть объект XML
-        chapterrender(1);
+        let xmlMainText = data;  // Должен быть объект XML
+        Chapters = xmlMainText.getElementsByTagName("chapter");
+        startgame();
     })
     .catch(error => {
         console.log(error);
     });
-    const gamefolder = '{{ gamefolder }}';
-    const gamedata = '{{ gamedata }}';
+
 </script>
 
 {% endblock %}
