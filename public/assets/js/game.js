@@ -52,12 +52,55 @@ function fetchData(paramValue) {
         });
 }
 
-function setHistory(storyname, idchapter) {
-    const url = `/api/set-history?storyname=${storyname}?idchapter=${storyname}`
-
+async function initData() {
+    const url = `../data/template.json`;
+    return fetch(url)
+        .then(response => response.json())
+        .then(jsonData => {
+            console.log(jsonData);
+            localStorage.setItem("info",JSON.stringify(jsonData));
+            return true;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            return false;
+        });
+    
 }
 
-function setAchievement(storyname, idachievement) {
+async function setHistory() {
+    let data = localStorage.getItem("info");
+    if (data == null) {
+        await initData();
+    }
+    data = JSON.parse(data);
+    data["symbiont"+gamedata]['history'] = History;
+    data["symbiont"+gamedata]['historyVisible'] = Array.from(HistoryVisible.keys());
+    localStorage.setItem("info",JSON.stringify(data));
+}
+
+async function readHistory(params) {
+    let data = localStorage.getItem("info");
+    if (data == null) {
+        await initData();
+    }
+    History = data["symbiont"+gamedata]['history'];
+    const historyVisNums = data["symbiont"+gamedata]['historyVisible'];
+    for (const item in historyVisNums) {
+
+    }
+    
+}
+
+
+function setAchievement(idachievement) {
+    let data = localStorage.getItem("info");
+    let achievements = data["symbiont"+gamedata]['achievements'];
+    achievements.push(idachievement);
+    data["symbiont"+gamedata]['achievements'] = achievements;
+}
+
+function setWord(word) {
 }
 
 function delay(ms) {
@@ -134,12 +177,16 @@ function displayChoices(choices) {
 
 async function chapterrender(id) {
     History.push(Number(id));
+    setHistory();
     const chapter = xmlMainText.getElementsByTagName("chapter")[id-1];
+    let isEnded = null;
 
     Array.from(chapter.attributes).forEach(attr => {
         switch (attr.name) {
             case "id": {break;}
-            case "achievementSimple": { break;}
+            case "achievementSimple": { 
+                setAchievement(attr.value);
+                break;}
             case "isKeyChapter": {
                 HistoryVisible.set(Number(id), chapter.getAttribute('achievementSimple'));
                 break;}
@@ -207,7 +254,10 @@ function chapterrenderButton(id) {
     chapterrender(id);
 }
 
-function startgame() {
+async function startgame() {
+    await readHistory();
+    
+    
 }
 
 function showAchievements() {

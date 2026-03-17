@@ -38,7 +38,8 @@ switch ($segments[0]) {
             echo $twig->render('game.twig',[
                 'maintext'=>'/assets/game_assets/'. $game_array[$segments[1]]['folder'] . '/localizations/text.xml',
                 'gamename' => $game_array[$segments[1]]['gamename'],
-                'gamefolder' => $game_array[$segments[1]]['folder']
+                'gamefolder' => $game_array[$segments[1]]['folder'],
+                'gamedata' => $segments[1]
             ]);
             break;
         }
