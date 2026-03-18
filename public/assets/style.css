@@ -18,6 +18,10 @@ body {
     color: #c0e4fc;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 #main {
   width: 100%;
@@ -151,6 +155,16 @@ body {
     background-position: bottom right;
     display: none;
     transition: display 0.4s;
+}
+
+#rewindBtn {
+    background-image: url(game_assets/gui/back.svg);
+    height: 60%;
+    width: 80%;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #waiting {

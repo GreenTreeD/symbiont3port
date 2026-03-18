@@ -1,18 +1,13 @@
 const outer_container = document.getElementById('outer_text_container');
 const text_container = document.getElementById('text_container');
 const scrollDownBtn = document.getElementById('scrollDownBtn');
-const btnHolder = document.getElementById('btnholder');
 const animHolder = document.getElementById('progressAnim');
-let chapterlist;
 let isAtBottom = true;
-let xmlMainText;
 let Chapters;
 
-History = [];
-HistoryVisible = new Map();
+let ChapterHistory = [];
+let lastKeyChapter = 0;
 let speed;
-
-
 
 
 function checkIfAtBottom() {
@@ -41,7 +36,7 @@ scrollDownBtn.addEventListener('click', () => {
 
 
 
-function fetchData(paramValue) {
+async function fetchData(paramValue) {
     const url = `${paramValue}`;
     return fetch(url)
         .then(response => response.text())
@@ -76,8 +71,8 @@ async function setHistory() {
         await initData();
     }
     data = JSON.parse(data);
-    data["symbiont"+gamedata]['history'] = History;
-    data["symbiont"+gamedata]['historyVisible'] = Array.from(HistoryVisible.keys());
+    data["symbiont"+gamedata] = ChapterHistory;
+    //data["symbiont"+gamedata]['historyVisible'] = Array.from(HistoryVisible.keys());
     localStorage.setItem("info",JSON.stringify(data));
 }
 
@@ -87,16 +82,11 @@ async function readHistory() {
         return;
     }
     let data = JSON.parse(localStorage.getItem("info"));
-    History = data["symbiont"+gamedata]['history'];
-    const historyVisNums = data["symbiont"+gamedata]['historyVisible'];
-    for (const item in historyVisNums) {
-
-    }
+    ChapterHistory = data["symbiont"+gamedata];
 }
 
-
 function setAchievement(idachievement) {
-    let data = localStorage.getItem("info");
+    let data = JSON.parse(localStorage.getItem("info"));
     let achievements = data["symbiont"+gamedata]['achievements'];
     achievements.push(idachievement);
     data["symbiont"+gamedata]['achievements'] = achievements;
@@ -113,6 +103,8 @@ function delay(ms) {
 }
 
 function swapBtnAnim() {
+    const btnHolder = document.getElementById('btnholder');
+    const animHolder = document.getElementById('progressAnim');
     if (btnHolder.style.display == 'none') {
         btnHolder.style.display = 'flex';
         animHolder.style.display = 'none';
@@ -127,19 +119,18 @@ async function displayMessages(messages, delay_ms) {
     for (let item of messages) {
         let message = document.createElement('div');
         let role;
-
         switch (Number(item.getAttribute('roleId'))) {
           case 1: { role = 'mc'; break; }
           case 2: { role = 'sc1'; break; }
           case 3: { role = 'sc2';  break; }
           case 4: { role = 'sys';  break; }
         }
-
         message.setAttribute('class',`content-block ${role}`);
-        message.innerHTML = item.textContent;
-
-        //delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
-        if (delay_ms != 0) await delay(delay_ms);
+        message.textContent = item.textContent;
+        if (delay_ms != 0) {
+            delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
+            await delay(delay_ms);
+        }
         text_container.appendChild(message);
         if (isAtBottom) {
             outer_container.scrollTop = outer_container.scrollHeight;
@@ -152,12 +143,13 @@ function canRender(choiceEl) {
     const ifVisited = choiceEl.getAttribute("ifVisited");
     const ifNotVisited = choiceEl.getAttribute("ifNotVisited");
   
-    if (ifVisited !== null) return History.includes(Number(ifVisited));
-    if (ifNotVisited !== null) return !History.includes(Number(ifNotVisited));
+    if (ifVisited !== null) return ChapterHistory.includes(Number(ifVisited));
+    if (ifNotVisited !== null) return !ChapterHistory.includes(Number(ifNotVisited));
     return true;
 }
 
 function displayChoices(choices) {
+    const btnHolder = document.getElementById('btnholder');
     choices = Array.from(choices).filter(canRender);
     btnHolder.innerHTML = ``;
 
@@ -178,35 +170,52 @@ function displayChoices(choices) {
     }
 }
 
-function resetToChapter(chapterid){
-
-}
 async function chapterrender(id) {
-    History.push(Number(id));
+    ChapterHistory.push(Number(id));
     setHistory();
     const chapter = Chapters[id-1];
-    let isEnded = null;
+    let isEnded = false;
+    let isVictory = false;
 
     Array.from(chapter.attributes).forEach(attr => {
         switch (attr.name) {
             case "id": {break;}
             case "achievementSimple": { 
-                setAchievement(attr.value);
+                //setAchievement(attr.value);
                 break;}
             case "isKeyChapter": {
+                lastKeyChapter = id;
                 const tmp = document.createElement("div");
                 tmp.setAttribute('class','content-block chapter');
                 const desc = chapter.getAttribute("description")
                 tmp.textContent = desc;
-                chapterlist.appendChild(tmp);
-                HistoryVisible.set(Number(id), desc);
+                tmp.dataset.chapter = id;
+                tmp.addEventListener("click", function () {
+                    resetToChapter(Number(this.dataset.chapter));
+                });
+
+                document.getElementById('chapterlist').appendChild(tmp);
                 break;}
-            case "isEnded": {break;}
+            case "isEnded": {
+                const btnHolder = document.getElementById('btnholder');
+                const tmp = document.createElement('div');
+                tmp.id = 'rewindBtn';
+                tmp.addEventListener("click", () => {
+                    resetToChapter(lastKeyChapter);
+                });
+                btnHolder.appendChild(tmp);
+                isEnded = true; 
+                break;}
+            case "isVictory": { 
+                const btnHolder = document.getElementById('btnholder');
+                btnHolder.style.display = 'none';
+                isVictory = true; 
+                break; }
             case "helpId": {break;}
         }
     });
 
-    if (chapter.getAttribute('achievementSimple') != undefined) {
+    /*if (chapter.getAttribute('achievementSimple') != undefined) {
           document.getElementById('achievement').style.display = 'block';
           let achid = chapter.getAttribute('achievementSimple');
           let listl = tipsDoc.children[0].children[1];
@@ -215,25 +224,27 @@ async function chapterrender(id) {
           document.getElementById('achievement_notification').innerHTML = achid.getAttribute("notification");
           document.getElementById('achievement_name').innerHTML = achid.getAttribute("value");
           document.getElementById('achievement_pic').src = "assets/gui/achievements/"+achid.getAttribute("id")+".png";
-    }
+    }*/
 
-    await displayMessages(chapter.getElementsByTagName('message'), 0);
-    if (chapter.getAttribute('isEnded') != undefined) {
-    }
-    else {
+    await displayMessages(chapter.getElementsByTagName('message'), 200);
+    if (isEnded == false && isVictory == false) {
         let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
         if (ifBtn == undefined) {
             swapBtnAnim();
+            return;
         }
         else {
             chapterrender(ifBtn);
         }
     }
-
+    if (isEnded) {
+        swapBtnAnim();
+    }
 }
 
 function chapterrenderButton(id) {
-    swapBtnAnim();
+    const btnHolder = document.getElementById('btnholder');
+    if (btnHolder.style.display != 'none') swapBtnAnim();
     let btnlft = btnHolder.children[0];
     let btnrght = btnHolder.children[1];
     let holder = document.createElement('div');
@@ -264,8 +275,6 @@ function chapterrenderButton(id) {
     outer_container.scrollTop = outer_container.scrollHeight;
     chapterrender(id);
 }
-
-
 
 async function showAchievements() {
     function formAchievemntBlock(elem) {
@@ -315,6 +324,17 @@ async function showAchievements() {
     });
 }
 
+function resetToChapter(chapterid) {
+    if (chapterid == 0) {
+        ChapterHistory = [];
+    }
+    else {
+        ChapterHistory = ChapterHistory.slice(0,ChapterHistory.indexOf(chapterid));
+    }
+    setHistory();
+    window.location.reload();
+}
+
 // основная функция запускающая игру
 async function startgame() {
     async function renderAll() {
@@ -329,24 +349,67 @@ async function startgame() {
                 case 3: { role = 'sc2';  break; }
                 case 4: { role = 'sys';  break; }
                 }
-
                 message.setAttribute('class',`content-block ${role}`);
                 message.innerHTML = item.textContent;
                 fragment.appendChild(message);
             } 
         }
-        if (History.length == 0) {
-            const startChapter = {"0":1, "1":1,"2":1, "3_1":1, "3_2":2263, "3_3": 2263};
+
+        async function chapterprocess(chapter) {
+            const chapterlist = document.getElementById('chapterlist');
+            const messages = chapter.getElementsByTagName('message');
+            await displayFast(messages);
+            let isEnded = false;
+            let isVictory = false;
+            Array.from(chapter.attributes).forEach(attr => {
+                switch (attr.name) {
+                    case "isKeyChapter": {
+                        lastKeyChapter = chapter.getAttribute('id');
+                        const tmp = document.createElement("div");
+                        tmp.setAttribute('class','content-block chapter');
+                        const desc = chapter.getAttribute("description")
+                        tmp.textContent = desc;
+                        tmp.dataset.chapter = chapter.getAttribute('id');
+                        tmp.addEventListener("click", function () {
+                            resetToChapter(Number(this.dataset.chapter));
+                        });
+                        chapterlist.appendChild(tmp);
+
+                        break;}
+                    case "isEnded": {
+                        const btnHolder = document.getElementById('btnholder');
+                        const tmp = document.createElement('div');
+                        tmp.id = 'rewindBtn';
+                        tmp.addEventListener("click", () => {
+                            resetToChapter(lastKeyChapter);
+                        });
+                        btnHolder.appendChild(tmp);
+                        isEnded = true;
+                        break;}
+                    case "isVictory": { 
+                        const btnHolder = document.getElementById('btnholder');
+                        btnHolder.style.display = 'none';
+                        isVictory = true; 
+                        break; }
+                }
+            });
+            if (isEnded == true || isVictory == true) {
+                return true;
+            }
+            return false;
+
+        }
+        if (ChapterHistory.length == 0) {
+            const startChapter = {"0":1, "1":1,"2":1, "3_1":1, "3_2":2263, "3_3": 2225};
             chapterrender(startChapter[String(gamedata)]);
             return;
         }
         const fragment = document.createDocumentFragment();
-        for (let i = 0; i < History.length - 1; i++) {
-            const chapter = Chapters[History[i]-1];
-            const messages = chapter.getElementsByTagName('message');
-            await displayFast(messages);
-        
-            const nextchapter = History[i+1];
+        for (let i = 0; i < ChapterHistory.length - 1; i++) {
+            const chapter = Chapters[ChapterHistory[i]-1];
+            const flag = await chapterprocess(chapter);
+ 
+            const nextchapter = ChapterHistory[i+1];
             const choices = Array.from(chapter.getElementsByTagName('choice')).filter(canRender);
 
             let holder = document.createElement('div');
@@ -366,14 +429,14 @@ async function startgame() {
                 fragment.appendChild(holder);
             }
         }
-        if (History.length < 2) return;
-        const chapter = Chapters[History[History.length-1]-1];
-        const messages = chapter.getElementsByTagName('message');
-        await displayFast(messages);
+        //if (ChapterHistory.length < 2) return;
+        const chapter = Chapters[ChapterHistory[ChapterHistory.length-1]-1];
+        chapterprocess(chapter);
+
         text_container.appendChild(fragment);
         let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
 
-        if (ifBtn == undefined) {
+        if (ifBtn == undefined && document.getElementById('btnholder').style.display == 'none') {
             swapBtnAnim();
         }
         else {
@@ -381,7 +444,7 @@ async function startgame() {
         }
     }
 
-    chapterlist = document.getElementById('chapterlist');
+    
     await readHistory();    
     await renderAll();
     if (gamedata == "S2" || gamedata == "S3") {

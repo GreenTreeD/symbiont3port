@@ -7,7 +7,7 @@ $game_array = [
     "2" => ["folder" => "S2", "startChapter" => 1, "gamename" => "Симбионт 2"],
     "3_1" => ["folder" => "S3", "startChapter" => 1, "gamename" => "Симбионт 3"],
     "3_2" => ["folder" => "S3", "startChapter" => 2263, "gamename" => "Симбионт 3"],
-    "3_3" => ["folder" => "S3", "startChapter" => 1, "gamename" => "Симбионт 3"]
+    "3_3" => ["folder" => "S3", "startChapter" => 2225, "gamename" => "Симбионт 3"]
 ];
 
 
