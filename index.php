@@ -1,5 +1,5 @@
 <?php 
-require_once '../vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
 $game_array = [
     "0" => ["folder" => "S0", "startChapter" => 1, "gamename" => "Симбионт 0"],
@@ -11,18 +11,10 @@ $game_array = [
 ];
 
 
-$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../templates');
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $twig = new \Twig\Environment($loader);
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-
-
-if (str_starts_with($uri, '/api/')) {
-    header('Content-Type: application/json; charset=utf-8');
-    require __DIR__ . '/api.php';
-    exit;
-}
 
 $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $segments = explode('/', $uri);

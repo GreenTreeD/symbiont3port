@@ -26,6 +26,7 @@ a {
 #main {
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -129,7 +130,7 @@ a {
 
 .text_container {
     width: 100%;
-    height: calc(100vh - 100px - 20px);
+    height: calc(100dvh - 100px - 20px);
     max-width: 800px;
     overflow-y: auto;
     flex-grow: 1;
@@ -168,7 +169,7 @@ a {
 }
 
 #waiting {
-    height: calc(100vh - 100px - 20px);
+    height: calc(100dvh - 100px - 20px);
     background-color: black;
     padding: 40px;
     display: flex;
@@ -178,7 +179,7 @@ a {
 }
 
 #NOTwaiting {
-    height: calc(100vh - 100px - 20px);
+    height: calc(100dvh - 100px - 20px);
 }
 
 @media only screen and (max-width: 995px) {
@@ -191,14 +192,14 @@ a {
 @media (max-width: 460px) {
   #main {
     width: calc(100% - 20px);
-    height: calc(100vh - 20px);
+    height: calc(100dvh - 20px);
     margin: 10px;
   }
   .game-menu {
         padding: 15px 25px;
   }
   .text_container {
-      height: calc(100vh - 70px - 20px);
+      height: calc(100dvh - 70px - 20px);
   }
 }
 
@@ -206,7 +207,7 @@ a {
   #main {
     width: 100%;
     max-width: 600px;          /* Максимальная ширина 800px */
-    height: calc(100vh - 20px);             /* Полная высота экрана */
+    height: calc(100dvh - 20px);             /* Полная высота экрана */
     margin: 10px auto;            /* Центрируем по горизонтали */
   }
 }

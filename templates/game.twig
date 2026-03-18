@@ -28,7 +28,12 @@
     fetchData('{{ maintext }}')
     .then(data => {
         let xmlMainText = data;  // Должен быть объект XML
-        Chapters = xmlMainText.getElementsByTagName("chapter");
+        const chaptersList = xmlMainText.getElementsByTagName("chapter");
+        Chapters = new Map();
+        for (const chapter of chaptersList) {
+            Chapters.set(Number(chapter.getAttribute("id")), chapter);
+        }
+        console.log(Chapters);
         startgame();
     })
     .catch(error => {

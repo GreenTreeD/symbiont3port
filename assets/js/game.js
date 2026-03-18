@@ -173,7 +173,8 @@ function displayChoices(choices) {
 async function chapterrender(id) {
     ChapterHistory.push(Number(id));
     setHistory();
-    const chapter = Chapters[id-1];
+    const chapter = Chapters.get(id);
+    console.log(chapter);
     let isEnded = false;
     let isVictory = false;
 
@@ -229,12 +230,13 @@ async function chapterrender(id) {
     await displayMessages(chapter.getElementsByTagName('message'), 200);
     if (isEnded == false && isVictory == false) {
         let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
+        console.log(ifBtn);
         if (ifBtn == undefined) {
             swapBtnAnim();
             return;
         }
         else {
-            chapterrender(ifBtn);
+            chapterrender(Number(ifBtn));
         }
     }
     if (isEnded) {
@@ -406,7 +408,7 @@ async function startgame() {
         }
         const fragment = document.createDocumentFragment();
         for (let i = 0; i < ChapterHistory.length - 1; i++) {
-            const chapter = Chapters[ChapterHistory[i]-1];
+            const chapter = Chapters.get(ChapterHistory[i]);
             const flag = await chapterprocess(chapter);
  
             const nextchapter = ChapterHistory[i+1];
@@ -430,7 +432,7 @@ async function startgame() {
             }
         }
         //if (ChapterHistory.length < 2) return;
-        const chapter = Chapters[ChapterHistory[ChapterHistory.length-1]-1];
+        const chapter = Chapters.get(ChapterHistory[ChapterHistory.length-1]);
         chapterprocess(chapter);
 
         text_container.appendChild(fragment);
@@ -440,7 +442,7 @@ async function startgame() {
             swapBtnAnim();
         }
         else {
-            chapterrender(ifBtn);
+            chapterrender(Number(ifBtn));
         }
     }
 
