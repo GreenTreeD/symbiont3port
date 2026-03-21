@@ -289,7 +289,7 @@
     <message id="4" roleId="1">Но, может быть, начнешь уже помогать как-то иначе? По-настоящему?</message>
     <choice id="1">Я думал, что уже помогаю...<targetChapter>25</targetChapter>
     </choice>
-    <choice id="2">Прости. Где ты сейчас?<targetChapter>25</targetChapter>
+    <choice id="2">Прости. Где ты сейчас?<targetChapter>882</targetChapter>
     </choice>
   </chapter>
   <chapter id="25">
@@ -574,7 +574,7 @@
     <message id="3" roleId="1">Нам нужно поторопиться. Не против, если я попробую заглянуть в ящики стола?</message>
     <choice id="1">Хорошая идея!<targetChapter>50</targetChapter>
     </choice>
-    <choice id="2">Действуй!<targetChapter>50</targetChapter>
+    <choice id="2">Действуй!<targetChapter>883</targetChapter>
     </choice>
   </chapter>
   <chapter id="50">
@@ -4162,7 +4162,7 @@
     <message id="12" roleId="1">В накладной сообщалось, что единственная полностью готовая партия «Препарата 22» была отправлена на этаж дирекции. То есть — А4.</message>
     <message id="13" roleId="1">Понимаешь? Где-то там находится и портативный компьютер с данными майора Сидельникова!</message>
     <message id="14" roleId="1">Нам просто обязательно нужно заглянуть на уровень А4! Обязательно!</message>
-    <choice id="1">Согласен.<targetChapter>342</targetChapter>
+    <choice id="1">Согласен.<targetChapter>954</targetChapter>
     </choice>
     <choice id="2">Что еще в бумагах?<targetChapter>342</targetChapter>
     </choice>
@@ -7823,7 +7823,7 @@
     <message id="9" roleId="1">А-а-а... черт!</message>
     <choice id="1">Что происходит?!<targetChapter>663</targetChapter>
     </choice>
-    <choice id="2">Что с тобой?!<targetChapter>663</targetChapter>
+    <choice id="2">Что с тобой?!<targetChapter>885</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="13" id="658">
@@ -10165,30 +10165,44 @@
     </choice>
   </chapter>
   <chapter id="882">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>25</targetChapter>
+    </choice>
   </chapter>
   <chapter id="883">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>50</targetChapter>
+    </choice>
   </chapter>
   <chapter id="884">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>50</targetChapter>
+    </choice>
   </chapter>
   <chapter id="885">
     <choice id="1">
-      <targetChapter>885</targetChapter>
+      <targetChapter>663</targetChapter>
     </choice>
   </chapter>
   <chapter id="886">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>947</targetChapter>
+    </choice>
   </chapter>
   <chapter id="887">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>951</targetChapter>
+    </choice>
   </chapter>
   <chapter id="888">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>948</targetChapter>
+    </choice>
   </chapter>
   <chapter id="889">
-    <choice id="1"/>
+    <choice id="1">
+      <targetChapter>900</targetChapter>
+    </choice>
   </chapter>
   <chapter id="890">
     <choice id="1"/>
@@ -10814,7 +10828,7 @@
     <message id="5" roleId="1">Ингибиторы или гормоны?</message>
     <choice id="1">Ингибиторы.<targetChapter>947</targetChapter>
     </choice>
-    <choice id="2">Гормоны.<targetChapter>947</targetChapter>
+    <choice id="2">Гормоны.<targetChapter>886</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="16" id="946">
@@ -10832,7 +10846,7 @@
     <message id="2" roleId="1">Мы понемногу продвигаемся, да, друг?</message>
     <message id="3" roleId="1">Настало время второго этапа смешивания.</message>
     <message id="4" roleId="1">Нейролептики или масса?</message>
-    <choice id="1">Нейролептики.<targetChapter>948</targetChapter>
+    <choice id="1">Нейролептики.<targetChapter>888</targetChapter>
     </choice>
     <choice id="2">Масса.<targetChapter>948</targetChapter>
     </choice>
@@ -10844,7 +10858,7 @@
     <message id="4" roleId="1">Ну, будем надеяться только на хорошее, верно?</message>
     <message id="5" roleId="1">Итак, третий этап смешивания.</message>
     <message id="6" roleId="1">Выбор из двух тестовых образцов: №22 и №23.</message>
-    <choice id="1">Образец №23.<targetChapter>951</targetChapter>
+    <choice id="1">Образец №23.<targetChapter>887</targetChapter>
     </choice>
     <choice id="2">Образец №22.<targetChapter>951</targetChapter>
     </choice>
@@ -10882,7 +10896,7 @@
     <message id="5" roleId="1">... ... ...</message>
     <message id="6" roleId="1">Гм... Что ж, теперь последний этап.</message>
     <message id="7" roleId="1">Что в итоге: фиксатор «G» или загуститель?</message>
-    <choice id="1">Фиксатор «G».<targetChapter>900</targetChapter>
+    <choice id="1">Фиксатор «G».<targetChapter>889</targetChapter>
     </choice>
     <choice id="2">Загуститель.<targetChapter>900</targetChapter>
     </choice>
@@ -10895,5 +10909,8 @@
     <message id="5" roleId="1">И...</message>
     <choice id="1">Автопереход.<targetChapter>881</targetChapter>
     </choice>
+  </chapter>
+  <chapter id="954">
+    <choice id="1">Автопереход.<targetChapter>342</targetChapter></choice>
   </chapter>
 </game>

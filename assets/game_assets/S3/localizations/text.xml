@@ -2254,7 +2254,7 @@
     <message id="9" roleId="1">Она отпрыгнула от двери!</message>
     <choice id="1">Быстрее в подсобку!<targetChapter>186</targetChapter>
     </choice>
-    <choice id="2">Не тормози!!!<targetChapter>186</targetChapter>
+    <choice id="2">Не тормози!!!<targetChapter>2266</targetChapter>
     </choice>
   </chapter>
   <chapter id="185" isEnded="true">
@@ -3001,7 +3001,7 @@
     <message id="8" roleId="1">Неужели она обнаружила дыру, в которую я провалился?!</message>
     <choice id="1">Прыгай в люк!<targetChapter>265</targetChapter>
     </choice>
-    <choice id="2">Быстрее беги!<targetChapter>265</targetChapter>
+    <choice id="2">Быстрее беги!<targetChapter>2267</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="10" id="252">
@@ -6512,7 +6512,7 @@
     <message id="5" roleId="1">Красным закреплять, аль синим?</message>
     <choice id="1">Красным.<targetChapter>615</targetChapter>
     </choice>
-    <choice id="2">Синим.<targetChapter>615</targetChapter>
+    <choice id="2">Синим.<targetChapter>2268</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="13" id="602">
@@ -6849,7 +6849,7 @@
     <message id="2" roleId="1">Это вопрос или утверждение?</message>
     <choice id="1">Вопрос?<targetChapter>635</targetChapter>
     </choice>
-    <choice id="2">Утверждение?<targetChapter>635</targetChapter>
+    <choice id="2">Утверждение?<targetChapter>2269</targetChapter>
     </choice>
   </chapter>
   <chapter id="634">
@@ -7729,7 +7729,7 @@
     <message id="13" roleId="1">Куда мне? Право? Лево?</message>
     <choice id="1">Давай вправо...<targetChapter>714</targetChapter>
     </choice>
-    <choice id="2">Давай влево...<targetChapter>714</targetChapter>
+    <choice id="2">Давай влево...<targetChapter>2270</targetChapter>
     </choice>
   </chapter>
   <chapter id="714">
@@ -8716,7 +8716,7 @@
     <message id="3" roleId="1">О, божечки! Они уже оседлали вершину мусорного «хребта»!</message>
     <choice id="1">Вперед, нейробиолог!<targetChapter>797</targetChapter>
     </choice>
-    <choice id="2">Давай-давай!<targetChapter>797</targetChapter>
+    <choice id="2">Давай-давай!<targetChapter>2271</targetChapter>
     </choice>
   </chapter>
   <chapter id="797">
@@ -11929,7 +11929,7 @@
     <message id="6" roleId="1">В шкафу инфицированный!!!</message>
     <choice id="1">Беги!!!<targetChapter>1129</targetChapter>
     </choice>
-    <choice id="2">Спасайся!!!<targetChapter>1129</targetChapter>
+    <choice id="2">Спасайся!!!<targetChapter>2272</targetChapter>
     </choice>
   </chapter>
   <chapter id="1129">
@@ -12640,7 +12640,7 @@
     <message id="2" roleId="1">Выбор из двух: «Макбет» или «Ромео и Джульетта»?</message>
     <choice id="1">«Ромео и Джульетта».<targetChapter>1204</targetChapter>
     </choice>
-    <choice id="2">«Макбет».<targetChapter>1204</targetChapter>
+    <choice id="2">«Макбет».<targetChapter>2273</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="18" id="1203">
@@ -12656,7 +12656,7 @@
     <message id="2" roleId="1">«Кошка или собака»?</message>
     <choice id="1">Кошка.<targetChapter>1206</targetChapter>
     </choice>
-    <choice id="2">Собака.<targetChapter>1206</targetChapter>
+    <choice id="2">Собака.<targetChapter>2274</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="18" id="1205">
@@ -12673,7 +12673,7 @@
     <message id="2" roleId="1">«1948» или «1984»?</message>
     <choice id="1">«1948».<targetChapter>1208</targetChapter>
     </choice>
-    <choice id="2">«1984».<targetChapter>1208</targetChapter>
+    <choice id="2">«1984».<targetChapter>2275</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="18" id="1207">
@@ -12682,7 +12682,7 @@
     <message id="3" roleId="1">«Какого цвета белый ворон: красного или синего?»</message>
     <choice id="1">Красного.<targetChapter>1209</targetChapter>
     </choice>
-    <choice id="2">Синего.<targetChapter>1209</targetChapter>
+    <choice id="2">Синего.<targetChapter>2276</targetChapter>
     </choice>
   </chapter>
   <chapter id="1208">
@@ -12691,7 +12691,7 @@
     <message id="5" roleId="1">«Какого цвета белый ворон: красного или синего?»</message>
     <choice id="1">Красного.<targetChapter>1210</targetChapter>
     </choice>
-    <choice id="2">Синего.<targetChapter>1210</targetChapter>
+    <choice id="2">Синего.<targetChapter>2277</targetChapter>
     </choice>
   </chapter>
   <chapter id="1209">
@@ -12807,7 +12807,7 @@
     <message id="2" roleId="1">«Какого цвета белый ворон: красного или синего?»</message>
     <choice id="1">Красного.<targetChapter>1212</targetChapter>
     </choice>
-    <choice id="2">Синего.<targetChapter>1212</targetChapter>
+    <choice id="2">Синего.<targetChapter>2278</targetChapter>
     </choice>
   </chapter>
   <chapter id="1219">
@@ -14857,7 +14857,7 @@
     <message id="4" roleId="3" voice="11">... ... ...</message>
     <choice id="1">Быстрее!!!<targetChapter>1369</targetChapter>
     </choice>
-    <choice id="2">Жми, солдат!<targetChapter>1369</targetChapter>
+    <choice id="2">Жми, солдат!<targetChapter>2279</targetChapter>
     </choice>
   </chapter>
   <chapter id="1368" isEnded="true">
@@ -15377,7 +15377,7 @@
     <message id="3" roleId="1">Все, баста. Двигаю к выходу из архива.</message>
     <choice id="1">Стой!<targetChapter>1430</targetChapter>
     </choice>
-    <choice id="2">А как же обыски?!<targetChapter>1430</targetChapter>
+    <choice id="2">А как же обыски?!<targetChapter>2280</targetChapter>
     </choice>
   </chapter>
   <chapter id="1429">
@@ -15386,7 +15386,7 @@
     <message id="3" roleId="1">Чертовы гении... Если тебе что-то известно, почему не расскажешь?</message>
     <choice id="1">...<targetChapter>1431</targetChapter>
     </choice>
-    <choice id="2">...<targetChapter>1431</targetChapter>
+    <choice id="2">...<targetChapter>2281</targetChapter>
     </choice>
   </chapter>
   <chapter id="1430">
@@ -15503,7 +15503,7 @@
     <message id="2" roleId="1">Девочка или часы?</message>
     <choice id="1">Часы.<targetChapter>1444</targetChapter>
     </choice>
-    <choice id="2">Девочка.<targetChapter>1444</targetChapter>
+    <choice id="2">Девочка.<targetChapter>2282</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="20" id="1444">
@@ -15511,7 +15511,7 @@
     <message id="2" roleId="1">Какая-то дыра... или отверстие? И карточная масть: пика.</message>
     <choice id="1">Дыра.<targetChapter>1445</targetChapter>
     </choice>
-    <choice id="2">Пика.<targetChapter>1445</targetChapter>
+    <choice id="2">Пика.<targetChapter>2283</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="20" id="1445">
@@ -15519,7 +15519,7 @@
     <message id="2" roleId="1">Две масти: черва или бубна?</message>
     <choice id="1">Черва.<targetChapter>1446</targetChapter>
     </choice>
-    <choice id="2">Бубна.<targetChapter>1446</targetChapter>
+    <choice id="2">Бубна.<targetChapter>2284</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="20" id="1446">
@@ -15527,7 +15527,7 @@
     <message id="2" roleId="1">Зеркало или трефа?</message>
     <choice id="1">Зеркало.<targetChapter>1447</targetChapter>
     </choice>
-    <choice id="2">Трефа.<targetChapter>1447</targetChapter>
+    <choice id="2">Трефа.<targetChapter>2285</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="20" id="1447">
@@ -17006,14 +17006,14 @@
     <message id="1" roleId="1">Есть сигать за кабину!</message>
     <choice id="1">Прыгай низко!<targetChapter>1608</targetChapter>
     </choice>
-    <choice id="2">Прыгай высоко!<targetChapter>1608</targetChapter>
+    <choice id="2">Прыгай высоко!<targetChapter>2286</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="22" id="1607">
     <message id="1" roleId="1">Есть ныкаться за бетон!</message>
     <choice id="1">Прыгай низко!<targetChapter>1608</targetChapter>
     </choice>
-    <choice id="2">Прыгай высоко!<targetChapter>1608</targetChapter>
+    <choice id="2">Прыгай высоко!<targetChapter>2287</targetChapter>
     </choice>
   </chapter>
   <chapter id="1608" isEnded="true">
@@ -17591,7 +17591,7 @@
     <message id="11" roleId="1">Блин, из уха кровь течет...</message>
     <choice id="1">Ты точно в порядке?<targetChapter>1675</targetChapter>
     </choice>
-    <choice id="2">А что было дальше?<targetChapter>1675</targetChapter>
+    <choice id="2">А что было дальше?<targetChapter>2288</targetChapter>
     </choice>
   </chapter>
   <chapter id="1666">
@@ -17661,7 +17661,7 @@
     <message id="6" roleId="1">В общем, на одной удаче только и вышел. Говорят же, что хорошим людям и Бог помогает? Меня можно считать хорошим?</message>
     <choice id="1">Да.<targetChapter>1676</targetChapter>
     </choice>
-    <choice id="2">Нет.<targetChapter>1676</targetChapter>
+    <choice id="2">Нет.<targetChapter>2289</targetChapter>
     </choice>
   </chapter>
   <chapter id="1676">
@@ -17674,7 +17674,7 @@
     <message id="7" roleId="1">Ох ты, чудо техники! Тут, оказывается, громкость можно выкрутить! Ну-ка... Меня слышно нормально?</message>
     <choice id="1">Нет.<targetChapter>1677</targetChapter>
     </choice>
-    <choice id="2">Да.<targetChapter>1677</targetChapter>
+    <choice id="2">Да.<targetChapter>2290</targetChapter>
     </choice>
   </chapter>
   <chapter id="1677">
@@ -18781,7 +18781,7 @@
     <message id="5" roleId="1">Кэп! Тут путь раздваивается: можно пойти прямо, а можно налево. Нам куда?</message>
     <choice id="1">Прямо.<targetChapter>1800</targetChapter>
     </choice>
-    <choice id="2">Налево.<targetChapter>1800</targetChapter>
+    <choice id="2">Налево.<targetChapter>2291</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="24" id="1774">
@@ -18800,7 +18800,7 @@
     <message id="6" roleId="1">Вправо уходит тоннель из огромной гофрированной трубы. А влево — помятая и грязная жестянка.</message>
     <choice id="1">Давайте влево.<targetChapter>1800</targetChapter>
     </choice>
-    <choice id="2">Давайте вправо.<targetChapter>1800</targetChapter>
+    <choice id="2">Давайте вправо.<targetChapter>2292</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="24" id="1776">
@@ -18978,7 +18978,7 @@
     <message id="5" roleId="1">Два пути, кэп. Опять. Прямо или влево?</message>
     <choice id="1">Влево.<targetChapter>1802</targetChapter>
     </choice>
-    <choice id="2">Прямо.<targetChapter>1802</targetChapter>
+    <choice id="2">Прямо.<targetChapter>2293</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="24" id="1787">
@@ -20567,7 +20567,7 @@
     <message id="4" roleId="1">Тут развилка: бежать к другой двери и запереть их; или убегать в тоннели?!</message>
     <choice id="1">К другой двери!<targetChapter>1945</targetChapter>
     </choice>
-    <choice id="2">В тоннели!<targetChapter>1945</targetChapter>
+    <choice id="2">В тоннели!<targetChapter>2294</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="27" id="1944">
@@ -22842,7 +22842,7 @@
     <message id="4" roleId="1">Я перед развилкой!</message>
     <choice id="1">Направо!<targetChapter>2208</targetChapter>
     </choice>
-    <choice id="2">Налево!<targetChapter>2208</targetChapter>
+    <choice id="2">Налево!<targetChapter>2295</targetChapter>
     </choice>
   </chapter>
   <chapter id="2206">
@@ -22871,7 +22871,7 @@
     <message id="3" roleId="1">Есть! Тут еще одна развилка!</message>
     <choice id="1">Налево!<targetChapter>2210</targetChapter>
     </choice>
-    <choice id="2">Направо!<targetChapter>2210</targetChapter>
+    <choice id="2">Направо!<targetChapter>2296</targetChapter>
     </choice>
   </chapter>
   <chapter id="2209">
@@ -22891,7 +22891,7 @@
     <message id="4" roleId="1">О-па! Я перед площадкой! Слева мост вниз, справа мост вверх!</message>
     <choice id="1">Вниз!<targetChapter>2212</targetChapter>
     </choice>
-    <choice id="2">Вверх!<targetChapter>2212</targetChapter>
+    <choice id="2">Вверх!<targetChapter>2297</targetChapter>
     </choice>
   </chapter>
   <chapter id="2211">
@@ -22916,7 +22916,7 @@
     <message id="6" roleId="1">Как бы меня здесь не растворило!.. Развилка!</message>
     <choice id="1">Налево!<targetChapter>2213</targetChapter>
     </choice>
-    <choice id="2">Направо!<targetChapter>2213</targetChapter>
+    <choice id="2">Направо!<targetChapter>2298</targetChapter>
     </choice>
   </chapter>
   <chapter id="2213">
@@ -22925,7 +22925,7 @@
     <message id="3" roleId="1">Развилка!</message>
     <choice id="1">Налево!<targetChapter>2215</targetChapter>
     </choice>
-    <choice id="2">Направо!<targetChapter>2215</targetChapter>
+    <choice id="2">Направо!<targetChapter>2299</targetChapter>
     </choice>
   </chapter>
   <chapter id="2214">
@@ -22945,7 +22945,7 @@
     <message id="5" roleId="1">Развилка!</message>
     <choice id="1">Вверх!<targetChapter>2217</targetChapter>
     </choice>
-    <choice id="2">Вниз!<targetChapter>2217</targetChapter>
+    <choice id="2">Вниз!<targetChapter>2300</targetChapter>
     </choice>
   </chapter>
   <chapter id="2216">
@@ -22969,7 +22969,7 @@
     <message id="7" roleId="1">Кэп! Развилка!</message>
     <choice id="1">Налево!<targetChapter>2219</targetChapter>
     </choice>
-    <choice id="2">Направо!<targetChapter>2219</targetChapter>
+    <choice id="2">Направо!<targetChapter>2301</targetChapter>
     </choice>
   </chapter>
   <chapter id="2218">
@@ -22994,7 +22994,7 @@
     <message id="6" roleId="1">Ага! Вон, внизу, какая-то платформа! И... там есть дверь!</message>
     <choice id="1">Беги туда!<targetChapter>2221</targetChapter>
     </choice>
-    <choice id="2">Быстрее!<targetChapter>2221</targetChapter>
+    <choice id="2">Быстрее!<targetChapter>2302</targetChapter>
     </choice>
   </chapter>
   <chapter id="2220">
@@ -23570,4 +23570,41 @@
     <choice id="2" ifNotVisited="681" keyWord="реликт" keyWordContained="false">Автопереход.<targetChapter>823</targetChapter>
     </choice>
   </chapter>
+  <chapter id="2266"><choice id="1">Автопереход.<targetChapter>186</targetChapter></choice></chapter>
+  <chapter id="2267"><choice id="1">Автопереход.<targetChapter>265</targetChapter></choice></chapter>
+  <chapter id="2268"><choice id="1">Автопереход.<targetChapter>615</targetChapter></choice></chapter>
+  <chapter id="2269"><choice id="1">Автопереход.<targetChapter>635</targetChapter></choice></chapter>
+  <chapter id="2270"><choice id="1">Автопереход.<targetChapter>714</targetChapter></choice></chapter>
+  <chapter id="2271"><choice id="1">Автопереход.<targetChapter>797</targetChapter></choice></chapter>
+  <chapter id="2272"><choice id="1">Автопереход.<targetChapter>1129</targetChapter></choice></chapter>
+  <chapter id="2273"><choice id="1">Автопереход.<targetChapter>1204</targetChapter></choice></chapter>
+  <chapter id="2274"><choice id="1">Автопереход.<targetChapter>1206</targetChapter></choice></chapter>
+  <chapter id="2275"><choice id="1">Автопереход.<targetChapter>1208</targetChapter></choice></chapter>
+  <chapter id="2276"><choice id="1">Автопереход.<targetChapter>1209</targetChapter></choice></chapter>
+  <chapter id="2277"><choice id="1">Автопереход.<targetChapter>1210</targetChapter></choice></chapter>
+  <chapter id="2278"><choice id="1">Автопереход.<targetChapter>1212</targetChapter></choice></chapter>
+  <chapter id="2279"><choice id="1">Автопереход.<targetChapter>1369</targetChapter></choice></chapter>
+  <chapter id="2280"><choice id="1">Автопереход.<targetChapter>1430</targetChapter></choice></chapter>
+  <chapter id="2281"><choice id="1">Автопереход.<targetChapter>1431</targetChapter></choice></chapter>
+  <chapter id="2282"><choice id="1">Автопереход.<targetChapter>1444</targetChapter></choice></chapter>
+  <chapter id="2283"><choice id="1">Автопереход.<targetChapter>1445</targetChapter></choice></chapter>
+  <chapter id="2284"><choice id="1">Автопереход.<targetChapter>1446</targetChapter></choice></chapter>
+  <chapter id="2285"><choice id="1">Автопереход.<targetChapter>1447</targetChapter></choice></chapter>
+  <chapter id="2286"><choice id="1">Автопереход.<targetChapter>1608</targetChapter></choice></chapter>
+  <chapter id="2287"><choice id="1">Автопереход.<targetChapter>1608</targetChapter></choice></chapter>
+  <chapter id="2288"><choice id="1">Автопереход.<targetChapter>1675</targetChapter></choice></chapter>
+  <chapter id="2289"><choice id="1">Автопереход.<targetChapter>1676</targetChapter></choice></chapter>
+  <chapter id="2290"><choice id="1">Автопереход.<targetChapter>1677</targetChapter></choice></chapter>
+  <chapter id="2291"><choice id="1">Автопереход.<targetChapter>1800</targetChapter></choice></chapter>
+  <chapter id="2292"><choice id="1">Автопереход.<targetChapter>1800</targetChapter></choice></chapter>
+  <chapter id="2293"><choice id="1">Автопереход.<targetChapter>1802</targetChapter></choice></chapter>
+  <chapter id="2294"><choice id="1">Автопереход.<targetChapter>1945</targetChapter></choice></chapter>
+  <chapter id="2295"><choice id="1">Автопереход.<targetChapter>2208</targetChapter></choice></chapter>
+  <chapter id="2296"><choice id="1">Автопереход.<targetChapter>2210</targetChapter></choice></chapter>
+  <chapter id="2297"><choice id="1">Автопереход.<targetChapter>2212</targetChapter></choice></chapter>
+  <chapter id="2298"><choice id="1">Автопереход.<targetChapter>2213</targetChapter></choice></chapter>
+  <chapter id="2299"><choice id="1">Автопереход.<targetChapter>2215</targetChapter></choice></chapter>
+  <chapter id="2300"><choice id="1">Автопереход.<targetChapter>2217</targetChapter></choice></chapter>
+  <chapter id="2301"><choice id="1">Автопереход.<targetChapter>2219</targetChapter></choice></chapter>
+  <chapter id="2302"><choice id="1">Автопереход.<targetChapter>2221</targetChapter></choice></chapter>
 </game>

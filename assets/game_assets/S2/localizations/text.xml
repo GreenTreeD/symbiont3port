@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
 <game>
   <chapter id="1" music="1">
     <message id="1" roleId="4">[ОБНАРУЖЕН СИГНАЛ]</message>
@@ -1347,7 +1347,7 @@
     <message id="12" roleId="1">Длинный или короткий?</message>
     <choice id="1">Давим длинный.<targetChapter>134</targetChapter>
     </choice>
-    <choice id="2">Давим короткий.<targetChapter>135</targetChapter>
+    <choice id="2">Давим короткий.<targetChapter>1077</targetChapter>
     </choice>
   </chapter>
   <chapter id="131">
@@ -1387,7 +1387,7 @@
     <message id="3" roleId="1">Цепляем толстый зуб или тонкий?</message>
     <choice id="1">Цепляй толстый.<targetChapter>136</targetChapter>
     </choice>
-    <choice id="2">Цепляй тонкий.<targetChapter>136</targetChapter>
+    <choice id="2">Цепляй тонкий.<targetChapter>1077</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="8" id="135">
@@ -1974,7 +1974,7 @@
     <message id="5" roleId="4">[... ... ...]</message>
     <message id="6" roleId="4" voice="24">[КОНТАКТ УСТАНОВЛЕН]</message>
     <message id="7" roleId="1">...Да помоги же мне!!!</message>
-    <choice id="1">Направо!<targetChapter>196</targetChapter>
+    <choice id="1">Направо!<targetChapter>1078</targetChapter>
     </choice>
     <choice id="2">Налево!<targetChapter>196</targetChapter>
     </choice>
@@ -3262,7 +3262,7 @@
     <message id="5" roleId="1">Кэп, последняя цифра!</message>
     <choice id="1">Цифра «4».<targetChapter>305</targetChapter>
     </choice>
-    <choice id="2">Цифра «8».<targetChapter>305</targetChapter>
+    <choice id="2">Цифра «8».<targetChapter>1078</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="11" id="305">
@@ -3349,7 +3349,7 @@
     <message id="5" roleId="1">Кэп, последняя цифра!</message>
     <choice id="1">Цифра «4».<targetChapter>305</targetChapter>
     </choice>
-    <choice id="2">Цифра «8».<targetChapter>305</targetChapter>
+    <choice id="2">Цифра «8».<targetChapter>1079</targetChapter>
     </choice>
   </chapter>
   <chapter id="312" isEnded="true">
@@ -3517,7 +3517,7 @@
     <message id="25" roleId="1">Прорыв гребанного Инферно из глубин ада?!</message>
     <choice id="1">... ... ...<targetChapter>325</targetChapter>
     </choice>
-    <choice id="2">... ... ...<targetChapter>325</targetChapter>
+    <choice id="2">... ... ...<targetChapter>1080</targetChapter>
     </choice>
   </chapter>
   <chapter id="325">
@@ -6468,7 +6468,7 @@
     <message id="10" roleId="1">Мы... не должны попасть в плен...</message>
     <choice id="1">Очнись!<targetChapter>534</targetChapter>
     </choice>
-    <choice id="2">Держись, солдат!<targetChapter>534</targetChapter>
+    <choice id="2">Держись, солдат!<targetChapter>1081</targetChapter>
     </choice>
   </chapter>
   <chapter id="534" isEnded="true" music="13">
@@ -9312,7 +9312,7 @@
     <message id="11" roleId="1">Быстро говори: право или лево?!</message>
     <choice id="1">Вправо!<targetChapter>788</targetChapter>
     </choice>
-    <choice id="2">Влево!<targetChapter>788</targetChapter>
+    <choice id="2">Влево!<targetChapter>1082</targetChapter>
     </choice>
   </chapter>
   <chapter id="787" isEnded="true" music="8">
@@ -9353,7 +9353,7 @@
     <message id="3" roleId="1">Новая развилка!</message>
     <choice id="1">Вправо!<targetChapter>791</targetChapter>
     </choice>
-    <choice id="2">Влево!<targetChapter>791</targetChapter>
+    <choice id="2">Влево!<targetChapter>1083</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="20" id="790" music="3">
@@ -9441,7 +9441,7 @@
     <message id="9" roleId="1">КЭП!!! Развилка!!!</message>
     <choice id="1">Вправо!<targetChapter>791</targetChapter>
     </choice>
-    <choice id="2">Влево!<targetChapter>791</targetChapter>
+    <choice id="2">Влево!<targetChapter>1084</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="20" id="795" music="3">
@@ -9606,7 +9606,7 @@
     <message id="4" roleId="1">Ну, кэп, что тебя еще интересует из моей скромной биографии?</message>
     <choice id="1">Расскажи о себе.<targetChapter>804</targetChapter>
     </choice>
-    <choice id="2">Просто отдыхай.<targetChapter>804</targetChapter>
+    <choice id="2">Просто отдыхай.<targetChapter>1085</targetChapter>
     </choice>
   </chapter>
   <chapter id="804" keyWord="A-9">
@@ -10570,7 +10570,7 @@
     <message id="18" roleId="1">...Только... живи...</message>
     <choice id="1">Беркут! Прием!<targetChapter>888</targetChapter>
     </choice>
-    <choice id="2">Что с тобой?<targetChapter>888</targetChapter>
+    <choice id="2">Что с тобой?<targetChapter>1086</targetChapter>
     </choice>
   </chapter>
   <chapter id="888" music="13">
@@ -10582,7 +10582,7 @@
     <message id="6" roleId="1">Патроны есть...</message>
     <choice id="1">Немедленно ответь!<targetChapter>889</targetChapter>
     </choice>
-    <choice id="2">Очнись!<targetChapter>889</targetChapter>
+    <choice id="2">Очнись!<targetChapter>1087</targetChapter>
     </choice>
   </chapter>
   <chapter id="889" music="13">
@@ -10592,7 +10592,7 @@
     <message id="4" roleId="1">Только держись...</message>
     <choice id="1">Очнись!<targetChapter>890</targetChapter>
     </choice>
-    <choice id="2">Беркут!!<targetChapter>890</targetChapter>
+    <choice id="2">Беркут!!<targetChapter>1088</targetChapter>
     </choice>
   </chapter>
   <chapter id="890" music="13">
@@ -10603,7 +10603,7 @@
     <message id="5" roleId="1">Не брошу... как бросили... нас...</message>
     <choice id="1">Это оператор!<targetChapter>891</targetChapter>
     </choice>
-    <choice id="2">Старлей, прием!<targetChapter>891</targetChapter>
+    <choice id="2">Старлей, прием!<targetChapter>1089</targetChapter>
     </choice>
   </chapter>
   <chapter id="891" music="13">
@@ -10612,7 +10612,7 @@
     <message id="3" roleId="1">Не брошу...</message>
     <choice id="1">Приказ: ответь!<targetChapter>892</targetChapter>
     </choice>
-    <choice id="2">Приказ: очнись!<targetChapter>892</targetChapter>
+    <choice id="2">Приказ: очнись!<targetChapter>1090</targetChapter>
     </choice>
   </chapter>
   <chapter id="892" music="13">
@@ -10624,7 +10624,7 @@
     <message id="6" roleId="1">Кэп, это ты?..</message>
     <choice id="1">Наконец-то!<targetChapter>893</targetChapter>
     </choice>
-    <choice id="2">Да, это я!<targetChapter>893</targetChapter>
+    <choice id="2">Да, это я!<targetChapter>1091</targetChapter>
     </choice>
   </chapter>
   <chapter id="893" music="13">
@@ -10642,7 +10642,7 @@
     <message id="12" roleId="1">... ... ...</message>
     <choice id="1">Говори!<targetChapter>894</targetChapter>
     </choice>
-    <choice id="2">Не теряй сознание!<targetChapter>894</targetChapter>
+    <choice id="2">Не теряй сознание!<targetChapter>1092</targetChapter>
     </choice>
   </chapter>
   <chapter id="894" music="13">
@@ -10660,7 +10660,7 @@
     <message id="12" roleId="1">... ... ...</message>
     <choice id="1">Держись!!<targetChapter>895</targetChapter>
     </choice>
-    <choice id="2">Продолжай говорить!<targetChapter>895</targetChapter>
+    <choice id="2">Продолжай говорить!<targetChapter>1093</targetChapter>
     </choice>
   </chapter>
   <chapter id="895" music="13">
@@ -10699,7 +10699,7 @@
     <message id="33" roleId="1">... ... ...</message>
     <choice id="1">Беркут!<targetChapter>896</targetChapter>
     </choice>
-    <choice id="2">Очнись, солдат!<targetChapter>896</targetChapter>
+    <choice id="2">Очнись, солдат!<targetChapter>1094</targetChapter>
     </choice>
   </chapter>
   <chapter id="896" music="13">
@@ -11331,7 +11331,7 @@
     <message id="17" roleId="1">Коллекторная труба раздваивается...</message>
     <choice id="1">Иди вправо.<targetChapter>942</targetChapter>
     </choice>
-    <choice id="2">Иди влево.<targetChapter>942</targetChapter>
+    <choice id="2">Иди влево.<targetChapter>1095</targetChapter>
     </choice>
   </chapter>
   <chapter id="942" music="10">
@@ -11758,7 +11758,7 @@
     <message id="9" roleId="1">Где искать вначале?</message>
     <choice id="1">В центр.<targetChapter>974</targetChapter>
     </choice>
-    <choice id="2">Вдоль стены.<targetChapter>974</targetChapter>
+    <choice id="2">Вдоль стены.<targetChapter>1096</targetChapter>
     </choice>
   </chapter>
   <chapter id="974" isEnded="true" music="8">
@@ -12229,7 +12229,7 @@
     <message id="3" roleId="1">Колба или Звезда?</message>
     <choice id="1">Колба.<targetChapter>1030</targetChapter>
     </choice>
-    <choice id="2">Звезда.<targetChapter>1030</targetChapter>
+    <choice id="2">Звезда.<targetChapter>1097</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="23" id="1026">
@@ -12269,14 +12269,14 @@
     <message id="3" roleId="1">Лупа или Книга?</message>
     <choice id="1">Книга.<targetChapter>1031</targetChapter>
     </choice>
-    <choice id="2">Лупа.<targetChapter>1031</targetChapter>
+    <choice id="2">Лупа.<targetChapter>1098</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="23" id="1031">
     <message id="1" roleId="1">Еще: Телефон или Документ?</message>
     <choice id="1">Телефон.<targetChapter>1032</targetChapter>
     </choice>
-    <choice id="2">Документ.<targetChapter>1032</targetChapter>
+    <choice id="2">Документ.<targetChapter>1099</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="23" id="1032">
@@ -12285,7 +12285,7 @@
     <message id="3" roleId="1">Курица или Яйцо?</message>
     <choice id="1">Курица.<targetChapter>1033</targetChapter>
     </choice>
-    <choice id="2">Яйцо.<targetChapter>1033</targetChapter>
+    <choice id="2">Яйцо.<targetChapter>1100</targetChapter>
     </choice>
   </chapter>
   <chapter helpId="23" id="1033">
@@ -13009,7 +13009,7 @@
     <message id="22" roleId="1">Но он... он едва стоит на ногах!!!</message>
     <choice id="1">Добивай!<targetChapter>1073</targetChapter>
     </choice>
-    <choice id="2">Убегай!<targetChapter>1073</targetChapter>
+    <choice id="2">Убегай!<targetChapter>1101</targetChapter>
     </choice>
   </chapter>
   <chapter id="1072" isEnded="true" music="6">
@@ -13201,4 +13201,30 @@
     <message id="17" roleId="4">[КОД]</message>
     <message id="18" roleId="4">[ГОРИЗОНТ ЧИСТ]</message>
   </chapter>
+  <chapter id="1077"><choice id="1">Автопереход.<targetChapter>136</targetChapter></choice></chapter>
+  <chapter id="1078"><choice id="1">Автопереход.<targetChapter>196</targetChapter></choice></chapter>
+  <chapter id="1079"><choice id="1">Автопереход.<targetChapter>305</targetChapter></choice></chapter>
+  <chapter id="1080"><choice id="1">Автопереход.<targetChapter>305</targetChapter></choice></chapter>
+  <chapter id="1081"><choice id="1">Автопереход.<targetChapter>325</targetChapter></choice></chapter>
+  <chapter id="1082"><choice id="1">Автопереход.<targetChapter>534</targetChapter></choice></chapter>
+  <chapter id="1083"><choice id="1">Автопереход.<targetChapter>788</targetChapter></choice></chapter>
+  <chapter id="1084"><choice id="1">Автопереход.<targetChapter>791</targetChapter></choice></chapter>
+  <chapter id="1085"><choice id="1">Автопереход.<targetChapter>791</targetChapter></choice></chapter>
+  <chapter id="1086"><choice id="1">Автопереход.<targetChapter>804</targetChapter></choice></chapter>
+  <chapter id="1087"><choice id="1">Автопереход.<targetChapter>888</targetChapter></choice></chapter>
+  <chapter id="1088"><choice id="1">Автопереход.<targetChapter>889</targetChapter></choice></chapter>
+  <chapter id="1089"><choice id="1">Автопереход.<targetChapter>890</targetChapter></choice></chapter>
+  <chapter id="1090"><choice id="1">Автопереход.<targetChapter>891</targetChapter></choice></chapter>
+  <chapter id="1091"><choice id="1">Автопереход.<targetChapter>892</targetChapter></choice></chapter>
+  <chapter id="1092"><choice id="1">Автопереход.<targetChapter>893</targetChapter></choice></chapter>
+  <chapter id="1093"><choice id="1">Автопереход.<targetChapter>894</targetChapter></choice></chapter>
+  <chapter id="1094"><choice id="1">Автопереход.<targetChapter>895</targetChapter></choice></chapter>
+  <chapter id="1095"><choice id="1">Автопереход.<targetChapter>896</targetChapter></choice></chapter>
+  <chapter id="1096"><choice id="1">Автопереход.<targetChapter>942</targetChapter></choice></chapter>
+  <chapter id="1097"><choice id="1">Автопереход.<targetChapter>974</targetChapter></choice></chapter>
+  <chapter id="1098"><choice id="1">Автопереход.<targetChapter>1030</targetChapter></choice></chapter>
+  <chapter id="1099"><choice id="1">Автопереход.<targetChapter>1031</targetChapter></choice></chapter>
+  <chapter id="1100"><choice id="1">Автопереход.<targetChapter>1032</targetChapter></choice></chapter>
+  <chapter id="1101"><choice id="1">Автопереход.<targetChapter>1033</targetChapter></choice></chapter>
+  <chapter id="1102"><choice id="1">Автопереход.<targetChapter>1073</targetChapter></choice></chapter>
 </game>

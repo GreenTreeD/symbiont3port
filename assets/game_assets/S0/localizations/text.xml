@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<game>
+  <chapter id="1" music="death">
+    <message id="1" roleId="4">[... ... ...]</message>
+    <message id="2" roleId="4">[ОБНАРУЖЕН СИГНАЛ]</message>
+    <message id="3" roleId="4">[СОЕДИНЕНИЕ]</message>
+    <message id="4" roleId="4">[... ... ...]</message>
+    <message id="5" roleId="4">[ИНИЦИАЛИЗАЦИЯ ПОЛЬЗОВАТЕЛЯ]</message>
+    <message id="6" roleId="4">[... ... ...]</message>
+    <message id="7" roleId="4">[ДОСТУП РАЗРЕШЕН]</message>
+    <message id="8" roleId="4">[ШИФРОВАНИЕ КАНАЛА]</message>
+    <message id="9" roleId="4">[... ... ...]</message>
+    <message id="10" roleId="4">[ДОСТУП К ФАЙЛОВОЙ СИСТЕМЕ «GENOME DATABASE CORP.» ОТКРЫТ]</message>
+    <message id="11" roleId="4">[РЕГИСТРАЦИЯ РАБОЧЕЙ СЕССИИ]</message>
+    <message id="12" roleId="4">[... ... ...]</message>
+    <message id="13" roleId="4">[ЗАГРУЖАЮ ВВОДНЫЕ ДАННЫЕ]</message>
+    <message id="15" roleId="4">[ОБЪЕКТ: экспериментальная лаборатория]</message>
+    <message id="16" roleId="4">[КОД: «Убежище М-2»]</message>
+    <message id="17" roleId="4">[УРОВЕНЬ СЕКРЕТНОСТИ: УЛЬТРА, I-го типа]</message>
+    <message id="18" roleId="4">[НАУЧНЫЙ ПЕРСОНАЛ: 141]</message>
+    <message id="19" roleId="4">[ОБСЛУЖИВАЮЩИЙ ПЕРСОНАЛ: 293]</message>
+    <message id="20" roleId="4">[ГАРНИЗОН: 52]</message>
+    <message id="21" roleId="4">[ЗАДАЧИ ОБЪЕКТА: изучение и разработка вирусного оружия и форм защиты]</message>
+    <message id="22" roleId="4">[СВЕРХЗАДАЧА ОБЪЕКТА: ЗАСЕКРЕЧЕНО]</message>
+    <message id="23" roleId="4">[Уважаемый, ЗАСЕКРЕЧЕНО! Шесть минут назад на Объекте активирован протокол «Пандора»]</message>
+    <message id="24" roleId="4">[По нашим данным произошла утечка вирусного оружия массового поражения]</message>
+    <message id="25" roleId="4">[Причина утечки: ЗАСЕКРЕЧЕНО]</message>
+    <message id="26" roleId="4">[Согласно ранее разработанному плану, данные исследований и тестовые образцы доставлены на поверхность]</message>
+    <message id="27" roleId="4">[Три ключевых персоны проекта эвакуированы]</message>
+    <message id="28" roleId="4">[После срабатывания сигнала тревоги, согласно протоколу «Пандора», Объект был изолирован]</message>
+    <message id="29" roleId="4">[99% научного и обслуживающего персонала остались в стенах лаборатории]</message>
+    <message id="30" roleId="4">[По данным аналитиков спасательная операция слишком опасна: риск не оправдывает затрат]</message>
+    <message id="31" roleId="4">[Семьям персонала высланы официальные письма с соболезнованиями]</message>
+    <message id="32" roleId="4">[Виновниками трагедии назначены террористы-радикалы]</message>
+    <message id="33" roleId="4">[Юридический отдел уже работает. Их специалисты уверены, что нам удастся избежать исков и замять скандал]</message>
+    <message id="34" roleId="4">[Все детали аварии засекречены на высшем уровне. Разглашение будет расцениваться как государственная измена]</message>
+    <message id="35" roleId="4">[Однако мы не можем упустить столь уникальную возможность. Многие образцы вирусного оружия еще не прошли полевых испытаний]</message>
+    <message id="36" roleId="4">[Уважаемый, ЗАСЕКРЕЧЕНО, по распоряжению ЗАСЕКРЕЧЕНО  и ЗАСЕКРЕЧЕНО, решено использовать аварию для проведения серии тестов]</message>
+    <message id="37" roleId="4">[Поставлены следующие задачи:]</message>
+    <message id="38" roleId="4">[1. Установить контакт с персоналом, который избежал первичного и вторичного заражения]</message>
+    <message id="39" roleId="4">[2. Смоделировать ситуации, в которых неизбежно столкновение выживших с инфицированными]</message>
+    <message id="40" roleId="4">[3. Изучить поведенческие и тактико-физические особенности инфицированных]</message>
+    <message id="41" roleId="4">[4. Выживание персонала после завершения миссии нежелательно]</message>
+    <message id="42" roleId="4">[5. О выполнении миссии немедленно доложить командованию]</message>
+    <message id="43" roleId="4">[... ... ...]</message>
+    <message id="44" roleId="4">[Спецназ из группы зачистки рапортует о готовности приступить к операции «Чистый горизонт»]</message>
+    <message id="45" roleId="4">[... ... ...]</message>
+    <message id="46" roleId="4">[ОПЕРАТОРАМ: НЕМЕДЛЕННО ПОДТВЕРДИТЬ УЧАСТИЕ]</message>
+    <message id="47" roleId="4">[... ... ...]</message>
+    <choice id="1">[подтвердить]<targetChapter>3</targetChapter>
+    </choice>
+    <choice id="2">[отказаться]<targetChapter>2</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="2" isEnded="true" music="death">
+    <message id="1" roleId="4">[Это Ваша совесть, и Ваше решение]</message>
+    <message id="2" roleId="4">[Возможно, так и надо было поступить]</message>
+    <message id="3" roleId="4">[Только вот те, кто после отказа устроил Вам «несчастный» случай, лишены совести]</message>
+    <message id="4" roleId="4">[А Вы просто слишком много знали...]</message>
+    <message id="5" roleId="4">[Так что Ваша миссия...]</message>
+    <message id="6" roleId="4" voice="death">[ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="3" music="death">
+    <message id="1" roleId="4">[ОПЕРАТОР 5 ПОДТВЕРДИЛ СВОЕ УЧАСТИЕ]</message>
+    <message id="2" roleId="4">[АКТИВАЦИЯ ПРОТОКОЛА «КОШКИ-МЫШКИ»]</message>
+    <message id="3" roleId="4">[ДЕТАЛИ: за каждым оператором закреплен один выживший]</message>
+    <message id="5" roleId="4">[ВАШ ИСПЫТУЕМЫЙ ОБЪЕКТ ОБНАРУЖЕН]</message>
+    <message id="6" roleId="4">[ЗАГРУЖАЮ ДАННЫЕ]</message>
+    <message id="7" roleId="4">[... ... ...]</message>
+    <message id="8" roleId="4">[ДОКТОР СОБОЛЕВ, ИВАН ЕВГЕНЬЕВИЧ]</message>
+    <message id="9" roleId="4">[НЕЙРОБИОЛОГ, СОТРУДНИК ОТДЕЛА «Б»: ЗАРАЖЕННЫЕ ТКАНИ]</message>
+    <message id="10" roleId="4">[СПЕЦИАЛЬНАЯ ПОДГОТОВКА ОТСУТСТВУЕТ]</message>
+    <message id="11" roleId="4">[НАВЫКИ ВЫЖИВАНИЯ В ЧРЕЗВЫЧАЙНЫХ СИТУАЦИЯХ ОТСУТСТВУЮТ]</message>
+    <message id="12" roleId="4">[ПЕРВИЧНЫЕ ЗАДАЧИ:]</message>
+    <message id="13" roleId="4">[-УСТАНОВИТЬ КОНТАКТ-]</message>
+    <message id="14" roleId="4">[-ВТЕРЕТЬСЯ В ДОВЕРИЕ-]</message>
+    <message id="15" roleId="4">[... ... ...]</message>
+    <message id="16" roleId="4">[ОПЕРАЦИЯ «ZERO» НАЧИНАЕТСЯ]</message>
+    <message id="17" roleId="4">[... ... ...]</message>
+    <choice id="1">Автопереход.<targetChapter>4</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="4" music="death">
+    <message id="1" roleId="4">[... ... ...]</message>
+    <message id="2" roleId="4">[СОЕДИНЕНИЕ С ОБЪЕКТОМ]</message>
+    <message id="3" roleId="4">[... ... ...]</message>
+    <message id="4" roleId="4">[СИГНАЛ СТАБИЛЕН]</message>
+    <message id="5" roleId="4">[КОНТАКТ]</message>
+    <choice id="1">Автопереход.<targetChapter>5</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«Контакт установлен»" id="5" isKeyChapter="true">
+    <message id="1" roleId="1">...критическая! Помогите!</message>
+    <message id="2" roleId="1">Повторяю: это доктор Соболев, научный сотрудник «Убежища М-2»! У нас критическая ситуация! Требуется помощь!</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Эй! Вы на связи! Слава богу!</message>
+    <choice id="1">Что у вас происходит?<targetChapter>6</targetChapter>
+    </choice>
+    <choice id="2">Оператор на связи!<targetChapter>7</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="6">
+    <message id="1" roleId="1">Настоящий хаос!!!</message>
+    <choice id="1">Автопереход.<targetChapter>8</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="7">
+    <message id="1" roleId="1">Господи, как я рад вас слышать!</message>
+    <choice id="1">Автопереход.<targetChapter>8</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="8">
+    <message id="1" roleId="1">Вы получили сигнал тревоги?! Код — самый красный из всех возможных!</message>
+    <message id="2" roleId="1">Оператор, я не шучу! Ситуация просто кошмарная!</message>
+    <message id="3" roleId="1">У нас внутреннее заражение! Биологическая катастрофа!</message>
+    <message id="4" roleId="1">Боже... Пришлите сюда всех! Быстрее!</message>
+    <message id="5" roleId="1">Солдат, спецназ, армию или хотя бы охрану с дубинками!</message>
+    <message id="6" roleId="1">Ради Бога, кого угодно!</message>
+    <message id="7" roleId="1">Только... умоляю! Скорее!!!</message>
+    <choice id="1">Мы уже работаем.<targetChapter>9</targetChapter>
+    </choice>
+    <choice id="2">Без паники! Все под контролем.<targetChapter>10</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="9">
+    <message id="1" roleId="1">Работаете?!</message>
+    <message id="2" roleId="1">Но...</message>
+    <choice id="1">Автопереход.<targetChapter>11</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="10">
+    <message id="1" roleId="1">Это правда? Под контролем?</message>
+    <message id="2" roleId="1">Потому что здесь и не пахнет контролем!</message>
+    <message id="3" roleId="1">Здесь...</message>
+    <choice id="1">Автопереход.<targetChapter>11</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="11">
+    <message id="1" roleId="1">Боже мой... Секундочку...</message>
+    <message id="2" roleId="1">Нужно взять себя в руки, я же нейробиолог. От эмоций в моем положении один вред.</message>
+    <message id="3" roleId="1">Так... дышать, нужно глубоко дышать...</message>
+    <message id="4" roleId="1">... ... ...</message>
+    <message id="5" roleId="1">Оператор, послушайте.</message>
+    <message id="6" roleId="1">Только выслушайте меня ОЧЕНЬ внимательно!</message>
+    <message id="7" roleId="1">В лаборатории произошла утечка вируса с маркировкой Z-01.21!</message>
+    <message id="8" roleId="1">Это боевой вирус! И он УЖЕ работает!</message>
+    <message id="9" roleId="1">Как только прозвучал сигнал тревоги... спасибо регулярным тренировкам!.. большинство из нас успело надеть костюмы биологической защиты...</message>
+    <message id="10" roleId="1">Большинство, но не все!</message>
+    <message id="11" roleId="1">Я не знаю, в каком конкретно Отделе произошла утечка, но среди персонала есть первично-инфицированные!</message>
+    <message id="12" roleId="1">Это те, кто вдохнул концентрированную дозу вируса из воздушно-газовой среды!</message>
+    <message id="13" roleId="1">Сейчас концентрация вируса снижена, но здешний воздух по-прежнему опасен!</message>
+    <message id="14" roleId="1">Кроме того... я уже упоминал, что вирус Z-01 — это вирус двадцать первой модификации?</message>
+    <message id="15" roleId="1">Это значит, что в концентрированных дозах он практически мгновенно подавляет нервные центры организма-носителя!</message>
+    <message id="16" roleId="1">Затем наступает черед второй фазы — агрессивного заражения!</message>
+    <message id="17" roleId="1">Первично-инфицированные впадают в состояние неконтролируемой агрессии и набрасываются на окружающих!</message>
+    <message id="18" roleId="1">Я лично видел, как одного из сотрудников забили и загрызли до смерти!</message>
+    <message id="19" roleId="1">Возможно... возможно, для него это только к лучшему...</message>
+    <message id="20" roleId="1">Лучше умереть сразу, чем стать обезумевшей биологической бомбой.</message>
+    <message id="21" roleId="1">Но... Боже, о Боже... как же все это страшно...</message>
+    <message id="22" roleId="1">Вы себе просто не представляете...</message>
+    <message id="23" roleId="1">... ... ...</message>
+    <message id="24" roleId="1">Так... чем еще я могу помочь?..</message>
+    <message id="25" roleId="1">Заражение...</message>
+    <message id="26" roleId="1">Инфицированные на первой стадии чрезвычайно активны. Они быстрые, выносливые и... очень, ОЧЕНЬ злые!</message>
+    <message id="27" roleId="1">Послушайте...</message>
+    <message id="28" roleId="1">Оператор! Пока еще есть надежда, пока многих людей можно спасти!</message>
+    <message id="29" roleId="1">Нужно НЕМЕДЛЕННО включить систему воздушной очистки!</message>
+    <message id="30" roleId="1">Нам же рассказывали, что разработана специальная эмульсия, которая на двадцать часов «гасит» вирус.</message>
+    <message id="31" roleId="1">Включите распылители! А затем... затем пришлите спецназ в костюмах биологической защиты.</message>
+    <message id="32" roleId="1">Мне противны любые методы насилия, но... сейчас ситуация из ряда вон выходящая! Нужно спасти людей!</message>
+    <message id="33" roleId="1">И...</message>
+    <message id="34" roleId="1">... ... ...</message>
+    <message id="35" roleId="1">ЧТО ЭТО?!!</message>
+    <message id="36" roleId="1">Оператор!!!</message>
+    <message id="37" roleId="1">Почему отключили электричество?!!</message>
+    <message id="38" roleId="1">Вы же откроете все замки! Нас тут всех убьют!!!</message>
+    <choice id="1">Успокойся!<targetChapter>12</targetChapter>
+    </choice>
+    <choice id="2">Мы знаем, что делаем.<targetChapter>13</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="12">
+    <message id="1" roleId="1">Я... Я постараюсь.</message>
+    <message id="2" roleId="1">Но вы должны понимать, что это непросто.</message>
+    <message id="3" roleId="1">В таких-то условиях...</message>
+    <choice id="1">Мы знаем, что делаем.<targetChapter>13</targetChapter>
+    </choice>
+    <choice id="2">Нужно быть сильным.<targetChapter>18</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="13">
+    <message id="1" roleId="1">Серьезно?</message>
+    <message id="2" roleId="1">Отключение электропитания — это не лучшее из решений.</message>
+    <choice id="1">Пожалуйста, успокойся.<targetChapter>14</targetChapter>
+    </choice>
+    <choice id="2">Нам лучше знать!<targetChapter>15</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="14">
+    <message id="1" roleId="1">Это трудно назвать полезным советом...</message>
+    <choice id="1">Молчи, и не мешай работать.<targetChapter>16</targetChapter>
+    </choice>
+    <choice id="2">Мы делаем все, что в наших силах.<targetChapter>20</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="15">
+    <message id="1" roleId="1">Что-то... подсказывает мне, что вы не собираетесь нам помогать.</message>
+    <message id="2" roleId="1">Это так?</message>
+    <message id="3" roleId="1">Я понимаю, что вы хотите избежать любой возможности выхода вируса на поверхность, но...</message>
+    <message id="4" roleId="1">Как же мы?!</message>
+    <message id="5" roleId="1">Вы нас бросите?!</message>
+    <choice id="1">Мы вам тоже поможем.<targetChapter>16</targetChapter>
+    </choice>
+    <choice id="2">Люди наверху важнее.<targetChapter>17</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="16">
+    <message id="1" roleId="1">Хм... Ты точно здесь для того, что нас спасти?</message>
+    <message id="2" roleId="1">Что-то я начинаю сомневаться...</message>
+    <choice id="1">Доверься мне.<targetChapter>20</targetChapter>
+    </choice>
+    <choice id="2">Не ной!<targetChapter>17</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="17" isEnded="true">
+    <message id="1" roleId="1">... ... ...</message>
+    <message id="2" roleId="1">Мне кажется, что я понял...</message>
+    <message id="3" roleId="1">Оператор... кем бы ты ни был...</message>
+    <message id="4" roleId="1">Вы нас бросаете, верно?</message>
+    <message id="5" roleId="1">Но... тогда зачем вы установили контакт?</message>
+    <message id="6" roleId="1">... ... ...</message>
+    <message id="7" roleId="1">Господи! Неужели для того, чтобы исследовать поведение инфицированных?!</message>
+    <message id="8" roleId="1">Это... Это чудовищно!</message>
+    <message id="9" roleId="1">Будьте вы прокляты!</message>
+    <message id="10" roleId="1">Я не желаю в этом участвовать! Нет!</message>
+    <message id="11" roleId="4">[СОЕДИНЕНИЕ ПОТЕРЯНО]</message>
+    <message id="12" roleId="4">[УСТРОЙСТВО ОБЪЕКТА ОТКЛЮЧЕНО]</message>
+    <message id="13" roleId="4">[ПОВТОРНЫЙ ЗАПРОС КОНТАКТА ОТКЛОНЕН]</message>
+    <message id="14" roleId="4">[СОЕДИНЕНИЕ НЕВОЗМОЖНО]</message>
+    <message id="15" roleId="4">[... ... ...]</message>
+    <message id="16" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="18">
+    <message id="1" roleId="1">Да... вы правы...</message>
+    <message id="2" roleId="1">Я в первый и... надеюсь! Надеюсь, что в последний раз в такой ситуации.</message>
+    <message id="3" roleId="1">Я должен успокоиться.</message>
+    <choice id="1">Доверься мне.<targetChapter>19</targetChapter>
+    </choice>
+    <choice id="2">Расслабься.<targetChapter>14</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="19">
+    <message id="1" roleId="1">... ... ...</message>
+    <message id="2" roleId="1">Да, конечно. Это логично.</message>
+    <message id="3" roleId="1">Доверие — ключ к успеху.</message>
+    <message id="4" roleId="1">В конце концов, — это ведь ваша лаборатория, верно?</message>
+    <message id="5" roleId="1">А мы, научный персонал, — ваши активы.</message>
+    <message id="6" roleId="1">Вы не станете жертвовать теми, кто вам полезен.</message>
+    <message id="7" roleId="1">... ... ...</message>
+    <message id="8" roleId="1">Хорошо, оператор. Я готов действовать!</message>
+    <message id="9" roleId="1">Какие будут приказания?</message>
+    <choice id="1">Автопереход.<targetChapter>21</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="20">
+    <message id="1" roleId="1">Хорошо... я постараюсь успокоиться.</message>
+    <message id="2" roleId="1">Правда, не уверен, что это получится.</message>
+    <message id="3" roleId="1">Слишком здесь... гм... страшно...</message>
+    <choice id="1">Ты должен мне верить.<targetChapter>19</targetChapter>
+    </choice>
+    <choice id="2">Все нормально.<targetChapter>17</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«Втереться в доверие»" id="21" isKeyChapter="true">
+    <message id="1" roleId="4">[ПЕРВООЧЕРЕДНАЯ ЗАДАЧА ВЫПОЛНЕНА]</message>
+    <message id="2" roleId="4">[КОНТАКТ УСТАНОВЛЕН]</message>
+    <message id="3" roleId="4">[ОБЪЕКТ ГОТОВ К ВЗАИМОДЕЙСТВИЮ]</message>
+    <message id="4" roleId="4">[ХОРОШАЯ РАБОТА, ОПЕРАТОР 5]</message>
+    <message id="5" roleId="4">[СЛЕДУЮЩАЯ ЗАДАЧА:]</message>
+    <message id="6" roleId="4">[-СМОДЕЛИРОВАТЬ ДЛЯ ОБЪЕКТА ОПАСНУЮ СИТУАЦИЮ-]</message>
+    <message id="7" roleId="4">[УСЛОВИЕ: ВСТРЕЧА С ИНФИЦИРОВАННЫМИ]</message>
+    <message id="8" roleId="4">[И ПОМНИТЕ: ОБЪЕКТ НЕ ДОЛЖЕН УСОМНИТЬСЯ В НАШИХ НАМЕРЕНИЯХ]</message>
+    <message id="9" roleId="4">[... ... ...]</message>
+    <message id="10" roleId="4">[ВЕДЕТСЯ СБОР ДАННЫХ]</message>
+    <message id="11" roleId="4">[... ... ...]</message>
+    <message id="12" roleId="4">[ПРИСТУПИТЬ К ВЫПОЛНЕНИЮ]</message>
+    <choice id="1">Автопереход.<targetChapter>22</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="22">
+    <message id="1" roleId="1">Оператор, я тут подумал...</message>
+    <message id="2" roleId="1">Во-первых, хотел сказать спасибо.</message>
+    <message id="3" roleId="1">Знаете, эмоции действительно вредят.</message>
+    <message id="4" roleId="1">Теперь я понимаю, что мешать вам не стоит, ведь вы и вправду знаете, что делать.</message>
+    <message id="5" roleId="1">Поэтому, я постараюсь больше не паниковать. Делайте все, что считаете нужным. И...</message>
+    <message id="6" roleId="1">Просто верните меня домой! К жене и дочке...</message>
+    <message id="7" roleId="1">Моей дочери всего полгода! Я так хочу еще хотя бы раз подержать ее на руках!</message>
+    <message id="8" roleId="1">И мечтаю увидеть своими глазами, как она взрослеет! Как впервые скажет «папа»!..</message>
+    <message id="9" roleId="1">Прошу...</message>
+    <message id="10" roleId="1">... ... ...</message>
+    <message id="11" roleId="1">Но... все... отставить панику! Я постараюсь изо всех сил вам помогать.</message>
+    <message id="12" roleId="1">В первую очередь, конечно, информацией.</message>
+    <message id="13" roleId="1">Итак, оператор, мне описать, где я нахожусь?</message>
+    <choice id="1">Конечно.<targetChapter>23</targetChapter>
+    </choice>
+    <choice id="2">Меня это не интересует.<targetChapter>24</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="23">
+    <message id="1" roleId="1">Хорошо... Я сейчас на уровне А-9. Это почти самый нижний этаж лаборатории.</message>
+    <message id="2" roleId="1">Как только сработал сигнал тревоги я бросился из Отдела по работе с зараженными тканями сюда...</message>
+    <message id="3" roleId="1">Мы называем это помещение раздевалкой, хотя, конечно, на двери написано другое.</message>
+    <message id="4" roleId="1">Официально это «ЛТ-21-А-9». Помещение, в котором хранится оборудование и экипировка для чрезвычайных ситуаций.</message>
+    <message id="5" roleId="1">Это просторное помещение с множеством шкафчиков, в которых висят костюмы биологической защиты.</message>
+    <message id="6" roleId="1">Здесь так же есть полки с аптечками первой помощи и передатчиками.</message>
+    <message id="7" roleId="1">Одним из таких передатчиков я и воспользовался, чтобы с вами связаться.</message>
+    <message id="8" roleId="1">Почему-то корпоративная сеть на здешнем компьютере не работает.</message>
+    <message id="9" roleId="1">... ... ...</message>
+    <message id="10" roleId="1">Ну, а теперь, после отключения электропитания, и сами компьютеры тоже не работают.</message>
+    <message id="11" roleId="1">В шлем костюма встроен фонарь, так что темнота мне не очень мешает...</message>
+    <message id="12" roleId="1">Хотя звуки снаружи пугают.</message>
+    <choice id="1">С чего все началось?<targetChapter>25</targetChapter>
+    </choice>
+    <choice id="2">Где выход?<targetChapter>26</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="24">
+    <message id="1" roleId="1">Гм... По меньшей мере странно.</message>
+    <message id="2" roleId="1">Однако, как я уже сказал, — вам виднее.</message>
+    <message id="3" roleId="1">В любом случае, хоть здесь и темно, но в шлем костюма биозащиты встроен фонарь.</message>
+    <message id="4" roleId="1">Хотя звуки... гм... извне, они пугают.</message>
+    <choice id="1">С чего все началось?<targetChapter>25</targetChapter>
+    </choice>
+    <choice id="2">Где выход?<targetChapter>26</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="25">
+    <message id="1" roleId="1">Сложный вопрос.</message>
+    <message id="2" roleId="1">Как ученый я понимаю, что вам нужен наиболее точный анализ ситуации с разбивкой по временной шкале, но...</message>
+    <message id="3" roleId="1">Сейчас, откровенно говоря, я не могу вспомнить ничего толкового.</message>
+    <message id="4" roleId="1">Все смешалось в памяти...</message>
+    <message id="5" roleId="1">Я работал в Отделе зараженных тканей. Как раз прислали тестовые образцы.</message>
+    <message id="6" roleId="1">И вот только я подготовился к работе... Еще даже пункцию не сделал...</message>
+    <message id="7" roleId="1">Как вдруг сработал сигнал тревоги.</message>
+    <message id="8" roleId="1">Конечно, мы с коллегами тут же остановили работу, перевели оборудование в режим ожидания.</message>
+    <message id="9" roleId="1">Никаких опасных химических процессов запущено не было, так что мы управились быстро.</message>
+    <message id="10" roleId="1">Да и, как я уже говорил ранее, регулярные тренировки выработали условные рефлексы.</message>
+    <message id="11" roleId="1">Под визг сирены и красное мерцание сигнальных огней мы облачились в защитные костюмы.</message>
+    <message id="12" roleId="1">Только-только подключили автономную дыхательную систему... И тут...</message>
+    <message id="13" roleId="1">За дверью Отдела послышался дикий крик!</message>
+    <message id="14" roleId="1">У меня сердце ушло в пятки! До сих пор этот крик стоит в ушах, аж мурашки по коже.</message>
+    <message id="15" roleId="1">Именно в тот момент я понял, что сигнал тревоги — не ложный.</message>
+    <message id="16" roleId="1">... ... ...</message>
+    <message id="17" roleId="1">Мы бросились к смотровым окнам, открыли жалюзи...</message>
+    <message id="18" roleId="1">Боже... Это была та еще картина...</message>
+    <message id="19" roleId="1">Из столовой, возвращаясь с обеденного перерыва, двигалась группа людей.</message>
+    <message id="20" roleId="1">Человек десять, наверное.</message>
+    <message id="21" roleId="1">И тут двери лифта вдруг распахнулись... Из кабины вылетело нечто...</message>
+    <message id="22" roleId="1">Я сейчас понимаю, что это был инфицированный, но тогда...</message>
+    <message id="23" roleId="1">Его скорость была невероятной!</message>
+    <message id="24" roleId="1">Он в одно мгновение преодолел коридор и, как торпеда, буквально врезался в группу людей!</message>
+    <message id="25" roleId="1">Удар, укус, рычание, новый удар! Это было нечто!</message>
+    <message id="26" roleId="1">Я такого никогда не видел!</message>
+    <message id="27" roleId="1">Настоящий хаос!</message>
+    <message id="28" roleId="1">Скоротечный хаос!</message>
+    <message id="29" roleId="1">Все свершилось за доли секунды!</message>
+    <message id="30" roleId="1">Сразу пять или шесть человек получили свою долю вируса, а затем...</message>
+    <message id="31" roleId="1">Я испугался... Как и все здесь...</message>
+    <message id="32" roleId="1">Я буду честен. Я не солдат, а научный работник.</message>
+    <message id="33" roleId="1">Вместе с коллегами мы бросились бежать.</message>
+    <message id="34" roleId="1">А эти... инфицированные... они гнались за нами, словно дикие звери!</message>
+    <message id="35" roleId="1">Эта адская гонка почти не отложилась у меня в памяти... Помню мелькали какие-то картины.</message>
+    <message id="36" roleId="1">Кровь... лица людей, перекошенные ужасом... крики боли... вой сирены и... везде красное!</message>
+    <message id="37" roleId="1">... ... ...</message>
+    <message id="38" roleId="1">Пришел в себя я только здесь...</message>
+    <message id="39" roleId="1">... ... ...</message>
+    <message id="40" roleId="1">Оператор, простите за сумбур, но... вы должны меня понять.</message>
+    <choice id="1">Понимаю.<targetChapter>27</targetChapter>
+    </choice>
+    <choice id="2">Ты все правильно сделал.<targetChapter>28</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«Выход»" id="26" isKeyChapter="true">
+    <message id="1" roleId="1">Отсюда можно выбраться двумя путями.</message>
+    <message id="2" roleId="1">Есть дверь, которая выведет меня обратно к Отделу по работе с зараженными тканями.</message>
+    <message id="3" roleId="1">Есть и вторая: она ведет к Отделу дрессировщиков... гм... то есть — зоологов.</message>
+    <message id="4" roleId="1">Даже не знаю, что и выбрать.</message>
+    <message id="5" roleId="1">В моем отделе царил хаос...</message>
+    <message id="6" roleId="1">А что творится у зоологов... даже страшно предположить...</message>
+    <message id="7" roleId="1">Там ведь клетки с подопытными животными. С ними работало много людей...</message>
+    <message id="8" roleId="1">Я... я просто не знаю, какой путь мне выбрать.</message>
+    <message id="9" roleId="1">Я...</message>
+    <message id="10" roleId="1">Наверное, все-таки нужно идти к зоологам.</message>
+    <message id="11" roleId="1">Неизвестность страшит, но... в памяти еще слишком свежи воспоминания о том, что мне пришлось пережить.</message>
+    <message id="12" roleId="1">Не хочу возвращаться...</message>
+    <choice id="1">Ты в порядке?<targetChapter>30</targetChapter>
+    </choice>
+    <choice id="2">Иди к зоологам.<targetChapter>31</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="27">
+    <message id="1" roleId="1">Честно говоря, не уверен...</message>
+    <message id="2" roleId="1">Это нужно пережить самому, но... желать такого не стану даже врагу!</message>
+    <choice id="1">Автопереход.<targetChapter>29</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="28">
+    <message id="1" roleId="1">Правда?</message>
+    <message id="2" roleId="1">Спасибо...</message>
+    <choice id="1">Автопереход.<targetChapter>29</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="29">
+    <message id="1" roleId="1">В общем, теперь вы знаете мою историю.</message>
+    <message id="2" roleId="1">Все это чертовски напоминает страшный сон...</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Нет, хватит эмоций... Давайте продолжим?</message>
+    <message id="5" roleId="1">Я расскажу, где в моем укрытии есть двери.</message>
+    <choice id="1">Автопереход.<targetChapter>26</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="30">
+    <message id="1" roleId="1">В порядке...</message>
+    <message id="2" roleId="1">Насколько вообще позволяет ситуация.</message>
+    <message id="3" roleId="1">Трудно поверить, что все это происходит.</message>
+    <message id="4" roleId="1">Что все эти милые люди, которые окружали меня, теперь...</message>
+    <message id="5" roleId="1">... ... ...</message>
+    <message id="6" roleId="1">Нет, это кошмар наяву!</message>
+    <message id="7" roleId="1">Оператор, давайте выбираться!</message>
+    <choice id="1">Стой! Выслушай правду!<targetChapter>32</targetChapter>
+    </choice>
+    <choice id="2">Хорошо, выходи.<targetChapter>33</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="31">
+    <message id="1" roleId="1">Значит все-таки к зоологам...</message>
+    <message id="2" roleId="1">Я надеялся услышать какой-нибудь другой совет... но...</message>
+    <message id="3" roleId="1">Хорошо, оператор.</message>
+    <message id="4" roleId="1">Выводите меня!</message>
+    <message id="5" roleId="1">... ... ...</message>
+    <message id="6" roleId="1">Гм... Не будет никаких напутствий?</message>
+    <choice id="1">Стой! Выслушай правду!<targetChapter>32</targetChapter>
+    </choice>
+    <choice id="2">Нет, иди.<targetChapter>33</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="32" isEnded="true">
+    <message id="1" roleId="1">Правду? Так вы не собирались мне помогать?..</message>
+    <message id="2" roleId="4">[Но не успели Вы и рта раскрыть, как связь оборвалась]</message>
+    <message id="3" roleId="4">[Тотальный контроль. Большой брат не дремлет]</message>
+    <message id="4" roleId="4">[Вас мгновенно отключили от системы]</message>
+    <message id="5" roleId="4">[А Ваши близкие получили письмо, полное соболезнований]</message>
+    <message id="6" roleId="4">[В нем говорилось, что Вы «героически погибли при исполнении»]</message>
+    <message id="7" roleId="4">[И больше Вы уже ничего и никому не могли рассказать]</message>
+    <message id="8" roleId="4">[А Ваша миссия...]</message>
+    <message id="9" roleId="4" voice="death">[ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="33">
+    <message id="1" roleId="1">Хорошо. Подхожу к двери...</message>
+    <message id="2" roleId="1">Жаль, у меня нет никакого оружия.</message>
+    <message id="3" roleId="1">А защита костюма кажется просто смехотворной.</message>
+    <message id="4" roleId="1">И этот тонкий луч фонарика... как тонкий луч надежды...</message>
+    <message id="5" roleId="1">Так, за дверью вроде бы тихо.</message>
+    <message id="6" roleId="1">Открываю ее.</message>
+    <message id="7" roleId="1">... ... ...</message>
+    <message id="8" roleId="1">Оператор...</message>
+    <message id="9" roleId="1">Я в коридоре.</message>
+    <message id="10" roleId="1">Тут темно и... вроде бы тихо.</message>
+    <message id="11" roleId="1">Вижу другой конец коридора.</message>
+    <message id="12" roleId="1">Мне предстоит пересечь весь проход, а затем...</message>
+    <message id="13" roleId="1">Затем будет довольно обширное помещение с клетками и всяким-разным.</message>
+    <choice id="1">Хорошо, иди.<targetChapter>87</targetChapter>
+    </choice>
+    <choice id="2">Будь осторожен.<targetChapter>88</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«К Отделу Б»" id="34" isKeyChapter="true">
+    <message id="1" roleId="1">Х-хорошо...</message>
+    <message id="2" roleId="1">Черт возьми, никогда не думал, что стану НАСТОЛЬКО бояться встречи с людьми!</message>
+    <message id="3" roleId="1">Хе-х, а ведь раньше супруга в шутку упрекала меня в болтливости и том, что слишком люблю общество...</message>
+    <message id="4" roleId="1">Теперь подозреваю, что стану социопатом...</message>
+    <message id="5" roleId="1">Оператор, я готов.</message>
+    <message id="6" roleId="1">Давайте уже сделаем это.</message>
+    <message id="7" roleId="1">Я у двери, которая выведет меня в обходной коридор.</message>
+    <message id="8" roleId="1">В конце коридора — Отдел «Б»...</message>
+    <message id="9" roleId="1">Похоже, мне все-таки придется через него пройти.</message>
+    <message id="10" roleId="1">... ... ...</message>
+    <message id="11" roleId="1">Так, за дверью вроде бы тихо.</message>
+    <message id="12" roleId="1">Открываю ее.</message>
+    <message id="13" roleId="1">... ... ...</message>
+    <message id="14" roleId="1">Оператор...</message>
+    <message id="15" roleId="1">Я в коридоре.</message>
+    <message id="16" roleId="1">Тут темно и... вроде бы действительно тихо.</message>
+    <message id="17" roleId="1">Вижу другой конец коридора.</message>
+    <message id="18" roleId="1">Мне предстоит пересечь весь проход, а затем...</message>
+    <message id="19" roleId="1">Стоп!</message>
+    <message id="20" roleId="1">Слышу какие-то шаги и невнятное бормотание!</message>
+    <message id="21" roleId="1">Это инфицированные!</message>
+    <choice id="1">Двигайся тихо!<targetChapter>35</targetChapter>
+    </choice>
+    <choice id="2">Двигайся быстро!<targetChapter>36</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="35">
+    <message id="1" roleId="1">Понял, оператор... Крадусь, как мышка...</message>
+    <message id="2" roleId="1">... ... ...</message>
+    <message id="3" roleId="1">Звуки становятся громче...</message>
+    <message id="4" roleId="1">Напоминают урчание голодного волка.</message>
+    <message id="5" roleId="1">Мурашки по коже!</message>
+    <message id="6" roleId="1">Темнота... и... этот звук...</message>
+    <message id="7" roleId="1">Я сейчас с ума сойду...</message>
+    <message id="8" roleId="1">... ... ...</message>
+    <message id="9" roleId="1">Оператор!</message>
+    <message id="10" roleId="1">Вижу его!</message>
+    <message id="11" roleId="1">Неподалеку от двери топчется инфицированный!</message>
+    <message id="12" roleId="1">Боже мой...</message>
+    <message id="13" roleId="1">Я... Я не знал его... По крайней мере, сейчас не узнаю...</message>
+    <message id="14" roleId="1">Но видно, что еще недавно он был нормальным живым человеком.</message>
+    <message id="15" roleId="1">А сейчас это монстр...</message>
+    <message id="16" roleId="1">Лабораторный халат весь в крови, лицо перекошено мышечными спазмами, вены вздулись и почернели...</message>
+    <message id="17" roleId="1">Он двигается резко, порывисто... Потом...</message>
+    <message id="18" roleId="1">Потом словно наталкивается на невидимую стену и застывает...</message>
+    <message id="19" roleId="1">Скрипит зубами, изо рта обильно течет кровавая слюна...</message>
+    <message id="20" roleId="1">Слышно рычание и тяжелое лихорадочное дыхание...</message>
+    <message id="21" roleId="1">Боже, как страшно...</message>
+    <choice id="1">Осторожно...<targetChapter>37</targetChapter>
+    </choice>
+    <choice id="2">Крадись дальше...<targetChapter>38</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="36" isEnded="true">
+    <message id="1" roleId="1">Бежать?! Прямо на него?!</message>
+    <message id="2" roleId="1">Хорошо... но...</message>
+    <message id="3" roleId="1">Сейчас... Нужно решиться...</message>
+    <message id="4" roleId="1">... ... ...</message>
+    <message id="5" roleId="1">... ... ...</message>
+    <message id="6" roleId="1">Нельзя больше ждать... Я готов!</message>
+    <message id="7" roleId="1">Бегу к двери!</message>
+    <message id="8" roleId="1">... ... ...</message>
+    <message id="9" roleId="1">О-о-о, черт!!!</message>
+    <message id="10" roleId="1">А-А-А-А-А!!!</message>
+    <message id="11" roleId="4">[Вы так и не поняли, что там произошло]</message>
+    <message id="12" roleId="4">[Последними звуками были: рычание и крик ужаса]</message>
+    <message id="13" roleId="4">[А затем связь оборвалась]</message>
+    <message id="14" roleId="4">[Система уведомила Вас, что биосигнал Объекта был потерян]</message>
+    <message id="15" roleId="4">[Он мертв...]</message>
+    <message id="16" roleId="4">[А значит...]</message>
+    <message id="17" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="37">
+    <message id="1" roleId="1">Хо... Хорошо...</message>
+    <message id="2" roleId="1">Я буду предельно осторожен...</message>
+    <choice id="1">Автопереход.<targetChapter>39</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="38">
+    <message id="1" roleId="1">Да... пока он меня не слышит и не видит — нужно идти...</message>
+    <message id="2" roleId="1">Продолжаю путь...</message>
+    <choice id="1">Автопереход.<targetChapter>39</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="39">
+    <message id="1" roleId="1">Я приближаюсь к нему понемногу...</message>
+    <message id="2" roleId="1">Приходится задерживать дыхание, чтобы кислородная система не так шумела.</message>
+    <message id="3" roleId="1">Но, похоже, инфицированные не отличаются острым слухом.</message>
+    <message id="4" roleId="1">Если только не...</message>
+    <message id="5" roleId="1">ФОНАРЬ!</message>
+    <message id="6" roleId="1">Он заметил луч фонаря!</message>
+    <message id="7" roleId="1">А теперь заметил и...</message>
+    <message id="8" roleId="1">МЕНЯ!!!</message>
+    <choice id="1">Замри!<targetChapter>40</targetChapter>
+    </choice>
+    <choice id="2">Беги в отдел!<targetChapter>41</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="40" isEnded="true">
+    <message id="1" roleId="1">Понял!</message>
+    <message id="2" roleId="1">Прижался спиной к стене и выключил фонарь!</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">О БОЖЕ!!!</message>
+    <message id="5" roleId="1">ОН БЕЖИТ КО МНЕ!!!</message>
+    <message id="6" roleId="1">А-А-А-А-А-!!!</message>
+    <message id="7" roleId="4">[КОНТАКТ ПОТЕРЯН]</message>
+    <message id="8" roleId="4">[БИОСИГНАЛ ОБЪЕКТА ПОТЕРЯН]</message>
+    <message id="9" roleId="4">[КОРРЕЛЯЦИЯ]</message>
+    <message id="10" roleId="4">[... ... ...]</message>
+    <message id="11" roleId="4">[СОБРАННО НЕДОСТАТОЧНО ИНФОРМАЦИИ]</message>
+    <message id="12" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="41">
+    <message id="1" roleId="1">БЕГУ!!!</message>
+    <message id="2" roleId="1">... ... ...</message>
+    <message id="3" roleId="1">Черт!</message>
+    <message id="4" roleId="1">Он двигается слишком быстро!</message>
+    <message id="5" roleId="1">Оператор!</message>
+    <message id="6" roleId="1">Он догоняет меня!!!</message>
+    <choice id="1">Прибавь ходу!<targetChapter>42</targetChapter>
+    </choice>
+    <choice id="2">Ослепи его фонарем!<targetChapter>43</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="42" isEnded="true">
+    <message id="1" roleId="1">БЕГУ!!! БЕГУ!</message>
+    <message id="2" roleId="1">Но...</message>
+    <message id="3" roleId="1">Он слишком быстр! Я не...</message>
+    <message id="4" roleId="1">А-А-А-А-А-!!!</message>
+    <message id="5" roleId="4">[КОНТАКТ ПОТЕРЯН]</message>
+    <message id="6" roleId="4">[БИОСИГНАЛ ОБЪЕКТА ПОТЕРЯН]</message>
+    <message id="7" roleId="4">[КОРРЕЛЯЦИЯ]</message>
+    <message id="8" roleId="4">[... ... ...]</message>
+    <message id="9" roleId="4">[СОБРАННО НЕДОСТАТОЧНО ДАННЫХ]</message>
+    <message id="10" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="43">
+    <message id="1" roleId="1">Свечу!</message>
+    <message id="2" roleId="1">Есть! И... продолжаю бежать!</message>
+    <message id="3" roleId="1">Оператор!</message>
+    <message id="4" roleId="1">Луч света направлен прямо ему в лицо!</message>
+    <message id="5" roleId="1">И он... он сбивается с шага!</message>
+    <message id="6" roleId="1">Вот двери Отдела «Б»!</message>
+    <message id="7" roleId="1">Забегаю!!!</message>
+    <message id="8" roleId="1">... ... ...</message>
+    <message id="9" roleId="1">О, черт!</message>
+    <message id="10" roleId="1">Я внутри!</message>
+    <message id="11" roleId="1">Держу двери!</message>
+    <message id="12" roleId="1">Замок! Запираю двери!</message>
+    <message id="13" roleId="1">... ... ...</message>
+    <message id="14" roleId="1">О боже... о боже...</message>
+    <message id="15" roleId="1">Я... я ушел... боже мой...</message>
+    <message id="16" roleId="1">Я жив...</message>
+    <message id="17" roleId="4">[ДЕЖУРНОМУ ОПЕРАТОРУ]</message>
+    <message id="18" roleId="4">[СОБРАНА ЧАСТЬ ДАННЫХ]</message>
+    <message id="19" roleId="4">[ОПРЕДЕЛЕНА СКОРОСТЬ ИНФИЦИРОВАННЫХ НА РАННЕЙ СТАДИИ ЗАРАЖЕНИЯ]</message>
+    <message id="20" roleId="4">[ОПРЕДЕЛЕНА ЧУВСТВИТЕЛЬНОСТЬ ОРГАНОВ СЛУХА]</message>
+    <message id="21" roleId="4">[ЕСТЬ РЕАКЦИЯ НА СВЕТ]</message>
+    <message id="22" roleId="4">[ЕСТЬ РЕАКЦИЯ НА ДВИЖЕНИЕ]</message>
+    <message id="23" roleId="4">[ОПЕРАТОР 5]</message>
+    <message id="24" roleId="4">[ПРОДОЛЖАЙТЕ МИССИЮ]</message>
+    <message id="25" roleId="4">[ОБНОВЛЕНИЕ ЗАДАНИЯ]</message>
+    <message id="26" roleId="4">[СТОЛКНИТЕ ОБЪЕКТ С ГРУППОЙ ИНФИЦИРОВАННЫХ]</message>
+    <message id="27" roleId="4">[... ... ...]</message>
+    <message id="28" roleId="4">[... ... ...]</message>
+    <message id="29" roleId="4">[ПРИСТУПИТЬ К ВЫПОЛНЕНИЮ]</message>
+    <message id="30" roleId="1">Господи... это было что-то!</message>
+    <message id="31" roleId="1">Оператор, вы здесь?</message>
+    <message id="32" roleId="1">Хотел сказать вам спасибо! Без вашей помощи я бы не справился!</message>
+    <message id="33" roleId="1">Вы спасли мне жизнь!</message>
+    <choice id="1">Не благодари.<targetChapter>44</targetChapter>
+    </choice>
+    <choice id="2">Продолжай путь.<targetChapter>45</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="44">
+    <message id="1" roleId="1">А по-моему — стоит!</message>
+    <message id="2" roleId="1">Для вас это, может быть, работа, но для меня...</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Еще раз — спасибо, оператор!</message>
+    <message id="5" roleId="1">Вы благородный человек!</message>
+    <choice id="1">Автопереход.<targetChapter>46</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="45">
+    <message id="1" roleId="1">Вот так прямо сразу?</message>
+    <message id="2" roleId="1">Я... Я в себя еще не пришел...</message>
+    <message id="3" roleId="1">Сердце буквально выпрыгивает из груди!</message>
+    <message id="4" roleId="1">... ... ...</message>
+    <message id="5" roleId="1">Но, конечно, вы правы.</message>
+    <message id="6" roleId="1">Вам лучше знать.</message>
+    <choice id="1">Автопереход.<targetChapter>46</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="46">
+    <message id="1" roleId="1">Скажите мне, что я должен делать?</message>
+    <choice id="1">Ты цел?<targetChapter>47</targetChapter>
+    </choice>
+    <choice id="2">Где ты сейчас?<targetChapter>48</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="47">
+    <message id="1" roleId="1">Спасибо за такой вопрос...</message>
+    <message id="2" roleId="1">Он... Он странно придает мне сил, надежда расправляет крылья...</message>
+    <message id="3" roleId="1">Да, оператор, я цел. Не считая того факта, что мне, вероятно, скоро понадобятся услуги кардиолога.</message>
+    <message id="4" roleId="1">... ... ...</message>
+    <message id="5" roleId="1">Так, давайте я опишу ситуацию?</message>
+    <choice id="1">Автопереход.<targetChapter>49</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="48">
+    <message id="1" roleId="1">Сейчас, минуточку...</message>
+    <choice id="1">Автопереход.<targetChapter>49</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="49">
+    <message id="1" roleId="1">Я в шлюзовой камере Отдела «Б».</message>
+    <message id="2" roleId="1">Это такое небольшое помещение, из-за железных стен похожее на большой рефрижератор.</message>
+    <message id="3" roleId="1">Есть панорамное окно, через него можно заглянуть в сам отдел.</message>
+    <message id="4" roleId="1">Секундочку, я выключил фонарь. Хочу вначале оглядеться без него.</message>
+    <message id="5" roleId="1">Здесь тихо, и это немного успокаивает.</message>
+    <message id="6" roleId="1">Возможно, инфицированные покинули...</message>
+    <message id="7" roleId="1">О нет!</message>
+    <choice id="1">Что происходит?<targetChapter>50</targetChapter>
+    </choice>
+    <choice id="2">Тебе плохо?<targetChapter>51</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="50">
+    <message id="1" roleId="1">Это ужасно...</message>
+    <message id="2" roleId="1">Все мои надежды... рухнули!</message>
+    <choice id="1">Автопереход.<targetChapter>52</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="51">
+    <message id="1" roleId="1">Пока нет... но скоро мне может стать очень и очень плохо...</message>
+    <choice id="1">Автопереход.<targetChapter>52</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="52">
+    <message id="1" roleId="1">Не включая фонарь, я подобрался к окну и заглянул в отдел.</message>
+    <message id="2" roleId="1">Вначале я ничего не увидел, даже успел обрадоваться...</message>
+    <message id="3" roleId="1">Но потом... Потом заметил смутное движение в темноте.</message>
+    <message id="4" roleId="1">Словно тени вдруг стали текучей ртутью...</message>
+    <message id="5" roleId="1">Оператор, все пропало! В Отделе зараженных тканей полным-полно инфицированных!</message>
+    <message id="6" roleId="1">Сходу, без света, мне удалось засечь пятерых.</message>
+    <message id="7" roleId="1">Двое переползают по полу... возможно, в процессе агрессивного заражения им повредили позвоночный столб или ноги.</message>
+    <message id="8" roleId="1">Еще трое топчутся у дальней стены. Там, где шла работа над тестовыми образцами.</message>
+    <message id="9" roleId="1">Скорее всего их привлек запах сырого мяса.</message>
+    <message id="10" roleId="1">Только, судя по резким, раздраженным движениями, вкус специально зараженного филе им не по нраву.</message>
+    <message id="11" roleId="1">Им нужны живые люди, а не синтезированные ткани...</message>
+    <message id="12" roleId="1">... ... ...</message>
+    <message id="13" roleId="1">Оператор, что мне делать?</message>
+    <message id="14" roleId="1">Вернуться в коридор я не могу — прямо за дверью ждет инфицированный...</message>
+    <message id="15" roleId="1">Но и войти в отдел — чистой воды самоубийство!</message>
+    <choice id="1">Придется рисковать.<targetChapter>53</targetChapter>
+    </choice>
+    <choice id="2">У тебя есть другие предложения?<targetChapter>54</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="53">
+    <message id="1" roleId="1">Я боялся, что ты это скажешь...</message>
+    <message id="2" roleId="1">Я нейробиолог! Мне противен риск!</message>
+    <choice id="1">Автопереход.<targetChapter>55</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="54">
+    <message id="1" roleId="1">Это что — издевка?</message>
+    <message id="2" roleId="1">У меня только одно предложение — постарайтесь оставить меня в живых!</message>
+    <choice id="1">Автопереход.<targetChapter>55</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="55">
+    <message id="1" roleId="1">Но... другого выхода, похоже, вы мне не оставляете.</message>
+    <message id="2" roleId="1">Придется рисковать и пробираться через отдел.</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Постойте! Кажется, я понял вашу задумку!</message>
+    <message id="5" roleId="1">Там, за дверью Отдела «Б», начинается длинный коридор с кабинетами, который приведет к моргу, офисам и...</message>
+    <message id="6" roleId="1">Лифтам!</message>
+    <message id="7" roleId="1">Вы хотите меня провести к лифтам, чтобы вытащить наружу?!</message>
+    <choice id="1">Нет, мы проводим эксперимент.<targetChapter>56</targetChapter>
+    </choice>
+    <choice id="2">Ага... мы тебя спасем.<targetChapter>57</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="56">
+    <message id="1" roleId="1">Что?..</message>
+    <message id="2" roleId="1">Эксперимент?..</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Мрачная, злая и очень несвоевременная шутка, оператор.</message>
+    <message id="5" roleId="1">У вас был такой серьезный голос, что на миг я вам даже поверил...</message>
+    <message id="6" roleId="1">Даже кровь похолодела...</message>
+    <choice id="1">Автопереход.<targetChapter>58</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="57">
+    <message id="1" roleId="1">Я так и знал!</message>
+    <message id="2" roleId="1">Спасибо вам! Спасибо!</message>
+    <choice id="1">Автопереход.<targetChapter>58</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«Отдел Б»" id="58" isKeyChapter="true" priceTier="0.99">
+    <message id="1" roleId="1">Хорошо... Давайте не будем медлить, иначе я точно не решусь.</message>
+    <message id="2" roleId="1">... ... ...</message>
+    <message id="3" roleId="1">Я готов!</message>
+    <choice id="1">Уверен?<targetChapter>59</targetChapter>
+    </choice>
+    <choice id="2">Входи!<targetChapter>60</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="59">
+    <message id="1" roleId="1">Нет, но лучше об этом не думать!</message>
+    <choice id="1">Автопереход.<targetChapter>61</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="60">
+    <message id="1" roleId="1">Понял.</message>
+    <message id="2" roleId="1">Надеюсь, мое имя не пополнит список ученых, которые погибли ради науки...</message>
+    <choice id="1">Автопереход.<targetChapter>61</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="61">
+    <message id="1" roleId="1">Итак...</message>
+    <message id="2" roleId="1">Приближаюсь к двери.</message>
+    <message id="3" roleId="1">Электричество отключено, так что автоматическую дверь мне придется открывать самостоятельно...</message>
+    <message id="4" roleId="1">Наверное, это к лучшему. Меньше шума.</message>
+    <message id="5" roleId="1">Э-эх...</message>
+    <message id="6" roleId="1">... ... ...</message>
+    <message id="7" roleId="1">Оператор... немного приоткрыл...</message>
+    <message id="8" roleId="1">Пока на меня не обращают внимания...</message>
+    <message id="9" roleId="1">И...</message>
+    <message id="10" roleId="1">Дьявол!</message>
+    <message id="11" roleId="1">Я вижу еще инфицированных!</message>
+    <message id="12" roleId="1">Их трое! И они прямо у двери выхода из отдела! Именно там, куда мне нужно попасть!</message>
+    <message id="13" roleId="1">Мне не пройти!..</message>
+    <choice id="1">Беги быстро!<targetChapter>62</targetChapter>
+    </choice>
+    <choice id="2">Вначале отвлеки их.<targetChapter>63</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="62">
+    <message id="1" roleId="1">Серьезно?!</message>
+    <message id="2" roleId="1">Прямо на них?!</message>
+    <choice id="1">Нет, вначале отвлеки.<targetChapter>63</targetChapter>
+    </choice>
+    <choice id="2">Беги!<targetChapter>64</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="63">
+    <message id="1" roleId="1">Отвлечь?.. Еще бы знать чем...</message>
+    <message id="2" roleId="1">Хм... давай-ка подумаем... я все же нейробиолог...</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Так, есть одна идейка, но... мне она не слишком нравится.</message>
+    <message id="5" roleId="1">Правда, альтернативы нет.</message>
+    <message id="6" roleId="1">Оператор, мне придется рискнуть и снять костюм биологической защиты.</message>
+    <message id="7" roleId="1">Он, конечно, изодранный, но с ним мне было спокойней...</message>
+    <message id="8" roleId="1">Если вы отключили электричество, значит — вентиляционная система не работает.</message>
+    <message id="9" roleId="1">У меня есть шанс продержаться некоторое время без дополнительной защиты.</message>
+    <message id="10" roleId="1">Концентрация вируса в воздухе должна была снизиться. Теперь главная опасность — агрессивное заражение.</message>
+    <message id="11" roleId="1">То есть — сами инфицированные.</message>
+    <message id="12" roleId="1">Поэтому... В общем, минутку. Мне нужно снять костюм.</message>
+    <message id="13" roleId="1">Он издает слишком много шума при движении.</message>
+    <message id="14" roleId="1">... ... ...</message>
+    <message id="15" roleId="1">... ... ...</message>
+    <message id="16" roleId="1">... ... ...</message>
+    <message id="17" roleId="1">Все, теперь я в рабочей одежде и белом халате. Даже фонаря не осталось.</message>
+    <message id="18" roleId="1">Впрочем, глаза уже привыкли к темноте.</message>
+    <message id="19" roleId="1">В общем, у меня такая идея.</message>
+    <message id="20" roleId="1">Я включаю на костюме фонарь, а затем зашвыриваю его подальше в отдел.</message>
+    <message id="21" roleId="1">Ведомые первобытными инстинктами, инфицированные должны среагировать на шум и свет.</message>
+    <message id="22" roleId="1">Они бросятся на костюм, а я...</message>
+    <choice id="1">Хорошая идея.<targetChapter>65</targetChapter>
+    </choice>
+    <choice id="2">Нет, просто беги к двери.<targetChapter>64</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="64" isEnded="true">
+    <message id="1" roleId="1">Ну-у... вам, наверное, виднее...</message>
+    <message id="2" roleId="1">Короткая передышка для рывка...</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Вдох-выдох...</message>
+    <message id="5" roleId="1">Я побежал...</message>
+    <message id="6" roleId="1">Вперед!</message>
+    <message id="7" roleId="1">... ... ...</message>
+    <message id="8" roleId="1">О... О-о!!!</message>
+    <message id="9" roleId="1">Нет, отцепись!</message>
+    <message id="10" roleId="1">А-А-А-А-А!!!</message>
+    <message id="11" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="12" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="13" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="14" roleId="4">[... ... ...]</message>
+    <message id="15" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="65">
+    <message id="1" roleId="1">Отлично. Тогда...</message>
+    <message id="2" roleId="1">Короткая передышка перед смертельной гонкой...</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Вдох-выдох, вдох-выдох...</message>
+    <message id="5" roleId="1">Все прекрасно, и даже эти чудные зомби — всего лишь тлен и суета...</message>
+    <message id="6" roleId="1">... ... ...</message>
+    <message id="7" roleId="1">Гм, получилось не слишком успокаивающе, но больше медлить нельзя.</message>
+    <message id="8" roleId="1">Я готов.</message>
+    <message id="9" roleId="1">Открываю дверь шире...</message>
+    <message id="10" roleId="1">Включаю фонарь...</message>
+    <message id="11" roleId="1">... ... ...</message>
+    <message id="12" roleId="1">«А, какой я вкусный!!!»</message>
+    <message id="13" roleId="1">Швыряю!!!</message>
+    <choice id="1">Теперь беги!<targetChapter>66</targetChapter>
+    </choice>
+    <choice id="2">Выжди!<targetChapter>67</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="66" isEnded="true">
+    <message id="1" roleId="1">Вперед!</message>
+    <message id="2" roleId="1">Бегу!!!</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">... ... ...</message>
+    <message id="5" roleId="1">О... О-о!!!</message>
+    <message id="6" roleId="1">Нет, отцепись!</message>
+    <message id="7" roleId="1">А-А-А-А-А!!!</message>
+    <message id="8" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="9" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="10" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="11" roleId="4">[... ... ...]</message>
+    <message id="12" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="67">
+    <message id="1" roleId="1">... ... ...</message>
+    <message id="2" roleId="1">Инфицированные от такого подарка опешили на миг...</message>
+    <message id="3" roleId="1">Ага!</message>
+    <message id="4" roleId="1">Боже... как жутко!</message>
+    <message id="5" roleId="1">Они бросились прямо как стая волков!</message>
+    <message id="6" roleId="1">Бедный костюм...</message>
+    <message id="7" roleId="1">И хорошо, что я не побежал к двери сразу!</message>
+    <message id="8" roleId="1">Иначе...</message>
+    <choice id="1">Теперь беги!<targetChapter>68</targetChapter>
+    </choice>
+    <choice id="2">Пробирайся медленно.<targetChapter>69</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="68">
+    <message id="1" roleId="1">Да, вперед!</message>
+    <message id="2" roleId="1">... ... ...</message>
+    <message id="3" roleId="1">Бегу!</message>
+    <message id="4" roleId="1">О-о, черт!</message>
+    <message id="5" roleId="1">А-а-а-а!</message>
+    <message id="6" roleId="1">Черт подери!</message>
+    <message id="7" roleId="1">Оператор!</message>
+    <message id="8" roleId="1">Я споткнулся о того зомби, который полз по...</message>
+    <message id="9" roleId="1">А-А-А-А-А!!!</message>
+    <choice id="1">Беги к двери!<targetChapter>70</targetChapter>
+    </choice>
+    <choice id="2">Возвращайся!<targetChapter>71</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="69" isEnded="true">
+    <message id="1" roleId="1">Хорошо...</message>
+    <message id="2" roleId="1">Пробираюсь к двери...</message>
+    <message id="3" roleId="1">Господи, слышишь, как они рычат?</message>
+    <message id="4" roleId="1">Безумное зверье...</message>
+    <message id="5" roleId="1">Черт...</message>
+    <message id="6" roleId="1">Так, от стола к столу... пригибаясь, осторожно...</message>
+    <message id="7" roleId="1">Оператор, я прошел уже полпути и...</message>
+    <message id="8" roleId="1">А-а, дьявол!</message>
+    <message id="9" roleId="1">Отпусти! Отпусти мою ногу!</message>
+    <message id="10" roleId="1">Помогите!</message>
+    <message id="11" roleId="1">Меня схватили!</message>
+    <message id="12" roleId="1">Мы забыли про ползучих тварей! Они...</message>
+    <message id="13" roleId="1">А-А-А-А-А!!!</message>
+    <message id="14" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="15" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="16" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="17" roleId="4">[... ... ...]</message>
+    <message id="18" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="70">
+    <message id="1" roleId="1">Хорошо!</message>
+    <message id="2" roleId="1">О, нет!</message>
+    <message id="3" roleId="1">ОНО СХВАТИЛО МЕНЯ!</message>
+    <message id="4" roleId="1">ПОМОГИ!!!</message>
+    <choice id="1">Бей ногой!<targetChapter>72</targetChapter>
+    </choice>
+    <choice id="2">Вырывайся!<targetChapter>73</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="71" isEnded="true">
+    <message id="1" roleId="1">Хорошо!</message>
+    <message id="2" roleId="1">Вскочил!</message>
+    <message id="3" roleId="1">Бегу обратно!</message>
+    <message id="4" roleId="1">И...</message>
+    <message id="5" roleId="1">А-А-А-А-А-А!!!</message>
+    <message id="6" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="7" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="8" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="9" roleId="4">[... ... ...]</message>
+    <message id="10" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="72">
+    <message id="1" roleId="1">Я же ученый!!!</message>
+    <message id="2" roleId="1">А, черт с ним... ПОЛУЧИ ТВАРЬ!!!</message>
+    <message id="3" roleId="1">Н-НА!!!</message>
+    <choice id="1">Автопереход.<targetChapter>74</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="73">
+    <message id="1" roleId="1">Выдираюсь!!!</message>
+    <message id="2" roleId="1">Отпусти, отпусти сказал!</message>
+    <message id="3" roleId="1">Фу! Плохой зомби!!!</message>
+    <choice id="1">Автопереход.<targetChapter>74</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="74">
+    <message id="1" roleId="1">... ... ...</message>
+    <message id="2" roleId="1">Н-НЕ ОТ-ТПУСКАЕТ!!!</message>
+    <choice id="1">Поднажми!<targetChapter>75</targetChapter>
+    </choice>
+    <choice id="2">Смирись, и... прощай!<targetChapter>76</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="75">
+    <message id="1" roleId="1">Р-Р-Р-Р!!!</message>
+    <message id="2" roleId="1">Н-на тебе по морде каблуком!!!</message>
+    <message id="3" roleId="1">Н-на!</message>
+    <message id="4" roleId="1">Отпусти ногу, бездарная скотина!</message>
+    <message id="5" roleId="1">Тебе все равно даже за это Нобелевку не дадут!</message>
+    <message id="6" roleId="1">... ... ...</message>
+    <message id="7" roleId="1">Есть!!!</message>
+    <message id="8" roleId="1">Вырвался!</message>
+    <message id="9" roleId="1">Вскочил!</message>
+    <message id="10" roleId="1">О, боги!</message>
+    <message id="11" roleId="1">Ко мне бегут остальные твари!</message>
+    <choice id="1">Беги к двери!<targetChapter>77</targetChapter>
+    </choice>
+    <choice id="2">Займи оборону!<targetChapter>78</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="76" isEnded="true">
+    <message id="1" roleId="1">Чего?!!</message>
+    <message id="2" roleId="1">А, тварь! Уйди! Уйди...</message>
+    <message id="3" roleId="1">А-А-А-А-А!!!</message>
+    <message id="4" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="5" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="6" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="7" roleId="4">[... ... ...]</message>
+    <message id="8" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="77">
+    <message id="1" roleId="1">Понял!</message>
+    <message id="2" roleId="1">Бегу!</message>
+    <choice id="1">Автопереход.<targetChapter>79</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="78">
+    <message id="1" roleId="1">Да ты с ума сошел!!!</message>
+    <message id="2" roleId="1">Я тебе адмирал Нельсон, что ли?!!</message>
+    <message id="3" roleId="1">Бегу к двери!!!</message>
+    <choice id="1">Автопереход.<targetChapter>79</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="79">
+    <message id="1" roleId="1">Ну давай же!</message>
+    <message id="2" roleId="1">Дверь!!!</message>
+    <message id="3" roleId="1">Она заперта!!!</message>
+    <message id="4" roleId="1">... ... ...</message>
+    <message id="5" roleId="1">О, дьявол!</message>
+    <message id="6" roleId="1">Открыл! Забыл, что нет света!</message>
+    <message id="7" roleId="1">Эй, отвали!</message>
+    <message id="8" roleId="1">Уйди!</message>
+    <message id="9" roleId="1">А, черт!</message>
+    <message id="10" roleId="1">... ... ...</message>
+    <message id="11" roleId="1">... ... ...</message>
+    <message id="12" roleId="1">Да что же за...</message>
+    <message id="13" roleId="1">А-а-а-а!!!</message>
+    <message id="14" roleId="1">... ... ...</message>
+    <message id="15" roleId="1">... ... ...</message>
+    <message id="16" roleId="1">Есть!!!</message>
+    <message id="17" roleId="1">Да!!!</message>
+    <message id="18" roleId="1">ОПЕРАТОР!!!</message>
+    <message id="19" roleId="1">Я вырвался!!!</message>
+    <message id="20" roleId="1">Я пробежал через отдел!!!</message>
+    <message id="21" roleId="1">Я в коридоре!</message>
+    <choice id="1">Автопереход.<targetChapter>80</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«Заразить его!»" id="80" isKeyChapter="true">
+    <message id="1" roleId="4">[ДЕЖУРНОМУ ОПЕРАТОРУ]</message>
+    <message id="2" roleId="4">[ДАННЫЕ СОБРАНЫ]</message>
+    <message id="3" roleId="4">[СКОРОСТЬ ИНФИЦИРОВАННЫХ НА РАННЕЙ СТАДИИ ЗАРАЖЕНИЯ]</message>
+    <message id="4" roleId="4">[ПОДТВЕРЖДЕНА ЧУВСТВИТЕЛЬНОСТЬ ОРГАНОВ СЛУХА]</message>
+    <message id="5" roleId="4">[ПОДТВЕРЖДЕНА РЕАКЦИЯ НА СВЕТ]</message>
+    <message id="6" roleId="4">[ПОДТВЕРЖДЕНА РЕАКЦИЯ НА ДВИЖЕНИЕ]</message>
+    <message id="7" roleId="4">[ЕСТЬ РЕАКЦИЯ НА ЗАПАХ]</message>
+    <message id="8" roleId="4">[СОБРАНЫ ДАННЫЕ ПО ГРУППОВОЙ АКТИВНОСТИ]</message>
+    <message id="9" roleId="4">[СОБРАНЫ ДАННЫЕ ПО АТАКУЮЩИМ СВОЙСТВАМ]</message>
+    <message id="10" roleId="4">[ЕСТЬ ТАКТИЧЕСКИЕ ДАННЫЕ]</message>
+    <message id="11" roleId="4">[... ... ...]</message>
+    <message id="12" roleId="4">[ОПЕРАТОР 5]</message>
+    <message id="13" roleId="4">[ПРОДОЛЖАЙТЕ МИССИЮ]</message>
+    <message id="14" roleId="4">[... ... ...]</message>
+    <message id="15" roleId="4">[ОБНОВЛЕНИЕ ЗАДАНИЯ]</message>
+    <message id="16" roleId="4">[... ... ...]</message>
+    <message id="17" roleId="4">[ЗАРАЗИТЕ ПОДОПЫТНЫЙ ОБЪЕКТ]</message>
+    <message id="18" roleId="4">[... ... ...]</message>
+    <message id="19" roleId="4">[ПРИСТУПИТЬ К ВЫПОЛНЕНИЮ]</message>
+    <choice id="1">Автопереход.<targetChapter>81</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="81">
+    <message id="1" roleId="1">Господи, что это была за минута, а?!</message>
+    <message id="2" roleId="1">Никогда в жизни за одну минуту я не испытывал ТАКОЙ гаммы чувств!</message>
+    <message id="3" roleId="1">Теперь я понимаю адреналиновых наркоманов: спасение после такого — эйфория!</message>
+    <message id="4" roleId="1">Боже мой! Боже мой!</message>
+    <message id="5" roleId="1">Это было нечто!</message>
+    <message id="6" roleId="1">Оператор!</message>
+    <message id="7" roleId="1">Вас послала мне сама судьба!</message>
+    <message id="8" roleId="1">Вы — ангел во плоти!</message>
+    <message id="9" roleId="1">Спасибо вам!</message>
+    <message id="10" roleId="1">Вы уже не раз мне жизнь спасли!</message>
+    <message id="11" roleId="1">Спасибо!</message>
+    <message id="12" roleId="1">Господи, да я, если все-таки выберусь отсюда, на руках вас буду носить!</message>
+    <message id="13" roleId="1">Если, конечно, вы не весите больше пятидесяти килограммов...</message>
+    <message id="14" roleId="1">... ... ...</message>
+    <message id="15" roleId="1">Уф-ф-ф...</message>
+    <message id="16" roleId="1">Я выжат... насухо! Или досуха?</message>
+    <message id="17" roleId="1">Стоп... что это?</message>
+    <message id="18" roleId="1">Я слышу какие-то звуки...</message>
+    <message id="19" roleId="1">... ... ...</message>
+    <message id="20" roleId="1">Это не из Отдела «Б»... Это...</message>
+    <message id="21" roleId="1">Человеческие крики!</message>
+    <message id="22" roleId="1">Откуда-то из офисов!</message>
+    <message id="23" roleId="1">Боже... везде этот кошмар!</message>
+    <message id="24" roleId="1">Это настоящий ад!</message>
+    <message id="25" roleId="1">Оператор, прошу вас — давайте выбираться!</message>
+    <message id="26" roleId="1">Я в коридоре. Очень длинном коридоре.</message>
+    <message id="27" roleId="1">И очень, очень темном.</message>
+    <message id="28" roleId="1">Он должен вывести меня к моргу, офисам, кабинетам и лифтам.</message>
+    <message id="29" roleId="1">Мне нужно туда, верно?</message>
+    <choice id="1">Верно.<targetChapter>82</targetChapter>
+    </choice>
+    <choice id="2">Подожди, я должен признаться.<targetChapter>83</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="82">
+    <message id="1" roleId="1">Хорошо, тогда я начинаю движение...</message>
+    <message id="2" roleId="1">Иду вдоль стены, потому что темно, хоть глаз выколи.</message>
+    <message id="3" roleId="1">И довольно страшно... Хотя адреналин еще кружит голову.</message>
+    <message id="4" roleId="1">Но разумом я понимаю, что еще одного такого удачного совпадения может и не быть.</message>
+    <message id="5" roleId="1">Еще одну схватку с зомби я не переживу...</message>
+    <message id="6" roleId="1">Хотя, конечно, кто знает. При грамотном-то помощнике...</message>
+    <message id="7" roleId="1">Стоп!</message>
+    <message id="8" roleId="1">Я слышу какой-то звук...</message>
+    <message id="9" roleId="1">... ... ...</message>
+    <message id="10" roleId="1">Я сейчас у кабинета профессора Зяброва.</message>
+    <message id="11" roleId="1">Это мой бывший научный руководитель.</message>
+    <message id="12" roleId="1">А звук доносится из кабинета доктора Ольги Шепелевой...</message>
+    <message id="13" roleId="1">... ... ...</message>
+    <message id="14" roleId="1">Слушайте... А вдруг ей тоже удалось спастись?</message>
+    <message id="15" roleId="1">И она заперлась у себя в кабинете?</message>
+    <choice id="1">Стой, я должен признаться!<targetChapter>83</targetChapter>
+    </choice>
+    <choice id="2">Проверь.<targetChapter>84</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="83" isEnded="true">
+    <message id="1" roleId="1">Признаться?</message>
+    <message id="2" roleId="1">Но в... в чем?</message>
+    <message id="3" roleId="4">[Но не успели Вы и рта раскрыть, как связь оборвалась]</message>
+    <message id="4" roleId="4">[Тотальный контроль. Большой брат не дремлет]</message>
+    <message id="5" roleId="4">[Вас мгновенно отключили от системы]</message>
+    <message id="6" roleId="4">[А Ваши близкие получили письмо, полное соболезнований]</message>
+    <message id="7" roleId="4">[В нем говорилось, что Вы «героически погибли при исполнении»]</message>
+    <message id="8" roleId="4">[И больше Вы уже ничего и никому не могли рассказать]</message>
+    <message id="9" roleId="4">[А Ваша миссия...]</message>
+    <message id="10" roleId="4" voice="death">[ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="84">
+    <message id="1" roleId="1">Хорошо...</message>
+    <message id="2" roleId="1">Нужно удостовериться, иначе... иначе просто не смогу потом спать по ночам.</message>
+    <message id="3" roleId="1">Не могу я оставить человека в беде...</message>
+    <message id="4" roleId="1">Так, стучу в дверь.</message>
+    <message id="5" roleId="1">... ... ...</message>
+    <message id="6" roleId="1">«Ольга Андреевна! Вы там? Это Иван Соболев!»</message>
+    <message id="7" roleId="1">... ... ...</message>
+    <message id="8" roleId="1">Все стихло...</message>
+    <message id="9" roleId="1">Кажется, моя догадка верна. Она внутри!</message>
+    <message id="10" roleId="1">«Ольга Андреевна, вы слышите меня? Это Иван Соболев!»</message>
+    <message id="11" roleId="1">«Откройте. Я не инфицирован, уверяю вас!»</message>
+    <message id="12" roleId="1">«И мне удалось связаться с поверхностью. Они нам...»</message>
+    <message id="13" roleId="1">... ... ...</message>
+    <message id="14" roleId="1">О-О-О-О...</message>
+    <message id="15" roleId="1">НЕТ!!!</message>
+    <message id="16" roleId="1">А-А-А-А-А-А!!!</message>
+    <message id="17" roleId="1">МОЯ РУКА-А-А!!!</message>
+    <message id="18" roleId="1">НЕТ!!!</message>
+    <message id="19" roleId="1">... ... ...</message>
+    <choice id="1">Автопереход.<targetChapter>85</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«Инфицирован!»" id="85" isKeyChapter="true">
+    <message id="1" roleId="4">[ДЕЖУРНОМУ ОПЕРАТОРУ]</message>
+    <message id="2" roleId="4">[ВАШ ПОДОПЫТНЫЙ ОБЪЕКТ ИНФИЦИРОВАН]</message>
+    <message id="3" roleId="4">[БИОСИГНАЛ ОБЪЕКТА НЕСТАБИЛЕН]</message>
+    <message id="4" roleId="4">[ЕГО ВРЕМЯ СОЧТЕНО]</message>
+    <message id="5" roleId="4">[... ... ...]</message>
+    <message id="6" roleId="4">[ПОЗДРАВЛЯЕМ]</message>
+    <message id="7" roleId="4">[МИССИЯ ВЫПОЛНЕНА]</message>
+    <message id="8" roleId="4">[ПЕРЕКЛЮЧАЮ ВАС НА ВОЛНУ ГРУППЫ ЗАЧИСТКИ]</message>
+    <message id="9" roleId="4">[ОЖИДАЙТЕ ОТВЕТА]</message>
+    <message id="10" roleId="4">[... ... ...]</message>
+    <message id="11" roleId="4">[КОНТАКТ ПОТЕРЯН]</message>
+    <choice id="1">Автопереход.<targetChapter>86</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="86">
+    <message id="1" roleId="2">«Уважаемые игроки!»</message>
+    <message id="2" roleId="2">«Вольно или невольно, но Вы только что положили начало истории Ивана Соболева»</message>
+    <message id="3" roleId="2">«Это самая короткая часть приключений во вселенной Симбионта, но мы просто обязаны были ее написать»</message>
+    <message id="4" roleId="2">«И мы думаем, что многие из Вас этому только обрадуются»</message>
+    <message id="5" roleId="2">«Если Вам не безразлична судьба доктора Соболева, — тогда за дело!»</message>
+    <message id="6" roleId="2">«Секретная лаборатория хранит в себе много секретов и опасных находок!»</message>
+    <message id="7" roleId="2">«Узнайте, что послужило причиной заражения...»</message>
+    <message id="8" roleId="2">«Спасите доктора Соболева и...»</message>
+    <message id="9" roleId="2">«Узнайте тайну Симбионта»</message>
+    <message id="10" roleId="2">«А мы... мы постараемся сделать так, чтобы Вам не пришлось скучать!»</message>
+    <message id="11" roleId="2">«С уважением, команда SYMBIONT GAMES»</message>
+    <message id="12" roleId="2">«Мы делаем игры — критерий цивилизованности!»</message>
+    <message id="13" roleId="2">... ... ...</message>
+    <message id="14" roleId="2">«P. S. Мы есть в Vk — присоединяйтесь!»</message>
+    <message id="15" roleId="2">«И до новых встреч!»</message>
+    <choice id="1">АВТОПЕРЕХОД.<targetChapter>116</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="87">
+    <message id="1" roleId="1">Понял...</message>
+    <choice id="1">Автопереход.<targetChapter>89</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="88">
+    <message id="1" roleId="1">Хорошо. Спасибо вам.</message>
+    <choice id="1">Автопереход.<targetChapter>89</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="89">
+    <message id="1" roleId="1">Начинаю движение.</message>
+    <message id="2" roleId="1">... ... ...</message>
+    <message id="3" roleId="1">Так, оператор. Я сейчас в темном коридоре. Света нет, кроме луча моего фонаря.</message>
+    <message id="4" roleId="1">Издалека доносятся глухие звуки.</message>
+    <message id="5" roleId="1">Что-то очень неразборчивое... что-то...</message>
+    <message id="6" roleId="1">... ... ...</message>
+    <message id="7" roleId="1">Господи! Это же крики животных!</message>
+    <message id="8" roleId="1">Точно! Обезьяны в клетках!</message>
+    <message id="9" roleId="1">Никогда не слышал, чтобы животное издавало такие звуки...</message>
+    <message id="10" roleId="1">Мурашки по коже. Адская смесь детского плача и предсмертного вопля...</message>
+    <message id="11" roleId="1">Они... они чуют вирус.</message>
+    <message id="12" roleId="1">Они в отчаянии!</message>
+    <message id="13" roleId="1">И мне, похоже, придется идти мимо их клеток.</message>
+    <message id="14" roleId="1">Черт! Я ведь даже в детстве кошек за хвосты не дергал! Люблю всяких божьих тварей...</message>
+    <message id="15" roleId="1">Жалко мне их...</message>
+    <choice id="1">Прекрати ныть.<targetChapter>90</targetChapter>
+    </choice>
+    <choice id="2">Будь твердым.<targetChapter>91</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="90">
+    <message id="1" roleId="1">Э-м-м...</message>
+    <message id="2" roleId="1">Это и вправду похоже на нытье?</message>
+    <message id="3" roleId="1">Извините...</message>
+    <message id="4" roleId="1">Постараюсь держать чувства в узде.</message>
+    <choice id="1">Автопереход.<targetChapter>92</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="91">
+    <message id="1" roleId="1">Да-да, ничего другого не остается.</message>
+    <message id="2" roleId="1">И — спасибо за понимание.</message>
+    <choice id="1">Автопереход.<targetChapter>92</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="92">
+    <message id="1" roleId="1">Крики животных становятся громче.</message>
+    <message id="2" roleId="1">Еще немного и...</message>
+    <message id="3" roleId="1">Вижу двери в отдел зоологов.</message>
+    <choice id="1">Автопереход.<targetChapter>93</targetChapter>
+    </choice>
+  </chapter>
+  <chapter description="«У Отдела зоологов»" id="93" isKeyChapter="true">
+    <message id="1" roleId="4">[-ВНИМАНИЕ-]</message>
+    <message id="2" roleId="4">[ДЕЖУРНЫЙ ОПЕРАТОР]</message>
+    <message id="3" roleId="4">[СУЩЕСТВУЕТ ВЕРОЯТНОСТЬ ВСТРЕЧИ СО СТРАЖЕМ]</message>
+    <message id="4" roleId="4">[АКТУАЛЬНЫХ ДАННЫХ О ПРОЕКТЕ НЕТ]</message>
+    <message id="5" roleId="4">[ИНФОРМАЦИЯ НАХОДИТСЯ НА СТАДИИ ФОРМИРОВАНИЯ]</message>
+    <message id="6" roleId="4">[ОБНОВЛЕНИЕ ЗАДАНИЯ]</message>
+    <message id="7" roleId="4">[СТОЛКНУТЬ ПОДОПЫТНЫЙ ОБЪЕКТ С ИНФИЦИРОВАННЫМИ ЖИВОТНЫМИ]</message>
+    <message id="8" roleId="4">[ПРИСТУПАЙТЕ К ВЫПОЛНЕНИЮ]</message>
+    <choice id="1">Автопереход.<targetChapter>94</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="94">
+    <message id="1" roleId="1">...Вы меня слышите?</message>
+    <message id="2" roleId="1">Оператор, я у дверей отдела зоологов.</message>
+    <message id="3" roleId="1">Судя по всему — внутри хаос.</message>
+    <message id="4" roleId="1">Что мне делать? Возвращаться?</message>
+    <message id="5" roleId="1">Мне не очень хочется туда идти.</message>
+    <message id="6" roleId="1">И я думаю, что вы меня поймете.</message>
+    <choice id="1">Хочешь вернуться?<targetChapter>95</targetChapter>
+    </choice>
+    <choice id="2">Входи.<targetChapter>99</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="95">
+    <message id="1" roleId="1">... ... ...</message>
+    <message id="2" roleId="1">Да. Вы правы.</message>
+    <message id="3" roleId="1">Прошу прощения.</message>
+    <message id="4" roleId="1">Назад действительно дороги нет.</message>
+    <message id="5" roleId="1">Я... я вхожу.</message>
+    <choice id="1">Автопереход.<targetChapter>99</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="96">
+    <choice id="1"/>
+  </chapter>
+  <chapter id="97">
+    <choice id="1">
+      <targetChapter>97</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="98">
+    <choice id="1">Автопереход.<targetChapter>99</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="99">
+    <message id="1" roleId="1">Так, почти готов.</message>
+    <message id="2" roleId="1">Давайте же не будем медлить, иначе... у меня духу не хватит.</message>
+    <message id="3" roleId="1">Входить?</message>
+    <choice id="1">Точно готов?<targetChapter>100</targetChapter>
+    </choice>
+    <choice id="2">Входи уже!<targetChapter>101</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="100">
+    <message id="1" roleId="1">Вопрос с подвохом.</message>
+    <message id="2" roleId="1">Как вообще к такому можно быть готовым?</message>
+    <message id="3" roleId="1">Ну, ладно, все. Довольно разговоров.</message>
+    <message id="4" roleId="1">Вхожу!</message>
+    <choice id="1">Автопереход.<targetChapter>102</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="101">
+    <message id="1" roleId="1">Есть! Вхожу.</message>
+    <choice id="1">Автопереход.<targetChapter>102</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="102">
+    <message id="1" roleId="1">Оператор... электричества нет, но мне удалось приоткрыть двери.</message>
+    <message id="2" roleId="1">Хорошо, что цифровой замок не работает. Не помню пароля...</message>
+    <message id="3" roleId="1">Так... заглядываю...</message>
+    <message id="4" roleId="1">Господи, ну и шум!</message>
+    <message id="5" roleId="1">Фу!</message>
+    <message id="6" roleId="1">Ну и вонь!</message>
+    <message id="7" roleId="1">Похоже, что животные от страха обгадились в клетках и...</message>
+    <message id="8" roleId="1">Боже мой...</message>
+    <message id="9" roleId="1">... ... ...</message>
+    <message id="10" roleId="1">Оператор... я внутри... и лучше бы тебе не видеть того, что здесь происходит.</message>
+    <choice id="1">Рассказывай.<targetChapter>103</targetChapter>
+    </choice>
+    <choice id="2">Ищи выход.<targetChapter>104</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="103">
+    <message id="1" roleId="1">Я... я посветил на клетки...</message>
+    <message id="2" roleId="1">Здесь много животных содержалось.</message>
+    <message id="3" roleId="1">Хомяки, крысы, птицы, собаки, кошки и орангутанги.</message>
+    <message id="4" roleId="1">Кажется, где-то был даже аквариум.</message>
+    <message id="5" roleId="1">В общем... сейчас здесь овеществленная иллюстрация из книги Судного дня.</message>
+    <message id="6" roleId="1">Все птицы в клетках мертвы.</message>
+    <message id="7" roleId="1">Они лежат на полу, их крылья широко расправлены в параличе. У клювиков потеки крови.</message>
+    <message id="8" roleId="1">Грызуны живые. Они ведут себя спокойнее остальных. И без видимых признаков зара...</message>
+    <message id="9" roleId="1">О! Грх-м-м... Черт!</message>
+    <message id="10" roleId="1">Это отвратительно!</message>
+    <message id="11" roleId="1">Нет! Грызуны заражены.</message>
+    <message id="12" roleId="1">Я только что видел, как одной крысе все-таки удалось прогрызть дыру в клетку с хомяками!</message>
+    <message id="13" roleId="1">Она даже не прогрызла подходящее по размеру отверстие, но смогла протиснуться...</message>
+    <message id="14" roleId="1">Ободрав при этом почти всю шкуру! Теперь та крыса — это практически оголившийся кровоточащий скелет!</message>
+    <message id="15" roleId="1">Но это еще не самое худшее...</message>
+    <message id="16" roleId="1">Оператор, ты точно хочешь знать детали?</message>
+    <choice id="1">Нет, ищи выход.<targetChapter>104</targetChapter>
+    </choice>
+    <choice id="2">Рассказывай!<targetChapter>106</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="104">
+    <message id="1" roleId="1">Хорошо. Здравое решение.</message>
+    <choice id="1">Автопереход.<targetChapter>105</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="105">
+    <message id="1" roleId="1">Так, осторожно пробираюсь между клетками.</message>
+    <message id="2" roleId="1">Не дай бог, кому-нибудь из этих несчастных животных удастся до меня дотянуться...</message>
+    <message id="3" roleId="1">Потому что...</message>
+    <message id="4" roleId="1">А это еще что?!</message>
+    <choice id="1">Что ты видишь?<targetChapter>107</targetChapter>
+    </choice>
+    <choice id="2">Осторожно!<targetChapter>108</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="106">
+    <message id="1" roleId="1">Как скажешь...</message>
+    <message id="2" roleId="1">Крыса ворвалась в клетку с хомяками и буквально выпотрошила их!</message>
+    <message id="3" roleId="1">На это у нее ушло меньше двадцати секунд!</message>
+    <message id="4" roleId="1">Теперь там просто феерическое кровавое побоище... А крыса... крыса торопливо сжирает трупы...</message>
+    <message id="5" roleId="1">Ее распирает от обилия пищи, ТАК жрать нормальное существо не может, но она не останавливается... Это... это ужасно...</message>
+    <message id="6" roleId="1">Еще она болезненно реагирует на свет. Шипит, пищит, щелкает зубами.</message>
+    <message id="7" roleId="1">Отойду-ка я подальше.</message>
+    <message id="8" roleId="1">... ... ...</message>
+    <message id="9" roleId="1">Похоже, это были еще цветочки.</message>
+    <message id="10" roleId="1">Я у клеток с собаками.</message>
+    <message id="11" roleId="1">Печальное зрелище.</message>
+    <message id="12" roleId="1">Все как одна лежат на полу, издыхая.</message>
+    <message id="13" roleId="1">Скулят, из глаз текут слезы. Из ушей струится кровь...</message>
+    <message id="14" roleId="1">Нет, я не могу описывать такое! Это выше моих сил!</message>
+    <message id="15" roleId="1">Я даже смотреть на это нормально не могу!</message>
+    <message id="16" roleId="1">Примерно та же картина у клеток с кошками.</message>
+    <message id="17" roleId="1">Вирус не уживается в них. Доза, рассчитанная на человека, не подавляет нервную систему, а убивает ее, начисто разрушая.</message>
+    <message id="18" roleId="1">Судороги, спазмы, смерть.</message>
+    <message id="19" roleId="1">... ... ...</message>
+    <message id="20" roleId="1">А вот с обезьянами другая ситуация.</message>
+    <message id="21" roleId="1">Их здесь шесть. Каждая в отдельной клетке.</message>
+    <message id="22" roleId="1">И каждая — инфицирована.</message>
+    <message id="23" roleId="1">Покрасневшие глаза навыкате. Обилие изменившей цвет слюны. Гортанные рыки.</message>
+    <message id="24" roleId="1">Реагируют на свет очень чутко. Бросаются на прутья клетки и бьются всем телом.</message>
+    <message id="25" roleId="1">Б-р-р-р... Боюсь себе даже представить, что случилось бы, вырвись одна на свободу!</message>
+    <message id="26" roleId="1">Мой голос для них тоже является раздражителем. Правда, не таким сильным, как свет. Тут явная ассоциация с бешенством.</message>
+    <message id="27" roleId="1">И...</message>
+    <message id="28" roleId="1">А вот это странно...</message>
+    <message id="29" roleId="1">Я вижу клочки шерсти. Она буквально сыплется с обезьян.</message>
+    <message id="30" roleId="1">Что это? Новая мутация или уже описанная реакция на вирус?</message>
+    <message id="31" roleId="1">Тут я не помощник. Данных недостаточно.</message>
+    <message id="32" roleId="1">Хорошо, думаю, что хватит описаний. Я же не доклад пишу.</message>
+    <message id="33" roleId="1">Начинаю искать выход.</message>
+    <message id="34" roleId="1">Даже через фильтры костюма биологической защиты я чувствую отвратительную удушливую вонь.</message>
+    <choice id="1">Автопереход.<targetChapter>105</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="107">
+    <message id="1" roleId="1">Я не... знаю...</message>
+    <choice id="1">Автопереход.<targetChapter>109</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="108">
+    <message id="1" roleId="1">Х-хорошо...</message>
+    <choice id="1">Автопереход.<targetChapter>109</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="109">
+    <message id="1" roleId="1">Здесь... здесь было нечто вроде хранилища.</message>
+    <message id="2" roleId="1">Дверь, как в банковском сейфе, толщиной в метр, открыта нараспашку!</message>
+    <message id="3" roleId="1">Я вижу ряды низких металлических столов.</message>
+    <message id="4" roleId="1">На каждом высокая емкость, метровая цистерна из толстого стекла.</message>
+    <message id="5" roleId="1">Она заполнена какой-то желтоватой жидкостью. А внутри...</message>
+    <message id="6" roleId="1">Внутри что-то ужасное... словно мутант-уродец...</message>
+    <message id="7" roleId="1">Огромное мохнатое тело, то ли собачье, то ли паучье... Множество толстых и очень длинных лап, как веревки...</message>
+    <message id="8" roleId="1">О!</message>
+    <message id="9" roleId="1">Черт!</message>
+    <message id="10" roleId="1">Черт подери!</message>
+    <message id="11" roleId="1">Я навел на одну банку луч фонаря, и тварь внутри шевельнулась!</message>
+    <message id="12" roleId="1">Резко, неуловимо, как каракатица!</message>
+    <message id="13" roleId="1">Боже, ну и скорость!</message>
+    <message id="14" roleId="1">Хорошо еще, что она заперта!</message>
+    <message id="15" roleId="1">Что это за чертовщина такая?!</message>
+    <message id="16" roleId="1">... ... ...</message>
+    <message id="17" roleId="1">... ... ...</message>
+    <message id="18" roleId="1">А вот это уже плохая новость.</message>
+    <message id="19" roleId="1">Оператор, я вижу в глубине хранилища несколько открытых банок.</message>
+    <message id="20" roleId="1">На стекле и на полу — обильные лужи из этой желтой жидкости.</message>
+    <message id="21" roleId="1">Похоже...</message>
+    <message id="22" roleId="1">Или тварям удалось сбежать...</message>
+    <message id="23" roleId="1">Или...</message>
+    <message id="24" roleId="1">Их кто-то выпустил?!</message>
+    <message id="25" roleId="1">Не понима... Что это?!</message>
+    <message id="26" roleId="1">Дьявол!</message>
+    <message id="27" roleId="1">Одна из обезьян повалила клетку!</message>
+    <message id="28" roleId="1">От падения у клетки повредилась дверь! И... обезьяна выбирается!</message>
+    <message id="29" roleId="1">Боже! Она сейчас бросится на меня!</message>
+    <choice id="1">Беги!<targetChapter>110</targetChapter>
+    </choice>
+    <choice id="2">Замри!<targetChapter>111</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="110">
+    <message id="1" roleId="1">Ну конечно!</message>
+    <message id="2" roleId="1">Бегу!!!</message>
+    <message id="3" roleId="1">... ... ...</message>
+    <message id="4" roleId="1">Все! Она вырвалась из клетки!</message>
+    <message id="5" roleId="1">Боже, она преследует меня!!!</message>
+    <message id="6" roleId="1">А-а-а!!!</message>
+    <message id="7" roleId="1">Вижу дверь!</message>
+    <message id="8" roleId="1">Дверь!!!</message>
+    <choice id="1">Беги к ней!<targetChapter>112</targetChapter>
+    </choice>
+    <choice id="2">Спрячься!<targetChapter>113</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="111" isEnded="true">
+    <message id="1" roleId="1">Что? Ты серьезно?!</message>
+    <message id="2" roleId="1">Нет... уже нет времени!</message>
+    <message id="3" roleId="1">Выключил фонарь и...</message>
+    <message id="4" roleId="1">А-А-А-А-А-А!!!</message>
+    <message id="5" roleId="1">Уберите ее от меня!!!</message>
+    <message id="6" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="7" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="8" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="9" roleId="4">[... ... ...]</message>
+    <message id="10" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="112">
+    <message id="1" roleId="1">Лечу!!!</message>
+    <message id="2" roleId="1">... ... ...</message>
+    <message id="3" roleId="1">Я рядом!!!</message>
+    <message id="4" roleId="1">Ну давай же!</message>
+    <message id="5" roleId="1">Дверь!!!</message>
+    <message id="6" roleId="1">Она заперта!!!</message>
+    <message id="7" roleId="1">... ... ...</message>
+    <message id="8" roleId="1">Пошла прочь, тварь!</message>
+    <message id="9" roleId="1">УЙДИ!!!</message>
+    <message id="10" roleId="1">... ... ...</message>
+    <message id="11" roleId="1">О, дьявол!..</message>
+    <message id="12" roleId="1">Открыл! Я открыл!!!</message>
+    <message id="13" roleId="1">Эй, да отвали же! Уйди!</message>
+    <message id="14" roleId="1">А, черт!</message>
+    <message id="15" roleId="1">... ... ...</message>
+    <message id="16" roleId="1">... ... ...</message>
+    <message id="17" roleId="1">Да что же за...</message>
+    <message id="18" roleId="1">А-а-а-а!!!</message>
+    <message id="19" roleId="1">... ... ...</message>
+    <message id="20" roleId="1">... ... ...</message>
+    <message id="21" roleId="1">Есть!!!</message>
+    <message id="22" roleId="1">Да!!!</message>
+    <message id="23" roleId="1">ОПЕРАТОР!!!</message>
+    <message id="24" roleId="1">Я вырвался!!!</message>
+    <message id="25" roleId="1">Я пробежал через отдел зоологов!</message>
+    <message id="26" roleId="1">Теперь я в коридоре!</message>
+    <choice id="1">Автопереход.<targetChapter>114</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="113" isEnded="true">
+    <message id="1" roleId="1">Да ты с ума сошел?!</message>
+    <message id="2" roleId="1">Черт! ГДЕ?!!</message>
+    <message id="3" roleId="1">А-А-А-А-А-А!!!</message>
+    <message id="4" roleId="1">Уберите ее от меня!!!</message>
+    <message id="5" roleId="4">[СВЯЗЬ ПОТЕРЯНА]</message>
+    <message id="6" roleId="4">[БИОСИГНАЛ ОБЪЕКТА УТРАЧЕН]</message>
+    <message id="7" roleId="4">[ДАННЫЕ СОБРАНЫ НЕ ПОЛНОСТЬЮ]</message>
+    <message id="8" roleId="4">[... ... ...]</message>
+    <message id="9" roleId="4" voice="death">[МИССИЯ ПРОВАЛЕНА]</message>
+  </chapter>
+  <chapter id="114">
+    <message id="1" roleId="4">[ДЕЖУРНОМУ ОПЕРАТОРУ]</message>
+    <message id="2" roleId="4">[ДАННЫЕ СОБРАНЫ]</message>
+    <message id="3" roleId="4">[СКОРОСТЬ ИНФИЦИРОВАННЫХ ЖИВОТНЫХ]</message>
+    <message id="4" roleId="4">[ПОДТВЕРЖДЕНА ЧУВСТВИТЕЛЬНОСТЬ ОРГАНОВ СЛУХА]</message>
+    <message id="5" roleId="4">[ПОДТВЕРЖДЕНА РЕАКЦИЯ НА СВЕТ]</message>
+    <message id="6" roleId="4">[ПОДТВЕРЖДЕНА РЕАКЦИЯ НА ДВИЖЕНИЕ]</message>
+    <message id="7" roleId="4">[ЕСТЬ РЕАКЦИЯ НА ЗАПАХ]</message>
+    <message id="8" roleId="4">[СОБРАНЫ ДАННЫЕ ПО ВЫЖИВАЕМОСТИ ВИДОВ]</message>
+    <message id="9" roleId="4">[СОБРАНЫ ДАННЫЕ ПО АТАКУЮЩИМ СВОЙСТВАМ]</message>
+    <message id="10" roleId="4">[... ... ...]</message>
+    <message id="11" roleId="4">[ОПЕРАТОР 5]</message>
+    <message id="12" roleId="4">[ПРОДОЛЖАЙТЕ МИССИЮ]</message>
+    <message id="13" roleId="4">[... ... ...]</message>
+    <message id="14" roleId="4">[ОБНОВЛЕНИЕ ЗАДАНИЯ]</message>
+    <message id="15" roleId="4">[... ... ...]</message>
+    <message id="16" roleId="4">[СТОЛКНИТЕ ПОДОПЫТНЫЙ ОБЪЕКТ С ИНФИЦИРОВАННЫМИ ЛЮДЬМИ]</message>
+    <message id="17" roleId="4">[... ... ...]</message>
+    <message id="18" roleId="4">[ПРИСТУПИТЬ К ВЫПОЛНЕНИЮ]</message>
+    <choice id="1">Автопереход.<targetChapter>115</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="115">
+    <message id="1" roleId="1">...Господи-господи-господи...</message>
+    <message id="2" roleId="1">Эта проклятая обезьяна... она настигла меня!</message>
+    <message id="3" roleId="1">Почти настигла!</message>
+    <message id="4" roleId="1">Я чувствовал, как воняет у нее из пасти!</message>
+    <message id="5" roleId="1">Боже мой...</message>
+    <message id="6" roleId="1">Мне чудом удалось уцелеть! Это... это правда чудо!</message>
+    <message id="7" roleId="1">Боже...</message>
+    <message id="8" roleId="1">... ... ...</message>
+    <message id="9" roleId="1">Да уж... я-то уцелел, но этого нельзя сказать про мой костюм.</message>
+    <message id="10" roleId="1">Безумная тварь хотела вцепиться мне в спину, в шею, загрызть...</message>
+    <message id="11" roleId="1">К счастью, там расположены кислородные баллоны.</message>
+    <message id="12" roleId="1">Обезьяна в клочья изодрала костюм, но... я за это время успел открыть дверь, и уже потом сбросить животное с себя!</message>
+    <message id="13" roleId="1">... ... ...</message>
+    <message id="14" roleId="1">У меня слов нет...</message>
+    <message id="15" roleId="1">И, кажется, еще немного, и у меня начнется истерика.</message>
+    <message id="16" roleId="1">Давайте продолжим путь?</message>
+    <message id="17" roleId="1">Пожалуйста, я хочу выбраться отсюда! Умоляю!</message>
+    <message id="18" roleId="1">Я боюсь того, что ждет впереди... там раньше был очень многолюдный Отдел...</message>
+    <message id="19" roleId="1">А теперь... страшно, до колик страшно!</message>
+    <choice id="1">Иди туда.<targetChapter>34</targetChapter>
+    </choice>
+    <choice id="2">Подожди, я должен признаться.<targetChapter>83</targetChapter>
+    </choice>
+  </chapter>
+  <chapter id="116" isVictory="true">
+    <message id="1" roleId="4">[... ... ...]</message>
+    <message id="2" roleId="4">[... ... ...]</message>
+    <message id="3" roleId="4">[... ... ...]</message>
+    <message id="4" roleId="4">[НАЧИНАЕМ ОЧИСТКУ ИСТОРИИ]</message>
+    <message id="5" roleId="4">[ЗАВЕРШЕНИЕ ТРАНСЛЯЦИИ]</message>
+    <message id="6" roleId="4">[...]</message>
+    <message id="7" roleId="4">[... ...]</message>
+    <message id="8" roleId="4">[... ... ...]</message>
+    <message id="9" roleId="4">[ОЧИСТКА ШИФРОВАЛЬНОГО КОДА]</message>
+    <message id="10" roleId="4">[...]</message>
+    <message id="11" roleId="4">[... ...]</message>
+    <message id="12" roleId="4">[... ... ...]</message>
+    <message id="13" roleId="4">[-ВНИМАНИЕ-]</message>
+    <message id="14" roleId="4">[ОБНАРУЖЕНА ПАССИВНАЯ ПЕРЕДАЧА]</message>
+    <message id="15" roleId="4">[ЗАПИСЬ ВЕЛАСЬ В ОДНОСТОРОННЕМ ПОРЯДКЕ]</message>
+    <message id="16" roleId="4">[ВОСПРОИЗВЕДЕНИЕ]</message>
+    <message id="17" roleId="1">... ... ...</message>
+    <message id="18" roleId="1">...Боже, как они могли...</message>
+    <message id="19" roleId="1">Мне... мне удалось отшвырнуть Шепелеву...</message>
+    <message id="20" roleId="1">Потом... потом я куда-то побежал... не помню точно... все... все как в дыму...</message>
+    <message id="21" roleId="1">Один из кабинетов был не заперт... я... спрятался...</message>
+    <message id="22" roleId="1">... ... ...</message>
+    <message id="23" roleId="1">Но... мне конец...</message>
+    <message id="24" roleId="1">Рука... горит, словно в огне!..</message>
+    <message id="25" roleId="1">В глазах темнеет... Или это тьма в кабинете?..</message>
+    <message id="26" roleId="1">... ... ...</message>
+    <message id="27" roleId="1">Похоже... похоже, теперь тебе конец, Соболев...</message>
+    <message id="28" roleId="1">Если никто... не придет на помощь...</message>
+    <message id="29" roleId="1">Может быть... нужно просто лечь на спину и закрыть глаза?</message>
+    <message id="30" roleId="1">И пусть тьма делает свое дело...</message>
+    <message id="31" roleId="1">... ... ...</message>
+    <message id="32" roleId="1">Или же...</message>
+    <message id="33" roleId="1">Я буду бороться!</message>
+    <message id="34" roleId="1">Я... должен бороться!</message>
+    <message id="35" roleId="1">Ради своей жены... ради дочери...</message>
+    <message id="36" roleId="1">Я выберусь отсюда и... остановлю это безумие...</message>
+    <message id="37" roleId="1">Но мне нужна помощь...</message>
+    <message id="38" roleId="1">Помогите...</message>
+    <message id="39" roleId="1">Прошу...</message>
+    <message id="40" roleId="1">Помогите мне кто-нибудь...</message>
+    <message id="41" roleId="4">[ОШИБКА ПЕРЕДАЧИ]</message>
+    <message id="42" roleId="4">[СИГНАЛ ПОТЕРЯН]</message>
+  </chapter>
+</game>

@@ -18,6 +18,13 @@ body {
     color: #c0e4fc;
 }
 
+::selection {
+    background: rgba(0, 0, 0, 0.01);
+}
+::-moz-selection {
+    background: rgba(0, 0, 0, 0.01);
+}
+
 a {
     text-decoration: none;
 }
@@ -59,13 +66,19 @@ a {
 
 .content-block {
     position: relative;
-    background-color: #323232; /* Цвет фона div */
+    /* background-color: #323232; Цвет фона div */
     padding: 30px;
     color: white;
-    height: 100px;
+    height: calc(7.5em + 40px - 60px);;
     display: flex;
     align-items: center;
     margin-bottom: 1px;
+}
+.interactable {
+    transition: 0.2s ease all;
+}
+.interactable:active {
+    background-color: #131418;
 }
 
 .content-block::before,
@@ -91,22 +104,24 @@ a {
     background-color: #282828; /* Цвет второй полосы */
 }
 .chapter {
-    height: 50px;
+    height: 2em;
     color: #dcecfb;
+    z-index: 11;
+    position: relative;
 }
 .game-menu {
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: 2em;
 }
 
 .game-menu .btn_a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 4em;
+    height: 4em;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 70px 70px;
+    background-size: 5em;
 }
 .marker { background-image: url("game_assets/gui/marker.svg"); }
 .ach { background-image: url('game_assets/gui/ach.svg'); }
@@ -130,12 +145,21 @@ a {
 
 .text_container {
     width: 100%;
-    height: calc(100dvh - 100px - 20px);
+    height: calc(100dvh - 60px - 2em - 20px);
     max-width: 800px;
+    min-width:200px;
     overflow-y: auto;
     flex-grow: 1;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+.scrollable {
+    overflow-y: auto;
+    flex-grow: 1;
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    height: 100%;
 }
 
 .text_container::-webkit-scrollbar {
@@ -169,7 +193,7 @@ a {
 }
 
 #waiting {
-    height: calc(100dvh - 100px - 20px);
+    height: calc(100dvh - 60px - 2em - 20px);
     background-color: black;
     padding: 40px;
     display: flex;
@@ -199,7 +223,7 @@ a {
         padding: 15px 25px;
   }
   .text_container {
-      height: calc(100dvh - 70px - 20px);
+      height: calc(100dvh - 50px - 2em - 20px);
   }
 }
 
@@ -265,6 +289,14 @@ a {
     justify-content: center;
     width: 50%;
     align-items: center;
+    transition: 0.2s ease all;
+}
+
+.btn:active {
+    background: rgb(8,89,155);
+	background: linear-gradient(0deg, rgba(8,89,155,1) 0%, rgba(49,134,197,1) 100%);
+	border-bottom: 7px solid #3B77C0;
+	color: #c0e4fc;
 }
 
 .active {
@@ -284,13 +316,18 @@ a {
 
 .btnhl {
     padding: 20px;
-    height: 120px;
+    height: 7.5em;
     background: rgb(42,42,42);
     background: linear-gradient(0deg, rgba(42,42,42,1) 0%, rgba(28,29,31,1) 100%);
     display: flex;
     justify-content: space-between;
     position: relative;
     gap: 20px;
+}
+
+#progressAnim {
+    padding: 20px;
+    height: 7.5em;
 }
 
 

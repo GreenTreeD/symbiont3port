@@ -127,14 +127,16 @@ async function displayMessages(messages, delay_ms) {
         }
         message.setAttribute('class',`content-block ${role}`);
         message.textContent = item.textContent;
-        if (delay_ms != 0) {
-            delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
-            await delay(delay_ms);
-        }
         text_container.appendChild(message);
+        
         if (isAtBottom) {
             outer_container.scrollTop = outer_container.scrollHeight;
             scrollDownBtn.style.display = 'none';
+        }
+
+        if (delay_ms != 0) {
+            delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
+            await delay(delay_ms);
         }
     }
 }
@@ -156,6 +158,7 @@ function displayChoices(choices) {
     if (choices.length === 1) {
         return choices[0].childNodes[1].textContent;
     } else {
+        choices = choices.slice(0,2);
         for (let item of choices) {
             const button = document.createElement('div');
             button.className = 'btn';
@@ -187,8 +190,8 @@ async function chapterrender(id) {
             case "isKeyChapter": {
                 lastKeyChapter = id;
                 const tmp = document.createElement("div");
-                tmp.setAttribute('class','content-block chapter');
-                const desc = chapter.getAttribute("description")
+                tmp.setAttribute('class','content-block chapter interactable');
+                const desc = "К главе "+chapter.getAttribute("description");
                 tmp.textContent = desc;
                 tmp.dataset.chapter = id;
                 tmp.addEventListener("click", function () {
@@ -230,7 +233,6 @@ async function chapterrender(id) {
     await displayMessages(chapter.getElementsByTagName('message'), 200);
     if (isEnded == false && isVictory == false) {
         let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
-        console.log(ifBtn);
         if (ifBtn == undefined) {
             swapBtnAnim();
             return;
@@ -327,12 +329,14 @@ async function showAchievements() {
 }
 
 function resetToChapter(chapterid) {
+    console.log(chapterid);
     if (chapterid == 0) {
         ChapterHistory = [];
     }
     else {
         ChapterHistory = ChapterHistory.slice(0,ChapterHistory.indexOf(chapterid));
     }
+    console.log(ChapterHistory);
     setHistory();
     window.location.reload();
 }
@@ -369,7 +373,7 @@ async function startgame() {
                         lastKeyChapter = chapter.getAttribute('id');
                         const tmp = document.createElement("div");
                         tmp.setAttribute('class','content-block chapter');
-                        const desc = chapter.getAttribute("description")
+                        const desc = "К главе "+chapter.getAttribute("description");
                         tmp.textContent = desc;
                         tmp.dataset.chapter = chapter.getAttribute('id');
                         tmp.addEventListener("click", function () {
@@ -382,8 +386,9 @@ async function startgame() {
                         const btnHolder = document.getElementById('btnholder');
                         const tmp = document.createElement('div');
                         tmp.id = 'rewindBtn';
-                        tmp.addEventListener("click", () => {
-                            resetToChapter(lastKeyChapter);
+                        tmp.dataset.chapter = lastKeyChapter;
+                        tmp.addEventListener("click", function () {
+                            resetToChapter(Number(this.dataset.chapter));
                         });
                         btnHolder.appendChild(tmp);
                         isEnded = true;
@@ -412,22 +417,27 @@ async function startgame() {
             const flag = await chapterprocess(chapter);
  
             const nextchapter = ChapterHistory[i+1];
-            const choices = Array.from(chapter.getElementsByTagName('choice')).filter(canRender);
-
+            let choices = Array.from(chapter.getElementsByTagName('choice')).filter(canRender);
+            choices = choices.slice(0,2);
             let holder = document.createElement('div');
             holder.setAttribute('class','btnhl');
             if (choices.length != 1) {
-                for (const item of choices) {
-                    let button = document.createElement('div');
-                    if (Number(item.childNodes[1].textContent) == nextchapter) {
-                        button.setAttribute('class','btn active');
-                    }
-                    else {
-                        button.setAttribute('class','btn passive');
-                    }
-                    button.textContent = item.childNodes[0].textContent;
-                    holder.appendChild(button);
+                let button1 = document.createElement('div');
+                let button2 = document.createElement('div');
+                if (Number(choices[0].childNodes[1].textContent) == nextchapter) {
+                    button1.setAttribute('class','btn active');
+                    button2.setAttribute('class','btn passive');
                 }
+                else {
+                    button2.setAttribute('class','btn active');
+                    button1.setAttribute('class','btn passive');
+                }
+                button1.textContent = choices[0].childNodes[0].textContent;
+                button2.textContent = choices[1].childNodes[0].textContent;
+
+                holder.appendChild(button1);
+                holder.appendChild(button2);
+
                 fragment.appendChild(holder);
             }
         }
