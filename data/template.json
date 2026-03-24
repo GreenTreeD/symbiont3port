@@ -5,10 +5,36 @@
     "speed": "75",
     "hints": "on"
   },
-  "symbiont0": [],
-  "symbiont1": [],
-  "symbiont2": [],
-  "symbiont3_1": [],
-  "symbiont3_2": [],
-  "symbiont3_3": []
+  "games": {
+    "symbiont0": {
+    "lastChapter": 1,
+    "choiceList": [],
+    "achievements":[]
+    },
+    "symbiont1": {
+      "lastChapter": 1,
+      "choiceList": [],
+      "achievements":[]
+    },
+    "symbiont2": {
+      "lastChapter": 1,
+      "choiceList": [],
+      "achievements":[]
+    },
+    "symbiont3_1": {
+      "lastChapter": 1,
+      "choiceList": [],
+      "achievements":[]
+    },
+    "symbiont3_2": {
+      "lastChapter": 2263,
+      "choiceList": [],
+      "achievements":[]
+    },
+    "symbiont3_3": {
+      "lastChapter": 2225,
+      "choiceList": [],
+      "achievements":[]
+    }
+  }
 }

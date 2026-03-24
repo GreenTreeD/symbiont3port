@@ -6,11 +6,14 @@ let isAtBottom = true;
 let Chapters;
 
 let ChapterHistory = [];
+let lastChapter = 1;
 let lastKeyChapter = 0;
-let speed;
+
+let state = null;
 
 
 function checkIfAtBottom() {
+    const outer_container = document.getElementById('outer_text_container');
     const scrollPosition = outer_container.scrollTop;
     const scrollHeight = outer_container.scrollHeight;
     const clientHeight = outer_container.clientHeight;
@@ -51,50 +54,6 @@ async function fetchData(paramValue) {
         });
 }
 
-async function initData() {
-    const url = `../data/template.json`;
-    return fetch(url)
-        .then(response => response.json())
-        .then(jsonData => {
-            localStorage.setItem("info",JSON.stringify(jsonData));
-            return true;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            return false;
-        });
-}
-
-async function setHistory() {
-    let data = localStorage.getItem("info");
-    if (data == null) {
-        await initData();
-    }
-    data = JSON.parse(data);
-    data["symbiont"+gamedata] = ChapterHistory;
-    //data["symbiont"+gamedata]['historyVisible'] = Array.from(HistoryVisible.keys());
-    localStorage.setItem("info",JSON.stringify(data));
-}
-
-async function readHistory() {
-    if (localStorage.getItem("info") == null) {
-        await initData();
-        return;
-    }
-    let data = JSON.parse(localStorage.getItem("info"));
-    ChapterHistory = data["symbiont"+gamedata];
-}
-
-function setAchievement(idachievement) {
-    let data = JSON.parse(localStorage.getItem("info"));
-    let achievements = data["symbiont"+gamedata]['achievements'];
-    achievements.push(idachievement);
-    data["symbiont"+gamedata]['achievements'] = achievements;
-}
-
-function setWord(word) {
-}
-
 function delay(ms) {
     if (ms == 0) {
         return;
@@ -133,7 +92,6 @@ async function displayMessages(messages, delay_ms) {
             outer_container.scrollTop = outer_container.scrollHeight;
             scrollDownBtn.style.display = 'none';
         }
-
         if (delay_ms != 0) {
             delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
             await delay(delay_ms);
@@ -157,15 +115,14 @@ function displayChoices(choices) {
 
     if (choices.length === 1) {
         return choices[0].childNodes[1].textContent;
-    } else {
+    } 
+    else {
         choices = choices.slice(0,2);
         for (let item of choices) {
             const button = document.createElement('div');
             button.className = 'btn';
-            button.setAttribute(
-                "onclick",
-                `chapterrenderButton(${Number(item.childNodes[1].textContent)})`
-              );
+            button.dataset.choiceId = Number(item.getAttribute("id"));
+            button.addEventListener("onclick",chapterrenderButton(Number(this.dataset.choiceId)));
             button.textContent = item.childNodes[0].textContent;
             btnHolder.appendChild(button);
         }
@@ -173,10 +130,9 @@ function displayChoices(choices) {
     }
 }
 
-async function chapterrender(id) {
-    ChapterHistory.push(Number(id));
-    setHistory();
-    const chapter = Chapters.get(id);
+async function chapterrender() {
+
+    const chapter = Chapters.get(state.currentChapter);
     console.log(chapter);
     let isEnded = false;
     let isVictory = false;
@@ -197,7 +153,6 @@ async function chapterrender(id) {
                 tmp.addEventListener("click", function () {
                     resetToChapter(Number(this.dataset.chapter));
                 });
-
                 document.getElementById('chapterlist').appendChild(tmp);
                 break;}
             case "isEnded": {
@@ -456,14 +411,14 @@ async function startgame() {
         }
     }
 
-    
-    await readHistory();    
+    state = await readState();
+        
     await renderAll();
     if (gamedata == "S2" || gamedata == "S3") {
         await showAchievements();
     }
     document.getElementById("waiting").style.display = 'none';
     document.getElementById("outer_text_container").style.display = 'block';
-    outer_container.scrollTop = outer_container.scrollHeight;
+    document.getElementById("outer_text_container").scrollTop = document.getElementById("outer_text_container").scrollHeight;
     checkIfAtBottom();
 }
