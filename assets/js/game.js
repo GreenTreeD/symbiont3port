@@ -6,7 +6,6 @@ let isAtBottom = true;
 let Chapters;
 
 let ChapterHistory = [];
-let lastChapter = 1;
 let lastKeyChapter = 0;
 
 let state = null;
@@ -111,17 +110,19 @@ function canRender(choiceEl) {
 function displayChoices(choices) {
     const btnHolder = document.getElementById('btnholder');
     choices = Array.from(choices).filter(canRender);
-    btnHolder.innerHTML = ``;
+    btnHolder.replaceChildren();
 
     if (choices.length === 1) {
-        return choices[0].childNodes[1].textContent;
+        return Number(choices[0].childNodes[1].textContent);
     } 
     else {
         choices = choices.slice(0,2);
         for (let item of choices) {
             const button = document.createElement('div');
+
             button.className = 'btn';
             button.dataset.choiceId = Number(item.getAttribute("id"));
+            button.dataset.nextChapter = Number(item.querySelector("targetChapter").textContent);
             button.addEventListener("onclick",chapterrenderButton(Number(this.dataset.choiceId)));
             button.textContent = item.childNodes[0].textContent;
             btnHolder.appendChild(button);
@@ -131,8 +132,7 @@ function displayChoices(choices) {
 }
 
 async function chapterrender() {
-
-    const chapter = Chapters.get(state.currentChapter);
+    const chapter = Chapters.get(state.lastChapter);
     console.log(chapter);
     let isEnded = false;
     let isVictory = false;
@@ -193,7 +193,8 @@ async function chapterrender() {
             return;
         }
         else {
-            chapterrender(Number(ifBtn));
+            state.lastChapter = ifBtn;
+            chapterrender();
         }
     }
     if (isEnded) {
@@ -201,14 +202,14 @@ async function chapterrender() {
     }
 }
 
-function chapterrenderButton(id) {
+function chapterrenderButton(choiceId,nextChapter) {
     const btnHolder = document.getElementById('btnholder');
     if (btnHolder.style.display != 'none') swapBtnAnim();
     let btnlft = btnHolder.children[0];
     let btnrght = btnHolder.children[1];
     let holder = document.createElement('div');
     holder.setAttribute('class','btnhl');
-    if (btnlft.getAttribute('onclick').match(/\((\d+)\)/)[1] == id) {
+    if (btnlft.dataset.choiceId == id) {
         let button = document.createElement('div');
         button.setAttribute('class','btn active');
         button.innerHTML = btnlft.childNodes[0].textContent;
@@ -230,9 +231,11 @@ function chapterrenderButton(id) {
     }
 
     text_container.appendChild(holder);
-    btnHolder.innerHTML = ``;
+    btnHolder.replaceChildren();
     outer_container.scrollTop = outer_container.scrollHeight;
-    chapterrender(id);
+    state.lastChapter = nextChapter;
+    state.
+    chapterrender();
 }
 
 async function showAchievements() {
