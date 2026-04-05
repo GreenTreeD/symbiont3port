@@ -6,7 +6,7 @@ let isAtBottom = true;
 let Chapters;
 
 let ChapterHistory = [];
-let lastKeyChapter = 0;
+
 
 let state = null;
 
@@ -60,6 +60,10 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function delayFromPercent(p) {
+  return 0.5 + 0.01 * p;
+}
+
 function swapBtnAnim() {
     const btnHolder = document.getElementById('btnholder');
     const animHolder = document.getElementById('progressAnim');
@@ -92,7 +96,7 @@ async function displayMessages(messages, delay_ms) {
             scrollDownBtn.style.display = 'none';
         }
         if (delay_ms != 0) {
-            delay_ms = item.textContent.length*speed > 300 ? item.textContent.length*speed : 300;
+            delay_ms = item.textContent.length*state.speed > 50*state.speed ? item.textContent.length*state.speed : 50*state.speed;
             await delay(delay_ms);
         }
     }
@@ -102,8 +106,8 @@ function canRender(choiceEl) {
     const ifVisited = choiceEl.getAttribute("ifVisited");
     const ifNotVisited = choiceEl.getAttribute("ifNotVisited");
   
-    if (ifVisited !== null) return ChapterHistory.includes(Number(ifVisited));
-    if (ifNotVisited !== null) return !ChapterHistory.includes(Number(ifNotVisited));
+    if (ifVisited !== null) return state.visitedChapters.includes(Number(ifVisited));
+    if (ifNotVisited !== null) return !state.visitedChapters.includes(Number(ifNotVisited));
     return true;
 }
 
@@ -119,11 +123,16 @@ function displayChoices(choices) {
         choices = choices.slice(0,2);
         for (let item of choices) {
             const button = document.createElement('div');
-
             button.className = 'btn';
             button.dataset.choiceId = Number(item.getAttribute("id"));
             button.dataset.nextChapter = Number(item.querySelector("targetChapter").textContent);
-            button.addEventListener("onclick",chapterrenderButton(Number(this.dataset.choiceId)));
+            button.addEventListener("click", () => {
+                chapterrenderButton(
+                    Number(button.dataset.choiceId),
+                    Number(button.dataset.nextChapter)
+                );
+            });
+
             button.textContent = item.childNodes[0].textContent;
             btnHolder.appendChild(button);
         }
@@ -131,9 +140,11 @@ function displayChoices(choices) {
     }
 }
 
-async function chapterrender() {
-    const chapter = Chapters.get(state.lastChapter);
-    console.log(chapter);
+async function chapterrender(chapterID) {
+    const chapter = Chapters.get(chapterID);
+    state.lastChapter = chapterID;
+    state.visitedChapters.push(chapterID);
+    
     let isEnded = false;
     let isVictory = false;
 
@@ -144,12 +155,12 @@ async function chapterrender() {
                 //setAchievement(attr.value);
                 break;}
             case "isKeyChapter": {
-                lastKeyChapter = id;
+                state.lastKeyChapter = chapterID;
                 const tmp = document.createElement("div");
                 tmp.setAttribute('class','content-block chapter interactable');
                 const desc = "К главе "+chapter.getAttribute("description");
                 tmp.textContent = desc;
-                tmp.dataset.chapter = id;
+                tmp.dataset.chapter = chapterID;
                 tmp.addEventListener("click", function () {
                     resetToChapter(Number(this.dataset.chapter));
                 });
@@ -160,7 +171,7 @@ async function chapterrender() {
                 const tmp = document.createElement('div');
                 tmp.id = 'rewindBtn';
                 tmp.addEventListener("click", () => {
-                    resetToChapter(lastKeyChapter);
+                    resetToChapter(state.lastKeyChapter);
                 });
                 btnHolder.appendChild(tmp);
                 isEnded = true; 
@@ -186,6 +197,7 @@ async function chapterrender() {
     }*/
 
     await displayMessages(chapter.getElementsByTagName('message'), 200);
+
     if (isEnded == false && isVictory == false) {
         let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
         if (ifBtn == undefined) {
@@ -193,23 +205,23 @@ async function chapterrender() {
             return;
         }
         else {
-            state.lastChapter = ifBtn;
-            chapterrender();
+            chapterrender(ifBtn);
         }
     }
     if (isEnded) {
         swapBtnAnim();
     }
+    setState();
 }
 
-function chapterrenderButton(choiceId,nextChapter) {
+function chapterrenderButton(choiceId, nextChapter) {
     const btnHolder = document.getElementById('btnholder');
     if (btnHolder.style.display != 'none') swapBtnAnim();
     let btnlft = btnHolder.children[0];
     let btnrght = btnHolder.children[1];
     let holder = document.createElement('div');
     holder.setAttribute('class','btnhl');
-    if (btnlft.dataset.choiceId == id) {
+    if (btnlft.dataset.choiceId == choiceId) {
         let button = document.createElement('div');
         button.setAttribute('class','btn active');
         button.innerHTML = btnlft.childNodes[0].textContent;
@@ -233,9 +245,9 @@ function chapterrenderButton(choiceId,nextChapter) {
     text_container.appendChild(holder);
     btnHolder.replaceChildren();
     outer_container.scrollTop = outer_container.scrollHeight;
-    state.lastChapter = nextChapter;
-    state.
-    chapterrender();
+    state.choiceList.set(String(state.lastChapter), choiceId);
+    setState();
+    chapterrender(nextChapter);
 }
 
 async function showAchievements() {
@@ -287,15 +299,21 @@ async function showAchievements() {
 }
 
 function resetToChapter(chapterid) {
-    console.log(chapterid);
     if (chapterid == 0) {
-        ChapterHistory = [];
+        state.choiceList = new Map();
     }
     else {
-        ChapterHistory = ChapterHistory.slice(0,ChapterHistory.indexOf(chapterid));
+        const result = new Map();
+
+        for (const [key, value] of state.choiceList) {
+        result.set(key, value);
+        if (key === String(chapterid)) break;
+        }
+        state.choiceList = result;
+        state.lastChapter = Number(chapterid);
+        state.lastKeyChapter = Number(chapterid);
     }
-    console.log(ChapterHistory);
-    setHistory();
+    setState();
     window.location.reload();
 }
 
@@ -322,29 +340,32 @@ async function startgame() {
         async function chapterprocess(chapter) {
             const chapterlist = document.getElementById('chapterlist');
             const messages = chapter.getElementsByTagName('message');
+
+            //вывод сообщение
             await displayFast(messages);
             let isEnded = false;
             let isVictory = false;
+
+            // обработка атрибутов
             Array.from(chapter.attributes).forEach(attr => {
                 switch (attr.name) {
-                    case "isKeyChapter": {
-                        lastKeyChapter = chapter.getAttribute('id');
+                     case "isKeyChapter": {
+                        state.lastKeyChapter = Number(chapter.getAttribute("id"));
                         const tmp = document.createElement("div");
-                        tmp.setAttribute('class','content-block chapter');
+                        tmp.setAttribute('class','content-block chapter interactable');
                         const desc = "К главе "+chapter.getAttribute("description");
                         tmp.textContent = desc;
-                        tmp.dataset.chapter = chapter.getAttribute('id');
+                        tmp.dataset.chapter = Number(chapter.getAttribute("id"));
                         tmp.addEventListener("click", function () {
                             resetToChapter(Number(this.dataset.chapter));
                         });
-                        chapterlist.appendChild(tmp);
-
+                        document.getElementById('chapterlist').appendChild(tmp);
                         break;}
                     case "isEnded": {
                         const btnHolder = document.getElementById('btnholder');
                         const tmp = document.createElement('div');
                         tmp.id = 'rewindBtn';
-                        tmp.dataset.chapter = lastKeyChapter;
+                        tmp.dataset.chapter = state.lastKeyChapter;
                         tmp.addEventListener("click", function () {
                             resetToChapter(Number(this.dataset.chapter));
                         });
@@ -358,35 +379,48 @@ async function startgame() {
                         break; }
                 }
             });
-            if (isEnded == true || isVictory == true) {
-                return true;
-            }
-            return false;
-
+            return {"isEnded":isEnded, "isVictory":isVictory};
         }
-        if (ChapterHistory.length == 0) {
-            const startChapter = {"0":1, "1":1,"2":1, "3_1":1, "3_2":2263, "3_3": 2225};
+
+        const startChapter = {"0":1, "1":1,"2":1, "3_1":1, "3_2":2263, "3_3": 2225};
+
+        if (state.lastChapter == 1 || state.lastChapter == 2263 || state.lastChapter == 2225) {
             chapterrender(startChapter[String(gamedata)]);
             return;
         }
+
+        let endflag = false;
+
         const fragment = document.createDocumentFragment();
-        for (let i = 0; i < ChapterHistory.length - 1; i++) {
-            const chapter = Chapters.get(ChapterHistory[i]);
-            const flag = await chapterprocess(chapter);
- 
-            const nextchapter = ChapterHistory[i+1];
+        let currentChapter = startChapter[String(gamedata)];
+        while (currentChapter != state.lastChapter) {
+            const chapter = Chapters.get(currentChapter);
+            state.visitedChapters.push(currentChapter);
+            const res = await chapterprocess(chapter);
+            if (res.isEnded == true || res.isVictory == true) {
+                endflag = true;
+                break;
+            }
             let choices = Array.from(chapter.getElementsByTagName('choice')).filter(canRender);
+            
             choices = choices.slice(0,2);
-            let holder = document.createElement('div');
-            holder.setAttribute('class','btnhl');
+            console.log(currentChapter,choices);
+
+            
             if (choices.length != 1) {
+                const choiceId = state.choiceList.get(String(currentChapter));
+                
+                let holder = document.createElement('div');
+                holder.setAttribute('class','btnhl');
                 let button1 = document.createElement('div');
                 let button2 = document.createElement('div');
-                if (Number(choices[0].childNodes[1].textContent) == nextchapter) {
+                if (Number(choices[0].getAttribute("id")) == choiceId) {
+                    currentChapter = Number(choices[0].childNodes[1].textContent);
                     button1.setAttribute('class','btn active');
                     button2.setAttribute('class','btn passive');
                 }
                 else {
+                    currentChapter = Number(choices[1].childNodes[1].textContent);
                     button2.setAttribute('class','btn active');
                     button1.setAttribute('class','btn passive');
                 }
@@ -398,19 +432,29 @@ async function startgame() {
 
                 fragment.appendChild(holder);
             }
+            else {
+                const target = choices[0].querySelector("targetChapter").textContent;
+                currentChapter = Number(target);
+            }
+
         }
-        //if (ChapterHistory.length < 2) return;
-        const chapter = Chapters.get(ChapterHistory[ChapterHistory.length-1]);
-        chapterprocess(chapter);
+        if (!endflag) {
+            const chapter = Chapters.get(currentChapter);
+            chapterprocess(chapter);
+            text_container.appendChild(fragment);
+            
+            let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
 
-        text_container.appendChild(fragment);
-        let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
-
-        if (ifBtn == undefined && document.getElementById('btnholder').style.display == 'none') {
-            swapBtnAnim();
+            if (ifBtn == undefined && document.getElementById('btnholder').style.display == 'none') {
+                swapBtnAnim();
+            }
+            else {
+                chapterrender(Number(ifBtn));
+            }
         }
         else {
-            chapterrender(Number(ifBtn));
+            text_container.appendChild(fragment);
+
         }
     }
 

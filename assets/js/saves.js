@@ -11,7 +11,7 @@ async function readState() {
   const state = {
     lastChapter: data.games["symbiont"+gamedata].lastChapter,
     lastKeyChapter: undefined,
-    choiceList: data.games["symbiont"+gamedata].choiceList,
+    choiceList: new Map(Object.entries(data.games["symbiont"+gamedata].choiceList)),
     achievements: data.games["symbiont"+gamedata].achievements,
     visitedChapters: [],
     speed: data.settings.speed,
@@ -33,7 +33,7 @@ async function setState() {
     data = JSON.parse(localStorage.getItem("info"));
   }
   data.games["symbiont"+gamedata].lastChapter = state.lastChapter;
-  data.games["symbiont"+gamedata].choiceList = state.choiceList;
+  data.games["symbiont"+gamedata].choiceList = Object.fromEntries(state.choiceList);
   data.games["symbiont"+gamedata].achievements = state.achievements;
   data.settings.speed = state.speed;
   data.settings.music = state.music;
