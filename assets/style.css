@@ -166,14 +166,30 @@ a {
   display: none;
 }
 
+#hintBtn {
+    position: absolute;
+    right: calc(50% - 50px);
+    bottom: -1px;
+    background-image: url("game_assets/gui/hint-2.svg");
+    height: 90px;
+    width: 100px;
+    z-index: 9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    display: block;
+    transition: display 0.4s;
+}
+
+
 
 #scrollDownBtn {
     position: absolute;
     right: -1px;
     bottom: -1px;
     background-image: url("game_assets/gui/down.svg");
-    height: 100px;
-    width: 100px;
+    height: 7em;
+    width: 7em;
     z-index: 11;
     background-size: cover;
     background-repeat: no-repeat;
@@ -183,7 +199,7 @@ a {
 }
 
 #rewindBtn {
-    background-image: url(game_assets/gui/back.svg);
+    background-image: url("game_assets/gui/back.svg");
     height: 60%;
     width: 80%;
     margin: auto;

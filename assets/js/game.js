@@ -5,8 +5,6 @@ const animHolder = document.getElementById('progressAnim');
 let isAtBottom = true;
 let Chapters;
 
-let ChapterHistory = [];
-
 
 let state = null;
 
@@ -61,7 +59,7 @@ function delay(ms) {
 }
 
 function delayFromPercent(p) {
-  return 0.5 + 0.01 * p;
+  return 1000 + (4000 - 1000) * p / 100;
 }
 
 function swapBtnAnim() {
@@ -77,8 +75,17 @@ function swapBtnAnim() {
     }
 }
 
-async function displayMessages(messages, delay_ms) {
+async function displayMessages(messages) {
+
     for (let item of messages) {
+        let displayflag = true;
+        const ifVisited = item.getAttribute("ifVisited");
+        const ifNotVisited = item.getAttribute("ifNotVisited");
+  
+        if (ifVisited !== null) return displayflag = state.visitedChapters.includes(Number(ifVisited));
+        if (ifNotVisited !== null) return displayflag = state.visitedChapters.includes(Number(ifNotVisited));
+
+        if (!displayflag) continue;
         let message = document.createElement('div');
         let role;
         switch (Number(item.getAttribute('roleId'))) {
@@ -90,13 +97,13 @@ async function displayMessages(messages, delay_ms) {
         message.setAttribute('class',`content-block ${role}`);
         message.textContent = item.textContent;
         text_container.appendChild(message);
-        
+
         if (isAtBottom) {
             outer_container.scrollTop = outer_container.scrollHeight;
             scrollDownBtn.style.display = 'none';
         }
-        if (delay_ms != 0) {
-            delay_ms = item.textContent.length*state.speed > 50*state.speed ? item.textContent.length*state.speed : 50*state.speed;
+        if (state.speed != 0) {
+            delay_ms = delayFromPercent(state.speed);
             await delay(delay_ms);
         }
     }
@@ -140,6 +147,11 @@ function displayChoices(choices) {
     }
 }
 
+function flashAchievement() {
+
+}
+
+
 async function chapterrender(chapterID) {
     const chapter = Chapters.get(chapterID);
     state.lastChapter = chapterID;
@@ -151,8 +163,10 @@ async function chapterrender(chapterID) {
     Array.from(chapter.attributes).forEach(attr => {
         switch (attr.name) {
             case "id": {break;}
-            case "achievementSimple": { 
-                //setAchievement(attr.value);
+            case "achievementSimple": {
+                const achID = Number(chapter.getAttribute("achievementSimple"));
+                state.achievements.push(achID);
+                flashAchievement(achID);
                 break;}
             case "isKeyChapter": {
                 state.lastKeyChapter = chapterID;
@@ -181,20 +195,13 @@ async function chapterrender(chapterID) {
                 btnHolder.style.display = 'none';
                 isVictory = true; 
                 break; }
-            case "helpId": {break;}
+            case "helpId": {
+                
+                break;}
         }
     });
 
-    /*if (chapter.getAttribute('achievementSimple') != undefined) {
-          document.getElementById('achievement').style.display = 'block';
-          let achid = chapter.getAttribute('achievementSimple');
-          let listl = tipsDoc.children[0].children[1];
-          achid = listl.querySelector("[id='"+achid+"']");
 
-          document.getElementById('achievement_notification').innerHTML = achid.getAttribute("notification");
-          document.getElementById('achievement_name').innerHTML = achid.getAttribute("value");
-          document.getElementById('achievement_pic').src = "assets/gui/achievements/"+achid.getAttribute("id")+".png";
-    }*/
 
     await displayMessages(chapter.getElementsByTagName('message'), 200);
 
@@ -322,6 +329,14 @@ async function startgame() {
     async function renderAll() {
         async function displayFast(messages) {
             for (let item of messages) {
+                let displayflag = true;
+                const ifVisited = item.getAttribute("ifVisited");
+                const ifNotVisited = item.getAttribute("ifNotVisited");
+        
+                if (ifVisited !== null) return displayflag = state.visitedChapters.includes(Number(ifVisited));
+                if (ifNotVisited !== null) return displayflag = state.visitedChapters.includes(Number(ifNotVisited));
+
+                if (!displayflag) continue;
                 let message = document.createElement('div');
                 let role;
 
@@ -404,7 +419,6 @@ async function startgame() {
             let choices = Array.from(chapter.getElementsByTagName('choice')).filter(canRender);
             
             choices = choices.slice(0,2);
-            console.log(currentChapter,choices);
 
             
             if (choices.length != 1) {
@@ -442,9 +456,7 @@ async function startgame() {
             const chapter = Chapters.get(currentChapter);
             chapterprocess(chapter);
             text_container.appendChild(fragment);
-            
             let ifBtn = displayChoices(chapter.getElementsByTagName('choice'));
-
             if (ifBtn == undefined && document.getElementById('btnholder').style.display == 'none') {
                 swapBtnAnim();
             }
@@ -454,7 +466,6 @@ async function startgame() {
         }
         else {
             text_container.appendChild(fragment);
-
         }
     }
 

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title%}{% endblock %}</title>
     <link rel="stylesheet" href="/assets/style.css">
+    {% if gamefolder is defined and gamefolder %}
+    <link rel="icon" type="image/x-icon" href="/assets/game_assets/{{ gamefolder }}/icon.ico?v={{ gamefolder }}">
+    {% else %}
+    <link rel="icon" href="/assets/skull.ico">
+    {% endif %}
 </head>
 <body>
     <div class="container" id="main">
